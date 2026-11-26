@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { createElement } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { Scene } from './Scene'
+import { displayedComparison } from './bench'
 import {
   csv,
   defaultQuantity,
@@ -63,6 +64,12 @@ describe('recorded experiment samples', () => {
     expect([indices[0], indices.at(-1)]).toEqual([0, 4000])
     expect(samples(1)).toEqual([0])
     expect(samples(0)).toEqual([])
+  })
+  it('saves only the quantity and object still displayed after a comparison member changes', () => {
+    const member = {...fall, experiment:{...fall.experiment,objects:['A'],measurements:{y:'m'}}}
+    const shown = displayedComparison([fall,member],fall,{quantity:'vy',object_index:1})
+    expect(shown.quantity).toBe('y')
+    expect(shown.object_index).toBe(0)
   })
   it('keeps tiny measured errors visible and avoids a zero chart span', () => {
     expect(numberText(0.00000012)).toBe('1.20e-7')

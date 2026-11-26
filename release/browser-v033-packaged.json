@@ -1,0 +1,45 @@
+{
+  "archive": "PHYSIS-AI-0.3.3-win-x64.zip",
+  "bytes": 73592652,
+  "sha256": "b0caca8a42a47ce9ec2f0058658a483f95ac0b33a2467deb0db5f0fd9d189f38",
+  "entries": 3736,
+  "verified_project_files": 329,
+  "previous_archives": {
+    "0.1": "f75e3b0769339a700862e2479397a23df5c0c1d9ea2a7c7c566859e70e1552d3",
+    "0.2": "b9c540bc2cafccd1272b4d98f4c2fcf4b6d5257ae0882751215d86e2d857fc4c",
+    "0.3": "44d9947ed0cf921c4ba5caa34e7c9f4fdc350789b829b9cd410d23b1adb945c7",
+    "0.3.1": "6dfd8d428c9b6880268aecdd92dae78630d51113b5c033ff8ef28c09c30dc8d0",
+    "0.3.2": "219969d83e86c0ee231975f572382e53f5a8e763ff6b1b6e04d4d6e3b634d1cb"
+  },
+  "PE_machine": "AMD64",
+  "CRC": "pass",
+  "version": "0.3.3",
+  "base_tag": "v0.3.2",
+  "registry": {
+    "models": 23,
+    "formulas": 27
+  },
+  "actual_llm_requests": 0,
+  "inference_quality": "unmeasured",
+  "browser_mode": "Edge, GPU/WebGL/accelerated canvas disabled, local Mock and offline launcher",
+  "backend_passed": 512,
+  "frontend_passed": 24,
+  "source_browser_passed": [
+    "test_shortcuts_share_history_with_mock_and_ignore_text_inputs",
+    "test_versioned_file_restores_named_comparison_and_rejects_invalid_input",
+    "test_converter_and_preset_from_the_tools_dialog",
+    "test_simulation_and_graph_pngs_include_rendered_data_and_evidence",
+    "test_field_and_fluid_models_can_export_their_current_scenes",
+    "test_conversation_modification_and_real_csv",
+    "test_phone_question_and_layout",
+    "test_four_workbench_members_share_clock_and_retain_inputs"
+  ],
+  "packaged_browser_passed": [
+    "test_shortcuts_share_history_with_mock_and_ignore_text_inputs",
+    "test_versioned_file_restores_named_comparison_and_rejects_invalid_input",
+    "test_converter_and_preset_from_the_tools_dialog",
+    "test_simulation_and_graph_pngs_include_rendered_data_and_evidence",
+    "test_field_and_fluid_models_can_export_their_current_scenes"
+  ],
+  "packaged_environment": "Packaged launcher + embedded runtime, PATH limited to Windows binaries; host pytest drives local browser."
+}

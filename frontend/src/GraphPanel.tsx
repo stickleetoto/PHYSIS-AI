@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { FocusAction } from './bench'
-import { ChartNoAxesCombined, Layers2 } from 'lucide-react'
+import { ChartNoAxesCombined, Download, Layers2 } from 'lucide-react'
 import {
   colors,
   defaultQuantity,
@@ -11,6 +11,8 @@ import {
   samples,
   type Snapshot,
 } from './domain'
+import { downloadExperimentPng } from './pngExport'
+import './pngExport.css'
 
 type GraphMode = 'series' | 'energy' | 'error' | 'convergence'
 interface Line {
@@ -26,18 +28,23 @@ export function GraphPanel({
   index,
   onSeek,
   focus,
+  displayTitle,
 }: {
   snapshot: Snapshot
   previous?: Snapshot
   index: number
   onSeek: (t: number) => void
   focus?: FocusAction[]
+  displayTitle?: string
 }) {
   const [mode, setMode] = useState<GraphMode>('series')
   const [quantity, setQuantity] = useState(() => defaultQuantity(snapshot))
   const [compare, setCompare] = useState(false)
   const [body, setBody] = useState(0)
+  const [exportError, setExportError] = useState('')
+  const plotRef = useRef<SVGSVGElement>(null)
   const { experiment: e, run } = snapshot
+  const title = displayTitle?.trim() || e.title
   const interval=focus?.find(a=>a.op==='highlight_graph')
   useEffect(()=>{
     const key=focus?.find(a=>a.op==='highlight_graph'||a.op==='highlight_quantity')?.quantity
@@ -113,6 +120,25 @@ export function GraphPanel({
       ),
     [lines, xmin, xmax, ymin, ymax],
   )
+  const plotDescription = mode === 'series'
+    ? `시계열 · ${quantities[q] ?? q} (${unit || '단위 미표기'}) 대 시간 (s)`
+    : mode === 'energy'
+      ? `에너지 · ${quantities[q] ?? q} (${unit || '단위 미표기'}) 대 시간 (s)`
+      : mode === 'error'
+        ? `오차 · 기준해와의 오차 (${unit || '단위 미표기'}) 대 시간 (s)`
+        : `수렴 · 최대 오차 (${unit || '단위 미표기'}) 대 시간 간격 Δt (s)`
+  const exportPng = () => {
+    if (!plotRef.current) return
+    setExportError('')
+    void downloadExperimentPng(plotRef.current, {
+      snapshot,
+      kind: 'graph',
+      displayTitle: title,
+      currentTime: run.times[index],
+      plotDescription,
+      plotSeries: lines.map(({ label, color }) => ({ label, color })),
+    }).catch(() => setExportError('PNG 내보내기에 실패했습니다.'))
+  }
   const modes: [GraphMode, string][] = [
     ['series', '시계열'],
     ['energy', '에너지'],
@@ -125,12 +151,17 @@ export function GraphPanel({
         <h2>
           <ChartNoAxesCombined size={17} /> 측정 그래프
         </h2>
-        <div className="segmented">
-          {modes.map(([key, title]) => (
-            <button key={key} aria-pressed={mode === key} onClick={() => setMode(key)}>
-              {title}
-            </button>
-          ))}
+        <div className="graph-heading-actions">
+          <div className="segmented">
+            {modes.map(([key, label]) => (
+              <button key={key} aria-pressed={mode === key} onClick={() => setMode(key)}>
+                {label}
+              </button>
+            ))}
+          </div>
+          <button type="button" className="png-export-button" onClick={exportPng} disabled={!lines.length} aria-label="그래프 PNG 내보내기" title="그래프 PNG 내보내기">
+            <Download size={14} /> PNG
+          </button>
         </div>
       </header>
       <div className="graph-options">
@@ -202,6 +233,7 @@ export function GraphPanel({
       </div>
       {lines.length ? (
         <svg
+          ref={plotRef}
           viewBox="0 0 658 157"
           role="img"
           aria-label={
@@ -309,6 +341,7 @@ export function GraphPanel({
           를 제공하지 않습니다.
         </p>
       )}
+      {exportError && <p className="png-export-error" role="alert">{exportError}</p>}
     </section>
   )
 }

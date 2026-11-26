@@ -1,4 +1,4 @@
-import { lazy, Suspense, useCallback, useEffect, useRef, useState, type FormEvent } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useEffectEvent, useRef, useState, type FormEvent } from 'react'
 import {
   Activity,
   ArrowDownToLine,
@@ -48,7 +48,9 @@ import { GraphPanel } from './GraphPanel'
 import { Inspector } from './Inspector'
 import { Scene } from './Scene'
 import { CompareBench } from './CompareBench'
-import { readTutorStream, type Board, type Selection, type FocusAction } from './bench'
+import { displayedComparison, readTutorStream, type Board, type Selection, type FocusAction, type ComparisonSelection } from './bench'
+import { ExperimentControls, saveExperimentFile, ToolsDialog } from './ExperimentControls'
+import { LabLearningTools } from './LabLearningTools'
 import { ProviderSettings } from './ProviderSettings'
 import { TutorPanel } from './TutorPanel'
 import { LearningView } from './LearningView'
@@ -160,6 +162,11 @@ export function App() {
   })
   const aborter=useRef<AbortController|null>(null)
   const [board,setBoard]=useState<Board|null>(null),[benchVersion,setBenchVersion]=useState(0)
+  const [comparison,setComparison]=useState<ComparisonSelection>({quantity:null,object_index:0})
+  const [formReset,setFormReset]=useState(0)
+  const [learningTools,setLearningTools]=useState(false)
+  const [inputHistory,setInputHistory]=useState<{id:string;revision:number;undo:number;redo:number}|null>(null)
+  const importer=useRef<HTMLInputElement>(null)
   const [busy, setBusy] = useState(true),
     [error, setError] = useState(''),
     lock = useRef(false)
@@ -200,7 +207,7 @@ export function App() {
     setPlaying(false)
     setHistory((items) => {
       const next = [
-        { id: s.experiment.id, title: s.experiment.title, model: s.experiment.model },
+        { id: s.experiment.id, title: items.find(h=>h.id===s.experiment.id)?.title ?? s.experiment.title, model: s.experiment.model },
         ...items.filter((h) => h.id !== s.experiment.id),
       ].slice(0, 24)
       writeHistory(next)
@@ -256,6 +263,25 @@ export function App() {
       .catch(err=>{if(!stale)setError(err.message)})
     return ()=>{stale=true}
   },[snapshot?.experiment.id,snapshot?.revision,benchVersion,level])
+  useEffect(()=>{
+    if(!snapshot)return
+    const id=snapshot.experiment.id
+    let stale=false
+    api<{revision:number;undo:number;redo:number}>('/experiments/'+id+'/history')
+      .then(value=>{if(!stale)setInputHistory({id,...value})})
+      .catch(err=>{if(!stale)setError(err.message)})
+    return ()=>{stale=true}
+  },[snapshot?.experiment.id,snapshot?.revision])
+  useEffect(()=>{
+    if(!board?.display_names)return
+    const titles=new Map(board.members.map(s=>[s.experiment.id,board.display_names?.[s.experiment.id]||s.experiment.title]))
+    setHistory(items=>{
+      if(!items.some(h=>titles.has(h.id)&&titles.get(h.id)!==h.title))return items
+      const next=items.map(h=>({...h,title:titles.get(h.id)??h.title}))
+      writeHistory(next)
+      return next
+    })
+  },[board])
   useEffect(()=>()=>{aborter.current?.abort()},[])
   useEffect(() => {
     if (!playing) return
@@ -308,13 +334,15 @@ export function App() {
     setPrediction('')
     setNotes('')
   }
-  const openModel = (model: string) =>
+  const openModel = (model: string, preset?:{title:string;initialValues:Record<string,number>}) =>
     perform(async () => {
-      const s = await api<Snapshot>('/experiments', 'POST', { model, level })
+      const s = await api<Snapshot>('/experiments', 'POST', { model, level,
+        ...(preset?{display_name:preset.title,patch:{values:preset.initialValues}}:{}) })
       accept(s)
       recordExperiment(s,level)
       setPrevious(undefined)
       setDrawer(null)
+      setLearningTools(false)
       setMobileChat(false)
       resetDiscovery()
     })
@@ -502,20 +530,94 @@ export function App() {
     if(seed && next!=='learning' && next!=='research' && !snapshot)void init()
   }
   const openStudy=(target:StudyTarget)=>{setStudy(target);changeView('research',false)}
+  const displayTitle = experiment && (activeBoard?.display_names?.[experiment.id] || experiment.title)
+  const available = inputHistory?.id===experiment?.id && inputHistory?.revision===snapshot?.revision ? inputHistory : null
+  const moveHistory=(direction:'undo'|'redo')=>perform(async()=>{
+    if(!snapshot || !available?.[direction])return
+    const s=await api<Snapshot>('/experiments/'+snapshot.experiment.id+'/history/'+direction,'POST',{revision:snapshot.revision,level})
+    setPrevious(snapshot);accept(s);recordExperiment(s,level);resetDiscovery()
+  })
+  const resetInputs=()=>{
+    if(!experiment)return
+    const defaults=catalog.find(model=>model.model===experiment.model)
+    if(!defaults)return
+    const values=Object.fromEntries(defaults.variables.map(v=>[v.key,v.default]))
+    seek(0)
+    setFormReset(n=>n+1)
+    if(defaults.dt!==experiment.dt || defaults.duration!==experiment.duration || defaults.methods[0]!==experiment.method
+      || Object.keys(values).some(key=>values[key]!==experiment.values[key])){
+      void patch({values,method:defaults.methods[0],dt:defaults.dt,duration:defaults.duration})
+    }
+  }
+  const rename=(name:string)=>perform(async()=>{
+    if(!snapshot)return
+    const id=snapshot.experiment.id
+    const result=await api<{display_name:string|null;name_revision:number}>('/experiments/'+id+'/display-name','PATCH',{
+      revision:snapshot.revision,display_name:name,name_revision:activeBoard?.name_revisions?.[id]??0})
+    setBoard(current=>current?{...current,display_names:{...current.display_names,[id]:result.display_name},
+      name_revisions:{...current.name_revisions,[id]:result.name_revision}}:current)
+    setBenchVersion(v=>v+1)
+  })
+  const saveFile=()=>perform(async()=>{
+    if(!snapshot)return
+    const members=activeBoard?.members.map(s=>s.experiment.id===snapshot.experiment.id?snapshot:s)??[snapshot]
+    const {quantity,object_index}=displayedComparison(members,snapshot,comparison)
+    const file=await api('/portable/experiments/export','POST',{experiment_id:snapshot.experiment.id,revision:snapshot.revision,
+      view:{quantity,object_index,elapsed,speed}})
+    saveExperimentFile(file, displayTitle ?? snapshot.experiment.title)
+  })
+  const loadFile=(file:File)=>perform(async()=>{
+    if(!file.size || file.size>128*1024)throw new Error('저장 파일은 1바이트 이상 128 KiB 이하여야 합니다.')
+    const imported=await api<{active_id:string;level:Level;view:ComparisonSelection & {elapsed:number;speed:number}}>(
+      '/portable/experiments/import','POST',file)
+    const restored=await api<Board>('/workbenches/'+imported.active_id+'?level='+imported.level)
+    const current=restored.members.find(s=>s.experiment.id===imported.active_id)
+    if(!current)throw new Error('불러온 비교 실험에서 선택한 실험을 찾을 수 없습니다.')
+    accept(current);setBoard(restored);setPrevious(undefined);setLevel(imported.level);setDiscover(false);resetDiscovery()
+    recordExperiment(current,imported.level);changeView('lab',false)
+    setComparison({quantity:imported.view.quantity,object_index:imported.view.object_index})
+    setSpeed(imported.view.speed)
+    seek(Math.min(imported.view.elapsed,Math.max(...restored.members.map(s=>s.run.times.at(-1)??0))))
+  })
+  const togglePlay=()=>{if(!playing && elapsed>=end)setElapsed(0);setPlaying(!playing)}
+  const handleShortcut=useEffectEvent((event:KeyboardEvent)=>{
+    if(event.defaultPrevented || event.isComposing || event.repeat || event.altKey || event.metaKey || event.shiftKey
+      || busy || lock.current || drawer || settings || learningTools
+      || (event.target instanceof Element && event.target.closest('input,textarea,select,[contenteditable]:not([contenteditable="false"]),[role="textbox"],dialog')))return
+    const key=event.key.toLowerCase()
+    if(event.ctrlKey && key==='o'){event.preventDefault();importer.current?.click();return}
+    if(!snapshot)return
+    if(event.ctrlKey){
+      if(!['s','z','y'].includes(key))return
+      event.preventDefault()
+      if(key==='s')void saveFile()
+      else void moveHistory(key==='z'?'undo':'redo')
+    } else if(view==='lab' && key==='r'){event.preventDefault();resetInputs()}
+    else if((view==='lab'||view==='tutor') && !hidden && (key===' ' || key==='n')){
+      event.preventDefault()
+      if(key===' ')togglePlay()
+      else nextFrame()
+    }
+  })
+  useEffect(()=>{const listener=(event:KeyboardEvent)=>handleShortcut(event)
+    window.addEventListener('keydown',listener);return ()=>window.removeEventListener('keydown',listener)
+  },[])
   const focusVariable=focus.find(a=>a.op==='highlight_variable')?.variable
   const scene = snapshot && (isFieldModel(snapshot.experiment.model)
-    ? <FieldScene snapshot={snapshot} index={index} focus={focus}/>
-    : <Scene key={snapshot.experiment.id} snapshot={snapshot} index={index} focus={focus}/>)
+    ? <FieldScene snapshot={snapshot} index={index} focus={focus} displayTitle={displayTitle}/>
+    : <Scene key={snapshot.experiment.id} snapshot={snapshot} index={index} focus={focus} displayTitle={displayTitle}/>)
   const tutorScene=snapshot&&<div className="tutor-evidence">
     {scene}
     <div className="tutor-playbar"><button onClick={()=>{if(elapsed>=end)setElapsed(0);setPlaying(!playing)}}>{playing?<Pause size={15}/>:<Play size={15}/>} {playing?'멈추기':'실험 재생'}</button>
       <input type="range" aria-label="튜터 시각" min={0} max={end} step="any" value={elapsed} onChange={e=>seek(+e.target.value)}/>
       <output>{numberText(elapsed)} s</output></div>
     <FocusReadout snapshot={snapshot} index={index} focus={focus}/>
-    {focus.some(a=>a.op==='highlight_graph'||a.op==='highlight_quantity')&&<GraphPanel snapshot={snapshot} index={index} onSeek={seek} focus={focus}/>}
+    {focus.some(a=>a.op==='highlight_graph'||a.op==='highlight_quantity')&&<GraphPanel snapshot={snapshot} index={index} onSeek={seek} focus={focus} displayTitle={displayTitle}/>}
   </div>
   return (
     <div className="app">
+      <input hidden type="file" accept=".json,application/json" aria-label="실험 JSON 파일" ref={importer}
+        onChange={e=>{const file=e.target.files?.[0];e.target.value='';if(file)void loadFile(file)}}/>
       <header className="masthead">
         <Brand />
         <span className="brand-divider" />
@@ -525,6 +627,7 @@ export function App() {
             <button key={key} disabled={busy} aria-pressed={view===key&&!drawer} onClick={()=>changeView(key)}><Icon size={15}/>{label}</button>)}
         </nav>
         <div className="catalog-tools">
+          <button onClick={()=>{setLearningTools(true);setPlaying(false)}}>프리셋·단위 변환</button>
           <button aria-pressed={drawer === 'catalog'} onClick={() => setDrawer('catalog')}>
             <LayoutGrid size={15} />
             실험 목록
@@ -699,7 +802,7 @@ export function App() {
                       {snapshot.experiment.model.replaceAll('_', ' ').toUpperCase()}
                     </span>
                   </div>
-                  <h1>{snapshot.experiment.title}</h1>
+                  <h1>{displayTitle}</h1>
                   <p>{snapshot.experiment.goal}</p>
                 </div>
                 <div className="heading-actions">
@@ -717,6 +820,9 @@ export function App() {
                   </button>
                 </div>
               </div>
+              <ExperimentControls key={snapshot.experiment.id} title={displayTitle??snapshot.experiment.title} busy={busy}
+                undo={available?.undo??0} redo={available?.redo??0} onRename={rename} onSave={saveFile}
+                onLoad={()=>importer.current?.click()} onReset={resetInputs} onUndo={()=>void moveHistory('undo')} onRedo={()=>void moveHistory('redo')}/>
               <div className="work-grid">
                 <div className="center-stack">
                   {discover && (
@@ -780,10 +886,7 @@ export function App() {
                             className="play"
                             title={playing ? '일시정지' : '재생'}
                             aria-label={playing ? '일시정지' : '재생'}
-                            onClick={() => {
-                              if (!playing && elapsed >= end) setElapsed(0)
-                              setPlaying(!playing)
-                            }}
+                            onClick={togglePlay}
                           >
                             {playing ? (
                               <Pause size={14} fill="currentColor" />
@@ -842,6 +945,7 @@ export function App() {
                       <FocusReadout snapshot={snapshot} index={index} focus={focus}/>
                       <GraphPanel
                         key={snapshot.experiment.id}
+                        displayTitle={displayTitle}
                         snapshot={snapshot}
                         previous={previous}
                         index={index}
@@ -849,13 +953,14 @@ export function App() {
                         focus={focus}
                       />
                       <CompareBench board={activeBoard??{anchor:snapshot.experiment.id,members:[snapshot],analysis:[]}} active={snapshot}
-                        elapsed={elapsed} catalog={catalog} busy={busy} onSelect={selectMember} onClone={clone} onRemove={removeMember}/>
+                        elapsed={elapsed} catalog={catalog} busy={busy} onSelect={selectMember} onClone={clone} onRemove={removeMember}
+                        selection={comparison} onSelection={setComparison}/>
                     </>
                   )}
                 </div>
                 <div className="side-stack">
                   <Inspector
-                    key={snapshot.experiment.id + snapshot.revision}
+                    key={snapshot.experiment.id + ':' + snapshot.revision + ':' + formReset}
                     snapshot={snapshot}
                     busy={busy}
                     level={level}
@@ -911,6 +1016,9 @@ export function App() {
           onHistory={id=>{changeView('lab',false);void reopen(id)}}
         />
       )}
+      {learningTools&&<ToolsDialog onClose={()=>setLearningTools(false)}>
+        <LabLearningTools catalog={catalog} onStartPreset={preset=>{changeView('lab',false);void openModel(preset.model,preset)}}/>
+      </ToolsDialog>}
       {settings&&<ProviderSettings selection={selection} onClose={()=>setSettings(false)} onSelect={s=>{
         setSelection(s);setProvider(s.provider);localStorage.setItem('physis-provider',JSON.stringify(s));setSettings(false)
       }}/>}

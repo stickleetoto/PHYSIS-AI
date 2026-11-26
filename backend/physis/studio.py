@@ -14,6 +14,7 @@ from starlette.concurrency import run_in_threadpool
 from . import clarification, cognitive, evidence, grounded, reasoning, tutor
 from .cognitive_routing import route
 from .physics import SPECS, simulate
+from .portable import DisplayNames
 from .providers import ProviderSelection, provider_context
 from .schema import Level, Patch, StrictModel
 from .state import RevisionConflict, build
@@ -94,17 +95,24 @@ def view_channel(action):
     return "graph" if action["op"] in {"highlight_graph", "highlight_quantity"} else action["op"]
 
 
-def studio_router(store, boards, load, get_spec, make_snapshot, snapshot_type, knowledge):
+def studio_router(store, boards, load, get_spec, make_snapshot, snapshot_type, knowledge, names=None):
     router = APIRouter(prefix="/api")
+    names = names or DisplayNames(store.path)
 
     @router.get("/workbenches/{eid}")
     def workbench(eid: UUID, level: Level = "school"):
         anchor, ids = boards.members(eid)
         members = []
+        display_names = {}
+        name_revisions = {}
         for member in ids:
             exp, rev, _ = load(member)
             members.append(make_snapshot(exp, rev, level))
+            display_name, name_revision = names.get(member)
+            display_names[str(member)] = display_name
+            name_revisions[str(member)] = name_revision
         return {"anchor": str(anchor), "members": members,
+                "display_names": display_names, "name_revisions": name_revisions,
                 "analysis": [comparison_text(members[0], other) for other in members[1:]]}
 
     @router.post("/workbenches/{eid}/members")

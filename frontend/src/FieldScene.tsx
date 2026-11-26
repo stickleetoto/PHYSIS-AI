@@ -1,7 +1,11 @@
 import { Waves } from 'lucide-react'
+import { Download } from 'lucide-react'
+import { useRef, useState } from 'react'
 import type { FocusAction } from './bench'
 import { colors, numberText, type Snapshot } from './domain'
+import { downloadExperimentPng } from './pngExport'
 import './science.css'
+import './pngExport.css'
 
 const fieldModels = [
   'wave_transverse', 'wave_longitudinal', 'wave_superposition', 'wave_standing',
@@ -9,10 +13,23 @@ const fieldModels = [
 ]
 export const isFieldModel = (model: string) => fieldModels.includes(model)
 
-export function FieldScene({snapshot, index, focus=[]}: {snapshot: Snapshot; index: number; focus?:FocusAction[]}) {
+export function FieldScene({snapshot, index, focus=[], displayTitle}: {snapshot: Snapshot; index: number; focus?:FocusAction[]; displayTitle?: string}) {
   const {experiment: e, run} = snapshot
+  const [exportError, setExportError] = useState('')
+  const svgRef = useRef<SVGSVGElement>(null)
+  const title = displayTitle?.trim() || e.title
   const p = e.values
   const get = (key: string, object = 0) => run.series[object + '.' + key]?.[index]
+  const exportPng = () => {
+    if (!svgRef.current) return
+    setExportError('')
+    void downloadExperimentPng(svgRef.current, {
+      snapshot,
+      kind: 'simulation',
+      displayTitle: title,
+      currentTime: run.times[index],
+    }).catch(() => setExportError('PNG 내보내기에 실패했습니다.'))
+  }
   if (!run.times.length || index < 0 || index >= run.times.length) return <p>이 시각의 측정 표본이 없습니다.</p>
   const text = (value: number, unit: string) => numberText(value) + ' ' + unit
   const outline = (obj:number,x:number,y:number,width:number,height:number) =>
@@ -94,8 +111,9 @@ export function FieldScene({snapshot, index, focus=[]}: {snapshot: Snapshot; ind
         <text x={x} y="142">{text(temp,'K')}</text></g>})}</>
   }
   return <section className="pane science-field" aria-label="계산된 물리장">
-    <header className="panel-heading"><h2><Waves size={17}/> 실험 장면</h2><span>{text(run.times[index],'s')}</span></header>
-    <svg role="img" aria-label={e.title+' 계산 모식도'} viewBox="0 0 650 205">{drawing}</svg>
+    <header className="panel-heading"><h2><Waves size={17}/> 실험 장면</h2><div className="png-export-tools"><span>{text(run.times[index],'s')}</span><button type="button" className="png-export-button" onClick={exportPng} aria-label="시뮬레이션 PNG 내보내기" title="시뮬레이션 PNG 내보내기"><Download size={14}/> PNG</button></div></header>
+    <svg ref={svgRef} role="img" aria-label={title+' 계산 모식도'} viewBox="0 0 650 205">{drawing}</svg>
+    {exportError && <p className="png-export-error" role="alert">{exportError}</p>}
     <p>{caption}</p>
   </section>
 }

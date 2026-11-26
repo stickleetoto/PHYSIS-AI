@@ -1,7 +1,9 @@
 """Local HTTP boundary for experiment design, validation and calculation."""
-from contextlib import asynccontextmanager
+from contextlib import asynccontextmanager, closing
 import os
 from pathlib import Path
+import sqlite3
+from typing import Literal
 from uuid import UUID, uuid4
 
 from dotenv import load_dotenv
@@ -15,6 +17,8 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from . import clarification, reasoning
 from .physics import SPECS, simulate
+from .portable import DisplayNames, clean_display_name
+from .portable_api import portable_router
 from .schema import Experiment, Level, Patch, Run, StrictModel
 from .state import Experiments, RevisionConflict, build
 from .workbenches import Workbenches
@@ -28,11 +32,17 @@ class NewExperiment(StrictModel):
     model: str = Field(max_length=64)
     level: Level = "school"
     patch: Patch = Field(default_factory=Patch)
+    display_name: str | None = Field(default=None, max_length=80)
 
 
 class Edit(StrictModel):
     revision: int = Field(ge=1, strict=True)
     patch: Patch
+    level: Level | None = None
+
+
+class HistoryMove(StrictModel):
+    revision: int = Field(ge=1, strict=True)
     level: Level | None = None
 
 
@@ -74,6 +84,7 @@ def create_app(db_path: Path | None = None) -> FastAPI:
     data = Path(os.getenv("PHYSIS_DATA_DIR") or (Path(os.getenv("LOCALAPPDATA") or Path.home()) / "PHYSIS-AI"))
     store = Experiments(db_path or data / "experiments.sqlite3")
     boards = Workbenches(store)
+    names = DisplayNames(store.path)
     from .knowledge import KnowledgeStore
     knowledge = KnowledgeStore(store.path.parent / "knowledge-v3.sqlite3")
 
@@ -85,7 +96,7 @@ def create_app(db_path: Path | None = None) -> FastAPI:
         app.state.knowledge = knowledge
         yield
 
-    app = FastAPI(title="PHYSIS AI", version="0.3.2", lifespan=lifespan)
+    app = FastAPI(title="PHYSIS AI", version="0.3.3", lifespan=lifespan)
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost", "[::1]", "testserver"])
 
     @app.exception_handler(RequestValidationError)
@@ -149,7 +160,16 @@ def create_app(db_path: Path | None = None) -> FastAPI:
 
     @app.post("/api/experiments", response_model=Snapshot)
     def create(body: NewExperiment):
-        return calculate_and_save(build(get_spec(body.model), uuid4(), body.patch), 0, body.level)
+        display_name = clean_display_name(body.display_name)
+        exp = build(get_spec(body.model), uuid4(), body.patch)
+        if display_name is None:
+            return calculate_and_save(exp, 0, body.level)
+        result = snapshot(exp, 1, body.level)
+        with closing(sqlite3.connect(store.path)) as db, db:
+            db.execute("BEGIN IMMEDIATE")
+            store.write(db, exp, body.level, 0)
+            DisplayNames.write_in_transaction(db, exp.id, display_name)
+        return result
 
     @app.get("/api/experiments/{experiment_id}", response_model=Snapshot)
     def get(experiment_id: UUID, level: Level | None = None):
@@ -161,6 +181,25 @@ def create_app(db_path: Path | None = None) -> FastAPI:
         exp, revision, previous_level = load(experiment_id, body.revision)
         updated = build(get_spec(exp.model), experiment_id, body.patch, exp)
         return calculate_and_save(updated, revision, body.level or previous_level)
+
+    @app.get("/api/experiments/{experiment_id}/history")
+    def input_history(experiment_id: UUID):
+        try:
+            return store.history(experiment_id)
+        except KeyError:
+            raise HTTPException(404, "저장된 실험을 찾을 수 없습니다.") from None
+
+    @app.post("/api/experiments/{experiment_id}/history/{direction}", response_model=Snapshot)
+    def restore_inputs(experiment_id: UUID, direction: Literal["undo", "redo"], body: HistoryMove):
+        exp, revision, old_level = load(experiment_id, body.revision)
+        target = store.history_target(experiment_id, direction)
+        if target is None:
+            raise HTTPException(409, "이 방향으로 복원할 조건이 없습니다.")
+        step, patch = target
+        level = body.level or old_level
+        result = snapshot(build(get_spec(exp.model), experiment_id, patch), revision + 1, level)
+        store.move_history(experiment_id, revision, direction, step, level)
+        return result
 
     @app.post("/api/chat")
     async def chat(body: Chat):
@@ -281,7 +320,8 @@ def create_app(db_path: Path | None = None) -> FastAPI:
     from .knowledge_api import router as knowledge_router
     from .math_router import router as math_router
     from .study_api import study_router
-    app.include_router(studio_router(store, boards, load, get_spec, snapshot, Snapshot, knowledge))
+    app.include_router(studio_router(store, boards, load, get_spec, snapshot, Snapshot, knowledge, names))
+    app.include_router(portable_router(store, boards, load, get_spec, names))
     app.include_router(knowledge_router)
     app.include_router(math_router)
     app.include_router(study_router(knowledge, load, snapshot, store.path.parent))

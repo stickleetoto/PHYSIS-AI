@@ -133,11 +133,11 @@ export const quantities: Record<string, string> = {
   angular_velocity: '각속도',
 }
 export type RequestBody = Record<string, unknown>
-export async function api<T>(path: string, method = 'GET', body?: RequestBody): Promise<T> {
+export async function api<T>(path: string, method = 'GET', body?: RequestBody | Blob): Promise<T> {
   const response = await fetch('/api' + path, {
     method,
     headers: body ? { 'Content-Type': 'application/json' } : undefined,
-    body: body ? JSON.stringify(body) : undefined,
+    body: body instanceof Blob ? body : body ? JSON.stringify(body) : undefined,
   })
   if (!response.ok) {
     let detail = ''

@@ -76,6 +76,7 @@ Thumbs.db
 # Release records are opt-in. Keep raw inference jobs and binary distributions local.
 /release/*
 !/release/browser-v032-packaged.json
+!/release/browser-v033-packaged.json
 !/release/software-v032/
 /release/software-v032/*
 !/release/software-v032/automated-qa.json

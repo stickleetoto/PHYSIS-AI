@@ -66,7 +66,8 @@ def browser():
                   Path(os.getenv("PROGRAMFILES", "C:/Program Files")) / "Google/Chrome/Application/chrome.exe"]
     installed = next((str(p) for p in candidates if p.is_file()), None)
     with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(executable_path=installed, headless=True)
+        browser = playwright.chromium.launch(executable_path=installed, headless=True,
+            args=["--disable-gpu", "--disable-webgl", "--disable-accelerated-2d-canvas"])
         yield browser
         browser.close()
 

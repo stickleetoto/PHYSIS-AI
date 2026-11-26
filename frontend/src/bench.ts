@@ -1,4 +1,4 @@
-import type { ChatResult, Snapshot } from './domain'
+import { defaultQuantity, type ChatResult, type Snapshot } from './domain'
 import type { Lesson } from './learning'
 
 interface TutorResult extends Omit<ChatResult, 'action'> {
@@ -8,7 +8,12 @@ interface TutorResult extends Omit<ChatResult, 'action'> {
 type TutorEvent = {event:'stage'; stage:string} | {event:'text'; text:string} |
   {event:'result'; result:TutorResult} | {event:'error'; detail:string}
 
-export interface Board { anchor: string; members: Snapshot[]; analysis: string[] }
+export interface Board {
+  anchor: string; members: Snapshot[]; analysis: string[]
+  display_names?: Record<string,string|null>
+  name_revisions?: Record<string,number>
+}
+export interface ComparisonSelection { quantity: string | null; object_index: number }
 export interface Selection { provider: string; model: string }
 export interface FocusAction {
   op: string
@@ -25,6 +30,15 @@ export function sharedQuantities(members: Snapshot[]) {
   const first = members[0].experiment.measurements
   return Object.keys(first).filter(q => members.every(s =>
     s.experiment.measurements[q] === first[q] && Boolean(s.run.series['0.' + q])))
+}
+
+export function displayedComparison(members: Snapshot[], active: Snapshot, selection: ComparisonSelection) {
+  const choices = sharedQuantities(members)
+  const preferred = defaultQuantity(active)
+  const quantity = selection.quantity && choices.includes(selection.quantity)
+    ? selection.quantity : choices.includes(preferred) ? preferred : choices[0] ?? null
+  const count = Math.min(...members.map(s=>s.experiment.objects.length))
+  return {choices, count, quantity, object_index: Math.min(selection.object_index, count - 1)}
 }
 
 export async function readTutorStream(body: object, signal: AbortSignal,

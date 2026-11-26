@@ -1,4 +1,4 @@
-import { useEffect, useId, useMemo, useState } from 'react'
+import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import type { FocusAction } from './bench'
 import {
   Axis3d,
@@ -10,8 +10,11 @@ import {
   MoveUpRight,
   ScanLine,
   TrendingUp,
+  Download,
 } from 'lucide-react'
 import { colors, numberText, range, sampleIndex, samples, type Snapshot } from './domain'
+import { downloadExperimentPng } from './pngExport'
+import './pngExport.css'
 
 type ViewFlags = {
   axes: boolean
@@ -64,7 +67,7 @@ function vector(
     </g>
   )
 }
-export function Scene({ snapshot, index, focus }: { snapshot: Snapshot; index: number; focus?:FocusAction[] }) {
+export function Scene({ snapshot, index, focus, displayTitle }: { snapshot: Snapshot; index: number; focus?:FocusAction[]; displayTitle?: string }) {
   const [flags, setFlags] = useState<ViewFlags>({
     axes: true,
     trail: true,
@@ -73,6 +76,8 @@ export function Scene({ snapshot, index, focus }: { snapshot: Snapshot; index: n
     acceleration: false,
   })
   const [zoom, setZoom] = useState(1)
+  const [exportError, setExportError] = useState('')
+  const svgRef = useRef<SVGSVGElement>(null)
   useEffect(()=>{
     if(!focus?.length)return
     setFlags(flags=>({...flags,
@@ -86,6 +91,7 @@ export function Scene({ snapshot, index, focus }: { snapshot: Snapshot; index: n
   }
   const id = useId().replaceAll(':', '')
   const { experiment: e, run } = snapshot
+  const title = displayTitle?.trim() || e.title
   const fall = e.model === 'free_fall'
   const fluid = ['continuity', 'hydrostatic', 'buoyancy'].includes(e.model)
   const scene = useMemo(() => {
@@ -176,6 +182,16 @@ export function Scene({ snapshot, index, focus }: { snapshot: Snapshot; index: n
     { key: 'force', title: '힘 벡터', icon: ScanLine },
     { key: 'axes', title: '좌표축', icon: Axis3d },
   ] as const
+  const exportPng = () => {
+    if (!svgRef.current) return
+    setExportError('')
+    void downloadExperimentPng(svgRef.current, {
+      snapshot,
+      kind: 'simulation',
+      displayTitle: title,
+      currentTime: run.times[index],
+    }).catch(() => setExportError('PNG 내보내기에 실패했습니다.'))
+  }
   return (
     <section className="scene-card" aria-label="시뮬레이션">
       <div className="scene-toolbar">
@@ -183,6 +199,9 @@ export function Scene({ snapshot, index, focus }: { snapshot: Snapshot; index: n
           <Crosshair size={16} /> 시뮬레이션
         </h2>
         <div className="view-toggles">
+          <button type="button" className="png-export-button" onClick={exportPng} aria-label="시뮬레이션 PNG 내보내기" title="시뮬레이션 PNG 내보내기">
+            <Download size={14} /> PNG
+          </button>
           {toggles.map(({ key, title, icon: Icon }) => (
             <button
               type="button"
@@ -201,13 +220,14 @@ export function Scene({ snapshot, index, focus }: { snapshot: Snapshot; index: n
       </div>
       <div className="scene-surface">
         {fluid ? (
-          <FluidScene snapshot={snapshot} index={index} axes={flags.axes} zoom={zoom} focus={focus}/>
+          <FluidScene snapshot={snapshot} index={index} axes={flags.axes} zoom={zoom} focus={focus} svgRef={(node) => { svgRef.current = node }} displayTitle={title}/>
         ) : (
           <svg
+            ref={svgRef}
             viewBox="0 0 700 278"
             className="world-svg"
             role="img"
-            aria-label={e.title + ' 위치와 궤적'}
+            aria-label={title + ' 위치와 궤적'}
           >
             <defs>
               <pattern id={id + 'grid'} width="26" height="26" patternUnits="userSpaceOnUse">
@@ -444,6 +464,7 @@ export function Scene({ snapshot, index, focus }: { snapshot: Snapshot; index: n
           </div>
         </div>
       </div>
+      {exportError && <p className="png-export-error" role="alert">{exportError}</p>}
     </section>
   )
 }
@@ -454,12 +475,16 @@ function FluidScene({
   axes,
   zoom,
   focus,
+  svgRef,
+  displayTitle,
 }: {
   snapshot: Snapshot
   index: number
   axes: boolean
   zoom: number
   focus?: FocusAction[]
+  svgRef: (node: SVGSVGElement | null) => void
+  displayTitle: string
 }) {
   const { experiment: e, run } = snapshot
   const sample = (key: string) => run.series['0.' + key]?.[index]
@@ -480,9 +505,10 @@ function FluidScene({
   const maxForce = Math.max(1e-12, ...forces.map((f) => Math.abs(f.v)))
   return (
     <svg
+      ref={svgRef}
       viewBox="0 0 700 278"
       role="img"
-      aria-label={e.title + ' 유체 모식도'}
+      aria-label={displayTitle + ' 유체 모식도'}
       className="world-svg fluid-svg"
     >
       <g transform={`translate(350 129) scale(${zoom}) translate(-350 -129)`}>

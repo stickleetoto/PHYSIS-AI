@@ -1,20 +1,17 @@
 import {useState} from 'react'
 import {CopyPlus, Download, GitCompareArrows, X} from 'lucide-react'
-import {colors, defaultQuantity, exportCsv, methods, numberText, quantities, range, sampleIndex, samples, statuses, type ModelSpec, type Snapshot} from './domain'
-import {sharedQuantities, type Board} from './bench'
+import {colors, exportCsv, methods, numberText, quantities, range, sampleIndex, samples, statuses, type ModelSpec, type Snapshot} from './domain'
+import {displayedComparison, type Board, type ComparisonSelection} from './bench'
 
-export function CompareBench({board, active, elapsed, catalog, busy, onSelect, onClone, onRemove}:{
+export function CompareBench({board, active, elapsed, catalog, busy, onSelect, onClone, onRemove, selection, onSelection}:{
   board:Board; active:Snapshot; elapsed:number; catalog:ModelSpec[]; busy:boolean
   onSelect:(s:Snapshot)=>void; onClone:(model?:string)=>void; onRemove:(id:string)=>void
+  selection: ComparisonSelection; onSelection:(next: ComparisonSelection)=>void
 }) {
-  const [requested,setRequested]=useState('')
   const [chosen,setChosen]=useState('')
-  const [objectIndex,setObjectIndex]=useState(0)
   const {members}=board
-  const choices=sharedQuantities(members), preferred=defaultQuantity(active)
-  const q=choices.includes(requested)?requested:choices.includes(preferred)?preferred:choices[0]
-  const count=Math.min(...members.map(s=>s.experiment.objects.length))
-  const object=Math.min(objectIndex, count-1)
+  const {choices,count,quantity,object_index:object}=displayedComparison(members,active,selection)
+  const q=quantity??''
   const key=object+'.'+q
   const unit=members[0].experiment.measurements[q]
   const last=Math.max(...members.map(s=>s.run.times.at(-1)??0), .001)
@@ -33,7 +30,7 @@ export function CompareBench({board, active, elapsed, catalog, busy, onSelect, o
         const id=s.experiment.id, t=s.run.times, index=sampleIndex(t,elapsed), value=s.run.series[key]?.[index]
         return <div className={'bench-member '+(id===active.experiment.id?'current':'')} key={id} style={{borderTopColor:colors[i]}}>
           <button className="bench-select" aria-pressed={id===active.experiment.id} onClick={()=>onSelect(s)} disabled={busy}>
-            <b>{i===0?'기준':'비교 '+i} · {s.experiment.title}</b>
+            <b>{i===0?'기준':'비교 '+i} · {board.display_names?.[id] || s.experiment.title}</b>
             <small>{methods[s.experiment.method]} · {statuses[s.run.status]}</small>
           </button>
           <div className="bench-value">{value!==undefined&&<strong>{numberText(value)} <small>{unit}</small></strong>}
@@ -43,9 +40,9 @@ export function CompareBench({board, active, elapsed, catalog, busy, onSelect, o
         </div>
       })}</div>
       {q?<><div className="bench-tools">
-        <label>공통 물리량 <select aria-label="공통 물리량" value={q} onChange={e=>setRequested(e.target.value)}>
+        <label>공통 물리량 <select aria-label="공통 물리량" value={q} onChange={e=>onSelection({...selection,quantity:e.target.value})}>
           {choices.map(k=><option key={k} value={k}>{quantities[k]??k} ({members[0].experiment.measurements[k]})</option>)}</select></label>
-        {count>1&&<select aria-label="비교할 물체" value={object} onChange={e=>setObjectIndex(+e.target.value)}>
+        {count>1&&<select aria-label="비교할 물체" value={object} onChange={e=>onSelection({...selection,object_index:Number(e.target.value)})}>
           {members[0].experiment.objects.slice(0,count).map((n,i)=><option key={n} value={i}>{n}</option>)}</select>}
       </div>
       <svg role="img" aria-label="공통 시간축 비교 그래프" viewBox="0 0 670 168" className="plot-svg">

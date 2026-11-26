@@ -1,4 +1,19 @@
 .masthead .topnav { flex:0 1 auto; }
+.experiment-controls, .experiment-controls form, .experiment-controls > div {
+  display:flex; align-items:center; flex-wrap:wrap; gap:6px;
+}
+.experiment-controls {
+  justify-content:space-between; gap:8px 16px; margin:0 0 14px; padding:10px 12px;
+  border:1px solid var(--line); border-radius:8px; background:var(--panel);
+}
+.experiment-controls label {display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+.experiment-controls input {width:clamp(110px,16vw,230px);background:#10161b;color:var(--text);
+  border:1px solid var(--line);border-radius:5px;padding:6px 8px;}
+.experiment-controls button {display:inline-flex;align-items:center;min-height:30px;gap:5px;
+  padding:4px 8px;background:var(--panel2);border:1px solid var(--line);border-radius:5px;font-size:12px;}
+.experiment-controls button:disabled {opacity:.5}
+.learning-tools-dialog {width:min(720px,calc(100vw - 24px))}
+.experiment-heading h1 {overflow-wrap:anywhere}
 .catalog-tools { display:flex;align-items:center;gap:4px;margin-left:auto; }
 .catalog-tools button,.bench-tools button,.bench-tools select,.member-tools button,.tutor-playbar button {
   display:inline-flex;align-items:center;justify-content:center;gap:6px;
