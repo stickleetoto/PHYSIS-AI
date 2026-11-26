@@ -1,0 +1,36 @@
+{
+  "artifact": "PHYSIS-AI-0.3.2-win-x64.zip",
+  "sha256": "219969d83e86c0ee231975f572382e53f5a8e763ff6b1b6e04d4d6e3b634d1cb",
+  "archive_bytes": 73532992,
+  "frozen_sha256": "620e9fd81ac02703d54aa77892fdd957e007aecb9b9f804c21ff6a09c7fc276f",
+  "verified_product_files": 171,
+  "started_utc": "2026-11-25T14:22:27.883284+00:00",
+  "finished_utc": "2026-11-25T14:22:48.240951+00:00",
+  "elapsed_seconds": 20.36,
+  "host": "Windows-11-10.0.26200-SP0",
+  "environment": "Korean and space in extracted path; server inherits PATH with Windows System32 and Windows only; host pytest and Edge/Playwright drive packaged Start-PHYSIS.cmd",
+  "selection": "conversation_modification_and_real_csv or missing_input_and_scope or d_wrong_model_claim_is_visible",
+  "pytest_exit_code": 0,
+  "passed": 3,
+  "total": 3,
+  "cases": [
+    {
+      "case": "test_conversation_modification_and_real_csv",
+      "seconds": "9.409",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_missing_input_and_scope_are_visible_without_running_a_new_scene",
+      "seconds": "4.354",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_d_wrong_model_claim_is_visible_and_engine_untouched",
+      "seconds": "5.584",
+      "result": "pass",
+      "detail": null
+    }
+  ]
+}

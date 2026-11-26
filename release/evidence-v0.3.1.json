@@ -1,0 +1,180 @@
+{
+  "scope": "Deterministic controls on the public audit API. No free-text semantic accuracy estimate.",
+  "summary": {
+    "citation": {
+      "matched": 5,
+      "total": 5
+    },
+    "number": {
+      "matched": 11,
+      "total": 11
+    },
+    "formula": {
+      "matched": 7,
+      "total": 7
+    }
+  },
+  "cases": [
+    {
+      "group": "citation",
+      "case": "original passage",
+      "expected": "source_verified",
+      "observed": "source_verified",
+      "matched": true
+    },
+    {
+      "group": "citation",
+      "case": "invented wording",
+      "expected": "failed",
+      "observed": "failed",
+      "matched": true
+    },
+    {
+      "group": "citation",
+      "case": "wrong document",
+      "expected": "failed",
+      "observed": "failed",
+      "matched": true
+    },
+    {
+      "group": "citation",
+      "case": "wrong page",
+      "expected": "failed",
+      "observed": "failed",
+      "matched": true
+    },
+    {
+      "group": "citation",
+      "case": "unretrieved identifier",
+      "expected": "insufficient",
+      "observed": "insufficient",
+      "matched": true
+    },
+    {
+      "group": "number",
+      "case": "12 N / 3 kg",
+      "expected": "calculation_verified",
+      "observed": "calculation_verified",
+      "matched": true
+    },
+    {
+      "group": "number",
+      "case": "ASCII power notation",
+      "expected": "calculation_verified",
+      "observed": "calculation_verified",
+      "matched": true
+    },
+    {
+      "group": "number",
+      "case": "inside tolerance",
+      "expected": "calculation_verified",
+      "observed": "calculation_verified",
+      "matched": true
+    },
+    {
+      "group": "number",
+      "case": "outside tolerance",
+      "expected": "failed",
+      "observed": "failed",
+      "matched": true
+    },
+    {
+      "group": "number",
+      "case": "wrong unit",
+      "expected": "failed",
+      "observed": "failed",
+      "matched": true
+    },
+    {
+      "group": "number",
+      "case": "malformed unit",
+      "expected": "failed",
+      "observed": "failed",
+      "matched": true
+    },
+    {
+      "group": "number",
+      "case": "stale run fingerprint",
+      "expected": "failed",
+      "observed": "failed",
+      "matched": true
+    },
+    {
+      "group": "number",
+      "case": "other revision",
+      "expected": "failed",
+      "observed": "failed",
+      "matched": true
+    },
+    {
+      "group": "number",
+      "case": "other experiment",
+      "expected": "failed",
+      "observed": "failed",
+      "matched": true
+    },
+    {
+      "group": "number",
+      "case": "unmeasured quantity",
+      "expected": "unverifiable",
+      "observed": "unverifiable",
+      "matched": true
+    },
+    {
+      "group": "formula",
+      "case": "registered Newton relation",
+      "expected": "applicable",
+      "observed": "applicable",
+      "matched": true
+    },
+    {
+      "group": "formula",
+      "case": "equivalent RHS",
+      "expected": "applicable",
+      "observed": "applicable",
+      "matched": true
+    },
+    {
+      "group": "formula",
+      "case": "wrong relation",
+      "expected": "failed",
+      "observed": "failed",
+      "matched": true
+    },
+    {
+      "group": "formula",
+      "case": "wrong SI units",
+      "expected": "failed",
+      "observed": "failed",
+      "matched": true
+    },
+    {
+      "group": "formula",
+      "case": "misspelled variable",
+      "expected": "failed",
+      "observed": "failed",
+      "matched": true
+    },
+    {
+      "group": "formula",
+      "case": "different model",
+      "expected": "outside_conditions",
+      "observed": "outside_conditions",
+      "matched": true
+    },
+    {
+      "group": "formula",
+      "case": "unknown formula",
+      "expected": "failed",
+      "observed": "failed",
+      "matched": true
+    },
+    {
+      "group": "number",
+      "case": "exact readout from failed trajectory",
+      "expected": "unverifiable",
+      "observed": "unverifiable",
+      "matched": true
+    }
+  ]
+}

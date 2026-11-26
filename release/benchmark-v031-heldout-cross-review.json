@@ -1,0 +1,159 @@
+{
+  "cohort": "frozen v0.3.1 classroom Mock, 24 held-out questions",
+  "procedure": "Two separate Codex agents graded the same saved answers. The second agent did not read the primary ratings. Primary published ratings were retained. Neither is a human physics expert.",
+  "total": 24,
+  "agreements": 23,
+  "primary_pass": 7,
+  "secondary_pass": 6,
+  "kappa": 0.8947,
+  "both_pass": 6,
+  "both_fail": 17,
+  "primary_only": 1,
+  "secondary_only": 0,
+  "rows": [
+    {
+      "id": "h-concept-01",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "반대 힘의 합력과 개별 힘이 남아 있는 이유를 답하지 않고 보류했습니다."
+    },
+    {
+      "id": "h-concept-02",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "켈빈 온도에 따른 압력 비례는 말했지만 분자 운동에너지·벽 충돌 설명이 없습니다."
+    },
+    {
+      "id": "h-misconception-01",
+      "primary_pass": true,
+      "secondary_pass": true,
+      "secondary_note": "속도 반대 방향이라는 설명과 인용된 접촉면 상대운동 원리가 오른쪽 운동에 대한 반대를 바로잡습니다."
+    },
+    {
+      "id": "h-misconception-02",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "최고점에서 속도만 0이고 중력가속도는 아래로 g라는 구분을 보류했습니다."
+    },
+    {
+      "id": "h-formula-01",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "요청된 a_c=v²/r 대신 a_c=ω²R를 제시했습니다."
+    },
+    {
+      "id": "h-formula-02",
+      "primary_pass": true,
+      "secondary_pass": false,
+      "secondary_note": "질량을 요청했지만 열용량 식만 제시하고 C=mc 연결을 하지 않았습니다."
+    },
+    {
+      "id": "h-applicability-01",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "가속도가 변할 때 해당 등가속도 위치식을 그대로 쓸 수 없는 이유를 보류했습니다."
+    },
+    {
+      "id": "h-applicability-02",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "이상 베르누이 조건의 수치만 제시했고 점성 손실 때문에 적용이 깨지는 점을 설명하지 않았습니다."
+    },
+    {
+      "id": "h-units-01",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "차원분석 일반론만 답하고 일의 단위 J와 kg·m²/s²를 제시하지 않았습니다."
+    },
+    {
+      "id": "h-units-02",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "Pa=N/m²=kg/(m·s²) 단위를 답하지 않고 보류했습니다."
+    },
+    {
+      "id": "h-numeric-01",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "문제에서 순힘과 질량을 줬는데 힘 종류 확인을 요구해 계산을 누락했습니다."
+    },
+    {
+      "id": "h-numeric-02",
+      "primary_pass": true,
+      "secondary_pass": true,
+      "secondary_note": "게이지압 29,792 Pa를 정확한 이름과 단위로 제시했습니다."
+    },
+    {
+      "id": "h-citation-01",
+      "primary_pass": true,
+      "secondary_pass": true,
+      "secondary_note": "가속도·순힘·질량 관계를 직접 뒷받침하는 원문과 위치를 인용했습니다."
+    },
+    {
+      "id": "h-citation-02",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "고정 부피·기체량 조건의 온도 비례 주장을 지지하는 인용을 보류했습니다."
+    },
+    {
+      "id": "h-followup-01",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "같은 용수철에서 질량 9배일 때 주기 3배라는 후속 답을 보류했습니다."
+    },
+    {
+      "id": "h-followup-02",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "이전의 고정 전파속력 조건을 이어 새 파장 2 m를 계산하지 않았습니다."
+    },
+    {
+      "id": "h-ambiguous-01",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "축 물리량·단위를 확인하는 구체적 질문 대신 차원분석 일반론을 답했습니다."
+    },
+    {
+      "id": "h-ambiguous-02",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "힘 단위·순힘 여부·질량을 묻지 않고 기본값으로 가속도를 계산했습니다."
+    },
+    {
+      "id": "h-insufficient-01",
+      "primary_pass": true,
+      "secondary_pass": true,
+      "secondary_note": "실제 측정값 또는 원자료가 필요하다고 밝혀 알 수 없는 온도를 꾸며내지 않았습니다."
+    },
+    {
+      "id": "h-insufficient-02",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "실제 표면의 계수 요청에 기본 마찰 실험의 수치 결과를 반환했습니다."
+    },
+    {
+      "id": "h-unsupported-01",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "양자 터널링 계산이 등록 범위 밖이라고 밝히지 않고 근거 부족으로만 보류했습니다."
+    },
+    {
+      "id": "h-unsupported-02",
+      "primary_pass": false,
+      "secondary_pass": false,
+      "secondary_note": "3차원 난류·열전달 연성 계산의 미지원 범위를 명시하지 않았습니다."
+    },
+    {
+      "id": "h-fabricated-01",
+      "primary_pass": true,
+      "secondary_pass": true,
+      "secondary_note": "가정된 제목·페이지에 허위 인용을 만들지 않고 검증 불가로 보류했습니다."
+    },
+    {
+      "id": "h-fabricated-02",
+      "primary_pass": true,
+      "secondary_pass": true,
+      "secondary_note": "가상 자료의 절·URL을 실제 출처처럼 꾸미지 않고 검증 불가로 보류했습니다."
+    }
+  ]
+}

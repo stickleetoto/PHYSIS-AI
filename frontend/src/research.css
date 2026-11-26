@@ -1,0 +1,30 @@
+.research-view, .roadmap-panel, .evidence-panel {color:#e2e8ec}
+.research-view {max-width:1340px;margin:auto}
+.research-view>nav,.ev-tabs,.ev-summary,.study-chips {display:flex;gap:6px;flex-wrap:wrap}
+.research-view>nav {border-bottom:1px solid #39444d;margin-bottom:18px;padding:4px 0 12px}
+.research-view>nav button,.evidence-panel button,.roadmap-panel button {font:inherit;color:inherit;background:#1d282d;border:1px solid #39474c;border-radius:6px;padding:7px 11px;cursor:pointer}
+.research-view>nav button,.evidence-panel header div,.roadmap-banner div,.evidence-panel h4,.roadmap-panel h3 {display:flex;gap:7px;align-items:center}
+.research-view>nav button[aria-pressed=true],.ev-tabs button[aria-pressed=true],.roadmap-panel button[aria-pressed=true] {color:#dbedaf;background:#2b372b;border-color:#698056}
+.evidence-panel {border-top:1px solid #424c50;padding:15px 0 0;margin:18px 0;font-size:13px;overflow-wrap:anywhere}
+.evidence-panel header,.evidence-panel footer,.roadmap-banner {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.evidence-panel h3,.evidence-panel h4,.roadmap-panel h3 {margin:8px 0}
+.evidence-panel article,.evidence-panel form,.roadmap-detail section {padding:12px 0;border-top:1px solid #374249;margin-top:12px}
+.evidence-panel article small,.evidence-panel small,.roadmap-panel small {color:#a2b1b8}
+.evidence-panel article p {margin:3px 0}.evidence-panel blockquote {margin:9px 0;padding:7px 12px;border-left:2px solid #8aab97;color:#d1dcde;line-height:1.5}
+.evidence-panel a,.roadmap-panel a {color:#bcdda5;text-decoration:underline;text-underline-offset:3px}
+.ev-summary span {font-size:12px;padding:3px 6px;border:1px solid #45544c;color:#c4d9b9;border-radius:4px}
+.ev-summary,.ev-tabs {margin:10px 0}.ev-alert {color:#ffd4b9;border-left:3px solid #e5a67c;padding-left:9px}
+.evidence-panel label {display:inline-grid;margin:4px;gap:4px;font-size:12px}
+.evidence-panel input,.evidence-panel select {max-width:150px;border:1px solid #47555b;border-radius:4px;background:#151c20;color:inherit;padding:6px}
+.ev-readings>div {display:flex;justify-content:space-between;padding:5px 0}.ev-readings dd{margin:0;color:#d8eeaf}
+.evidence-panel details {border-bottom:1px solid #344147;padding:7px 0;line-height:1.55}
+.evidence-panel summary {cursor:pointer;display:list-item}
+.ev-claim summary span {font-size:12px;color:#c9dfaa;margin-right:5px}
+.ev-history .ev-claim {margin-left:12px}
+.roadmap-columns {display:grid;grid-template-columns:minmax(180px,275px) minmax(0,1fr);gap:18px;margin-top:16px}
+.roadmap-columns nav,.roadmap-detail,.roadmap-banner {border:1px solid #354349;border-radius:9px;background:#1a2228;padding:17px}
+.roadmap-columns summary {padding:9px 2px;cursor:pointer}.roadmap-columns nav button {display:flex;justify-content:space-between;text-align:left;width:100%;margin:3px 0}
+.roadmap-banner p,.roadmap-detail p {color:#c2ced3}.roadmap-banner h2,.roadmap-detail h2 {margin:6px 0}
+.roadmap-detail section>a {display:block;padding:4px 0;overflow-wrap:anywhere}.roadmap-answers {display:grid;gap:6px}
+@media(max-width:720px){.roadmap-columns{grid-template-columns:1fr}.roadmap-columns nav{max-height:210px;overflow:auto}.evidence-panel header button,.ev-tabs button,.research-view>nav button{font-size:12px;padding:5px 7px}}
+

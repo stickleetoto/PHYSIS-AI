@@ -1,0 +1,623 @@
+{
+  "provider": "scripted loopback Ollama-compatible HTTP fault server; no language model",
+  "timing": "timeout scenario uses 180 ms, loading simulates 120 ms, other cases use 8 s inference budget",
+  "passed": 13,
+  "total": 13,
+  "rows": [
+    {
+      "scenario": "optional",
+      "passed": true,
+      "http_calls": [
+        "/api/chat"
+      ],
+      "event": "result",
+      "state_preserved": true,
+      "pipeline": {
+        "intents": [
+          "concept"
+        ],
+        "model": "free_fall",
+        "confidence": 0.9,
+        "readout_requested": true,
+        "generation": "model_with_verified_tools",
+        "warnings": [
+          "invalid_assumptions_dropped",
+          "invalid_uncertainty_dropped"
+        ],
+        "context_bytes": 2540,
+        "candidate_clauses": 3,
+        "accepted_clauses": 3
+      },
+      "answer_state": "ANSWERED",
+      "answer": "공기 저항이 없을 때 물체를 아래로 끌어당기는 힘은 질량에 비례합니다. 그 힘을 질량으로 나눈 가속도는 두 물체에서 같아요.\n\nIn the real world, air resistance can cause a lighter object to fall slower than a heavier object of the same size.\n\nA tennis ball will reach the ground after a hard baseball dropped at the same time.\n\n(It might be difficult to observe the difference if the height is not large.) Air resistance opposes the motion of an object through the air, while friction between objects—such as between clothes and a laundry chute or between a stone and a pool into which it is dropped—also opposes motion between them.\n\n이 실행에서 확인한 값: 두 물체의 바닥 도착 시간 2.019 s, 도착 순간 속력 19.81 m/s, 이론 도착 시간 2.019 s, 물체 A · 마지막 x 0 m",
+      "detail": null,
+      "checks": [],
+      "elapsed_ms": 568
+    },
+    {
+      "scenario": "settings",
+      "passed": true,
+      "http_calls": [
+        "/api/chat"
+      ],
+      "event": "result",
+      "state_preserved": true,
+      "pipeline": {
+        "intents": [
+          "concept"
+        ],
+        "model": "free_fall",
+        "confidence": 0.9,
+        "readout_requested": true,
+        "generation": "model_with_verified_tools",
+        "warnings": [
+          "state_action_metadata_dropped",
+          "invalid_level_dropped"
+        ],
+        "context_bytes": 2540,
+        "candidate_clauses": 3,
+        "accepted_clauses": 3
+      },
+      "answer_state": "ANSWERED",
+      "answer": "공기 저항이 없을 때 물체를 아래로 끌어당기는 힘은 질량에 비례합니다. 그 힘을 질량으로 나눈 가속도는 두 물체에서 같아요.\n\nIn the real world, air resistance can cause a lighter object to fall slower than a heavier object of the same size.\n\nA tennis ball will reach the ground after a hard baseball dropped at the same time.\n\n(It might be difficult to observe the difference if the height is not large.) Air resistance opposes the motion of an object through the air, while friction between objects—such as between clothes and a laundry chute or between a stone and a pool into which it is dropped—also opposes motion between them.\n\n이 실행에서 확인한 값: 두 물체의 바닥 도착 시간 2.019 s, 도착 순간 속력 19.81 m/s, 이론 도착 시간 2.019 s, 물체 A · 마지막 x 0 m",
+      "detail": null,
+      "checks": [],
+      "elapsed_ms": 444
+    },
+    {
+      "scenario": "wrong_target",
+      "passed": true,
+      "http_calls": [
+        "/api/chat"
+      ],
+      "event": "result",
+      "state_preserved": true,
+      "pipeline": {
+        "intents": [
+          "concept"
+        ],
+        "model": "free_fall",
+        "confidence": 0.9,
+        "readout_requested": true,
+        "generation": "model_with_verified_tools",
+        "warnings": [
+          "state_action_metadata_dropped"
+        ],
+        "context_bytes": 2540,
+        "candidate_clauses": 3,
+        "accepted_clauses": 3
+      },
+      "answer_state": "ANSWERED",
+      "answer": "공기 저항이 없을 때 물체를 아래로 끌어당기는 힘은 질량에 비례합니다. 그 힘을 질량으로 나눈 가속도는 두 물체에서 같아요.\n\nIn the real world, air resistance can cause a lighter object to fall slower than a heavier object of the same size.\n\nA tennis ball will reach the ground after a hard baseball dropped at the same time.\n\n(It might be difficult to observe the difference if the height is not large.) Air resistance opposes the motion of an object through the air, while friction between objects—such as between clothes and a laundry chute or between a stone and a pool into which it is dropped—also opposes motion between them.\n\n이 실행에서 확인한 값: 두 물체의 바닥 도착 시간 2.019 s, 도착 순간 속력 19.81 m/s, 이론 도착 시간 2.019 s, 물체 A · 마지막 x 0 m",
+      "detail": null,
+      "checks": [],
+      "elapsed_ms": 442
+    },
+    {
+      "scenario": "numbers",
+      "passed": true,
+      "http_calls": [
+        "/api/chat"
+      ],
+      "event": "result",
+      "state_preserved": true,
+      "pipeline": {
+        "intents": [
+          "concept"
+        ],
+        "model": "free_fall",
+        "confidence": 0.9,
+        "readout_requested": true,
+        "generation": "model_with_verified_tools",
+        "warnings": [
+          "unverified_numeric_claim_reported",
+          "numeric_prose_replaced_by_run"
+        ],
+        "context_bytes": 2540,
+        "candidate_clauses": 3,
+        "accepted_clauses": 3
+      },
+      "answer_state": "PARTIALLY_ANSWERED",
+      "answer": "공기 저항이 없을 때 물체를 아래로 끌어당기는 힘은 질량에 비례합니다. 그 힘을 질량으로 나눈 가속도는 두 물체에서 같아요.\n\nIn the real world, air resistance can cause a lighter object to fall slower than a heavier object of the same size.\n\nA tennis ball will reach the ground after a hard baseball dropped at the same time.\n\n(It might be difficult to observe the difference if the height is not large.) Air resistance opposes the motion of an object through the air, while friction between objects—such as between clothes and a laundry chute or between a stone and a pool into which it is dropped—also opposes motion between them.\n\n이 실행에서 확인한 값: 두 물체의 바닥 도착 시간 2.019 s, 도착 순간 속력 19.81 m/s, 이론 도착 시간 2.019 s, 물체 A · 마지막 x 0 m",
+      "detail": null,
+      "checks": [
+        {
+          "key": "arrival_time",
+          "value": 912345.0,
+          "unit": "s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "failed",
+          "label": "두 물체의 바닥 도착 시간",
+          "fingerprint_version": "0.3.1",
+          "expected": 2.0192751093846075,
+          "expected_unit": "s",
+          "display_value": "9.123e+05",
+          "expected_display": "2.019",
+          "reason": "실제 계산값과 표시 반올림 허용 오차 안에서 일치하지 않습니다."
+        }
+      ],
+      "elapsed_ms": 439
+    },
+    {
+      "scenario": "citation",
+      "passed": true,
+      "http_calls": [
+        "/api/chat"
+      ],
+      "event": "result",
+      "state_preserved": true,
+      "pipeline": {
+        "intents": [
+          "concept"
+        ],
+        "model": "free_fall",
+        "confidence": 0.9,
+        "readout_requested": true,
+        "generation": "verified_fallback",
+        "warnings": [
+          "invalid_source_ids_dropped",
+          "numeric_prose_replaced_by_run"
+        ],
+        "context_bytes": 2540
+      },
+      "answer_state": "PARTIALLY_ANSWERED",
+      "answer": "공기 저항이 없을 때 물체를 아래로 끌어당기는 힘은 질량에 비례합니다. 그 힘을 질량으로 나눈 가속도는 두 물체에서 같아요.\n\n이 실행에서 확인한 값: 두 물체의 바닥 도착 시간 2.019 s, 도착 순간 속력 19.81 m/s, 이론 도착 시간 2.019 s, 물체 A · 마지막 x 0 m",
+      "detail": null,
+      "checks": [
+        {
+          "key": "arrival_time",
+          "value": 2.019,
+          "unit": "s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "두 물체의 바닥 도착 시간",
+          "fingerprint_version": "0.3.1",
+          "expected": 2.0192751093846075,
+          "expected_unit": "s",
+          "display_value": "2.019",
+          "expected_display": "2.019",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        },
+        {
+          "key": "arrival_time",
+          "value": 2.019,
+          "unit": "s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "두 물체의 바닥 도착 시간",
+          "fingerprint_version": "0.3.1",
+          "expected": 2.0192751093846075,
+          "expected_unit": "s",
+          "display_value": "2.019",
+          "expected_display": "2.019",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        },
+        {
+          "key": "impact_speed",
+          "value": 19.81,
+          "unit": "m/s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "도착 순간 속력",
+          "fingerprint_version": "0.3.1",
+          "expected": 19.809088823063043,
+          "expected_unit": "m/s",
+          "display_value": "19.81",
+          "expected_display": "19.81",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        },
+        {
+          "key": "reference_arrival_time",
+          "value": 2.019,
+          "unit": "s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "이론 도착 시간",
+          "fingerprint_version": "0.3.1",
+          "expected": 2.019275109384609,
+          "expected_unit": "s",
+          "display_value": "2.019",
+          "expected_display": "2.019",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        },
+        {
+          "status": "failed",
+          "reason": "이번 질문에 제시되지 않은 인용 참조를 제거했습니다."
+        }
+      ],
+      "elapsed_ms": 442
+    },
+    {
+      "scenario": "partial",
+      "passed": true,
+      "http_calls": [
+        "/api/chat"
+      ],
+      "event": "result",
+      "state_preserved": true,
+      "pipeline": {
+        "intents": [
+          "concept"
+        ],
+        "model": "free_fall",
+        "confidence": 0.9,
+        "readout_requested": true,
+        "generation": "model_with_verified_tools",
+        "warnings": [
+          "numeric_prose_replaced_by_run"
+        ],
+        "context_bytes": 2540,
+        "candidate_clauses": 3,
+        "accepted_clauses": 3
+      },
+      "answer_state": "ANSWERED",
+      "answer": "공기 저항이 없을 때 물체를 아래로 끌어당기는 힘은 질량에 비례합니다. 그 힘을 질량으로 나눈 가속도는 두 물체에서 같아요.\n\nIn the real world, air resistance can cause a lighter object to fall slower than a heavier object of the same size.\n\nA tennis ball will reach the ground after a hard baseball dropped at the same time.\n\n(It might be difficult to observe the difference if the height is not large.) Air resistance opposes the motion of an object through the air, while friction between objects—such as between clothes and a laundry chute or between a stone and a pool into which it is dropped—also opposes motion between them.\n\n이 실행에서 확인한 값: 두 물체의 바닥 도착 시간 2.019 s, 도착 순간 속력 19.81 m/s, 이론 도착 시간 2.019 s, 물체 A · 마지막 x 0 m",
+      "detail": null,
+      "checks": [],
+      "elapsed_ms": 443
+    },
+    {
+      "scenario": "loading",
+      "passed": true,
+      "http_calls": [
+        "/api/generate",
+        "/api/chat"
+      ],
+      "event": "result",
+      "state_preserved": true,
+      "pipeline": {
+        "intents": [
+          "concept"
+        ],
+        "model": "free_fall",
+        "confidence": 0.9,
+        "readout_requested": true,
+        "generation": "model_with_verified_tools",
+        "warnings": [],
+        "context_bytes": 2540,
+        "candidate_clauses": 3,
+        "accepted_clauses": 3
+      },
+      "answer_state": "ANSWERED",
+      "answer": "공기 저항이 없을 때 물체를 아래로 끌어당기는 힘은 질량에 비례합니다. 그 힘을 질량으로 나눈 가속도는 두 물체에서 같아요.\n\nIn the real world, air resistance can cause a lighter object to fall slower than a heavier object of the same size.\n\nA tennis ball will reach the ground after a hard baseball dropped at the same time.\n\n(It might be difficult to observe the difference if the height is not large.) Air resistance opposes the motion of an object through the air, while friction between objects—such as between clothes and a laundry chute or between a stone and a pool into which it is dropped—also opposes motion between them.\n\n이 실행에서 확인한 값: 두 물체의 바닥 도착 시간 2.019 s, 도착 순간 속력 19.81 m/s, 이론 도착 시간 2.019 s, 물체 A · 마지막 x 0 m",
+      "detail": null,
+      "checks": [],
+      "elapsed_ms": 721
+    },
+    {
+      "scenario": "timeout",
+      "passed": true,
+      "http_calls": [
+        "/api/chat"
+      ],
+      "event": "result",
+      "state_preserved": true,
+      "pipeline": {
+        "intents": [
+          "concept"
+        ],
+        "model": "free_fall",
+        "confidence": 0.9,
+        "readout_requested": true,
+        "generation": "verified_fallback",
+        "warnings": [
+          "provider_or_contract_error"
+        ],
+        "context_bytes": 2540,
+        "detail": "AI 공급자의 응답 시간이 초과되었습니다."
+      },
+      "answer_state": "PARTIALLY_ANSWERED",
+      "answer": "공기 저항이 없을 때 물체를 아래로 끌어당기는 힘은 질량에 비례합니다. 그 힘을 질량으로 나눈 가속도는 두 물체에서 같아요.\n\n이 실행에서 확인한 값: 두 물체의 바닥 도착 시간 2.019 s, 도착 순간 속력 19.81 m/s, 이론 도착 시간 2.019 s, 물체 A · 마지막 x 0 m",
+      "detail": null,
+      "checks": [
+        {
+          "key": "arrival_time",
+          "value": 2.019,
+          "unit": "s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "두 물체의 바닥 도착 시간",
+          "fingerprint_version": "0.3.1",
+          "expected": 2.0192751093846075,
+          "expected_unit": "s",
+          "display_value": "2.019",
+          "expected_display": "2.019",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        },
+        {
+          "key": "arrival_time",
+          "value": 2.019,
+          "unit": "s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "두 물체의 바닥 도착 시간",
+          "fingerprint_version": "0.3.1",
+          "expected": 2.0192751093846075,
+          "expected_unit": "s",
+          "display_value": "2.019",
+          "expected_display": "2.019",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        },
+        {
+          "key": "impact_speed",
+          "value": 19.81,
+          "unit": "m/s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "도착 순간 속력",
+          "fingerprint_version": "0.3.1",
+          "expected": 19.809088823063043,
+          "expected_unit": "m/s",
+          "display_value": "19.81",
+          "expected_display": "19.81",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        },
+        {
+          "key": "reference_arrival_time",
+          "value": 2.019,
+          "unit": "s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "이론 도착 시간",
+          "fingerprint_version": "0.3.1",
+          "expected": 2.019275109384609,
+          "expected_unit": "s",
+          "display_value": "2.019",
+          "expected_display": "2.019",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        }
+      ],
+      "elapsed_ms": 441
+    },
+    {
+      "scenario": "stream_cut",
+      "passed": true,
+      "http_calls": [
+        "/api/chat"
+      ],
+      "event": "result",
+      "state_preserved": true,
+      "pipeline": {
+        "intents": [
+          "concept"
+        ],
+        "model": "free_fall",
+        "confidence": 0.9,
+        "readout_requested": true,
+        "generation": "verified_fallback",
+        "warnings": [
+          "provider_or_contract_error"
+        ],
+        "context_bytes": 2540,
+        "detail": "AI 응답이 실험 명세를 충족하지 않습니다. 요청을 다시 시도하세요."
+      },
+      "answer_state": "PARTIALLY_ANSWERED",
+      "answer": "공기 저항이 없을 때 물체를 아래로 끌어당기는 힘은 질량에 비례합니다. 그 힘을 질량으로 나눈 가속도는 두 물체에서 같아요.\n\n이 실행에서 확인한 값: 두 물체의 바닥 도착 시간 2.019 s, 도착 순간 속력 19.81 m/s, 이론 도착 시간 2.019 s, 물체 A · 마지막 x 0 m",
+      "detail": null,
+      "checks": [
+        {
+          "key": "arrival_time",
+          "value": 2.019,
+          "unit": "s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "두 물체의 바닥 도착 시간",
+          "fingerprint_version": "0.3.1",
+          "expected": 2.0192751093846075,
+          "expected_unit": "s",
+          "display_value": "2.019",
+          "expected_display": "2.019",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        },
+        {
+          "key": "arrival_time",
+          "value": 2.019,
+          "unit": "s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "두 물체의 바닥 도착 시간",
+          "fingerprint_version": "0.3.1",
+          "expected": 2.0192751093846075,
+          "expected_unit": "s",
+          "display_value": "2.019",
+          "expected_display": "2.019",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        },
+        {
+          "key": "impact_speed",
+          "value": 19.81,
+          "unit": "m/s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "도착 순간 속력",
+          "fingerprint_version": "0.3.1",
+          "expected": 19.809088823063043,
+          "expected_unit": "m/s",
+          "display_value": "19.81",
+          "expected_display": "19.81",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        },
+        {
+          "key": "reference_arrival_time",
+          "value": 2.019,
+          "unit": "s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "이론 도착 시간",
+          "fingerprint_version": "0.3.1",
+          "expected": 2.019275109384609,
+          "expected_unit": "s",
+          "display_value": "2.019",
+          "expected_display": "2.019",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        }
+      ],
+      "elapsed_ms": 446
+    },
+    {
+      "scenario": "invalid_format",
+      "passed": true,
+      "http_calls": [
+        "/api/chat"
+      ],
+      "event": "result",
+      "state_preserved": true,
+      "pipeline": {
+        "intents": [
+          "concept"
+        ],
+        "model": "free_fall",
+        "confidence": 0.9,
+        "readout_requested": true,
+        "generation": "verified_fallback",
+        "warnings": [
+          "provider_or_contract_error",
+          "invalid_explanation_dropped"
+        ],
+        "context_bytes": 2540,
+        "detail": "AI 공급자가 사용할 수 있는 설명을 반환하지 않았습니다."
+      },
+      "answer_state": "PARTIALLY_ANSWERED",
+      "answer": "공기 저항이 없을 때 물체를 아래로 끌어당기는 힘은 질량에 비례합니다. 그 힘을 질량으로 나눈 가속도는 두 물체에서 같아요.\n\n이 실행에서 확인한 값: 두 물체의 바닥 도착 시간 2.019 s, 도착 순간 속력 19.81 m/s, 이론 도착 시간 2.019 s, 물체 A · 마지막 x 0 m",
+      "detail": null,
+      "checks": [
+        {
+          "key": "arrival_time",
+          "value": 2.019,
+          "unit": "s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "두 물체의 바닥 도착 시간",
+          "fingerprint_version": "0.3.1",
+          "expected": 2.0192751093846075,
+          "expected_unit": "s",
+          "display_value": "2.019",
+          "expected_display": "2.019",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        },
+        {
+          "key": "arrival_time",
+          "value": 2.019,
+          "unit": "s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "두 물체의 바닥 도착 시간",
+          "fingerprint_version": "0.3.1",
+          "expected": 2.0192751093846075,
+          "expected_unit": "s",
+          "display_value": "2.019",
+          "expected_display": "2.019",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        },
+        {
+          "key": "impact_speed",
+          "value": 19.81,
+          "unit": "m/s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "도착 순간 속력",
+          "fingerprint_version": "0.3.1",
+          "expected": 19.809088823063043,
+          "expected_unit": "m/s",
+          "display_value": "19.81",
+          "expected_display": "19.81",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        },
+        {
+          "key": "reference_arrival_time",
+          "value": 2.019,
+          "unit": "s",
+          "experiment_id": "9e8903d3-2811-46a7-8245-44cf7ba1e529",
+          "revision": 1,
+          "run_id": "0aec26ab10c7e00e5a3f6e05",
+          "status": "calculation_verified",
+          "label": "이론 도착 시간",
+          "fingerprint_version": "0.3.1",
+          "expected": 2.019275109384609,
+          "expected_unit": "s",
+          "display_value": "2.019",
+          "expected_display": "2.019",
+          "reason": "이 버전의 엔진 결과와 단위·수치가 일치합니다."
+        }
+      ],
+      "elapsed_ms": 446
+    },
+    {
+      "scenario": "ambiguous",
+      "passed": true,
+      "http_calls": [],
+      "event": "result",
+      "state_preserved": true,
+      "pipeline": {
+        "generation": "deterministic",
+        "warnings": []
+      },
+      "answer_state": "CLARIFICATION_REQUIRED",
+      "answer": "낙하 시간을 계산하려면 낙하 높이(m)를 알려 주세요. 높이는 바닥 기준으로, 물체는 정지 상태에서 놓이고 지구 중력 가속도는 기본값을 쓰는 것으로 가정하겠습니다.",
+      "detail": null,
+      "checks": [],
+      "elapsed_ms": 132
+    },
+    {
+      "scenario": "unsupported",
+      "passed": true,
+      "http_calls": [],
+      "event": "result",
+      "state_preserved": true,
+      "pipeline": {
+        "generation": "deterministic",
+        "warnings": []
+      },
+      "answer_state": "UNSUPPORTED_SIMULATION",
+      "answer": "같은 장소에서 공기 저항과 마찰을 무시하면, 질량이 달라도 낙하 가속도는 같습니다. 질량은 이 조건에서 가속도를 바꾸지 않습니다.\n\n요청 범위: 요청한 항력과 바람을 포함한 운동 계산은 현재 등록 모델에서 지원하지 않습니다. 필요한 의존 기능은 항력 법칙·항력 계수와 물체 기준의 바람장을 처리하는 모델입니다. 관련해 사용할 수 있는 등록 기능: 두 물체의 자유낙하. 관련 개념 자료는 확인할 수 있지만, 이를 요청한 계산의 대체 결과로 사용하지 않습니다.\n\n등록 모델 '두 물체의 자유낙하'은 공기 저항을 무시하는 조건으로 계산하므로 항력을 포함한 낙하 계산은 지원하지 않습니다.\n\n관련 기능·자료: Drag Forces, Falling Objects, 두 물체의 자유낙하.",
+      "detail": null,
+      "checks": [],
+      "elapsed_ms": 137
+    },
+    {
+      "scenario": "missing_experiment",
+      "passed": true,
+      "http_calls": [],
+      "event": "error",
+      "state_preserved": true,
+      "pipeline": {},
+      "answer_state": null,
+      "answer": "",
+      "detail": "저장된 실험을 찾을 수 없습니다.",
+      "checks": null,
+      "elapsed_ms": 129
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "origin": "archived_provider_capture",
+  "source_file": "E:\\E-project\\.private-evaluation-v032\\raw_baseline_ab.jsonl",
+  "source_sha256": "43b58d2c75df530812882ab40c283e3435ab32c64c0d01ea793361c5d943b607",
+  "record_id": "h-units-01",
+  "record_key": "response.message.content",
+  "provider_wire": "Ollama response envelope; only normalized assistant content copied",
+  "fixture_file": "ollama_saved_h_units_answer.txt",
+  "fixture_sha256": "f7d1b0c94cf936fab87c726985179498f5f5007364949f7b054f12ad86fea267",
+  "fixture_characters": 188,
+  "note": "Verbatim saved output text, not a regenerated fixture. The replay adapter labels its use as replay and does not claim live inference."
+}

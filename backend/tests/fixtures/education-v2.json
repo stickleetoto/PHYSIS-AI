@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "sources": {
+    "fall": "https://openstax.org/books/university-physics-volume-1/pages/3-5-free-fall",
+    "force": "https://openstax.org/books/university-physics-volume-1/pages/5-3-newtons-second-law",
+    "pendulum": "https://openstax.org/books/university-physics-volume-1/pages/15-4-pendulums",
+    "pressure": "https://openstax.org/books/university-physics-volume-1/pages/14-2-measuring-pressure",
+    "fluid": "https://openstax.org/books/university-physics-volume-1/pages/14-5-fluid-dynamics",
+    "collision": "https://openstax.org/books/university-physics-volume-1/pages/9-3-conservation-of-linear-momentum",
+    "wave": "https://openstax.org/books/university-physics-volume-1/pages/16-2-mathematics-of-waves",
+    "gas": "https://openstax.org/books/university-physics-volume-2/pages/2-1-molecular-model-of-an-ideal-gas",
+    "limits": "PHYSICS_VALIDATION.md"
+  },
+  "scenarios": [
+    {"id":"falling-balls","initial":"uniform","source":"fall","basis":"m a = m g; h = g t²/2. 진공에서 질량은 시간에 들어가지 않는다.","turns":[
+      {"type":"misconception","ask":"자유낙하에서 무거운 공이 먼저 떨어질까?","action":"create","model":"free_fall","phrases":["가속도는 두 물체에서 같","공기 저항"]},
+      {"type":"change","ask":"높이를 5 m로, 중력을 10 m/s²로 변경해 줘","action":"modify","model":"free_fall","values":{"height":5,"g":10},"numbers":[["arrival_time","두 물체의 바닥 도착 시간",1,"s"],["impact_speed","도착 순간 속력",10,"m/s"]]},
+      {"type":"followup","ask":"B의 질량을 8 kg으로 바꿔 줘","action":"modify","model":"free_fall","values":{"mass_b":8},"retain":{"height":5,"g":10},"numbers":[["arrival_time","두 물체의 바닥 도착 시간",1,"s"]]},
+      {"type":"interpretation","ask":"그 결과를 설명해 줘","action":"explain","model":"free_fall","retain":{"mass_b":8,"height":5},"numbers":[["impact_speed","도착 순간 속력",10,"m/s"]]},
+      {"type":"out_of_scope","ask":"공기 저항까지 넣어 자유낙하를 계산해 줘","action":"unsupported"},
+      {"type":"followup","ask":"실험 시간을 0.2초로 바꿔 줘","action":"modify","model":"free_fall","settings":{"duration":0.2},"retain":{"mass_b":8,"g":10},"phrases":["도착 시각은 측정되지 않았습니다"],"absent":["arrival_time"],"status":"LIMITED"}
+    ]},
+    {"id":"force-cart","initial":"uniform","source":"force","basis":"a = F/m. 6 N / 2 kg = 3 m/s²; 같은 힘에 4 kg이면 1.5 m/s².","turns":[
+      {"type":"experiment","ask":"뉴턴의 운동 실험을 질량 2 kg, 힘 6 N으로 설정해 줘","action":"create","model":"newton","values":{"mass":2,"force":6},"numbers":[["acceleration","가속도",3,"m/s²"]]},
+      {"type":"change","ask":"그럼 질량을 두 배로 바꿔 줘","action":"modify","model":"newton","values":{"mass":4},"retain":{"force":6},"numbers":[["acceleration","가속도",1.5,"m/s²"]]},
+      {"type":"concept","ask":"왜 가속도가 달라져?","action":"explain","model":"newton","phrases":["질량이 클수록 가속도가 작아"]},
+      {"type":"ambiguous","ask":"질량을 2 kg과 4 kg으로 동시에 설정해 줘","action":"unsupported"},
+      {"type":"out_of_scope","ask":"경사면 위의 수레로 바꿔 줘","action":"unsupported"}
+    ]},
+    {"id":"pressure-gauge","initial":"uniform","source":"pressure","basis":"p_g = ρgh, p_abs = p₀ + p_g. ρ = 1000 kg/m³.","turns":[
+      {"type":"experiment","ask":"정수압 실험에서 깊이 3 m, 중력 10 m/s², 수면 압력 100 kPa로 설정해 줘","action":"create","model":"hydrostatic","values":{"depth":3,"g":10,"p0":100000},"numbers":[["pressure","절대압",130000,"Pa"],["gauge_pressure","게이지압",30000,"Pa"]]},
+      {"type":"followup","ask":"깊이를 절반으로 바꿔 줘","action":"modify","model":"hydrostatic","values":{"depth":1.5},"retain":{"p0":100000,"g":10},"numbers":[["pressure","절대압",115000,"Pa"]]},
+      {"type":"interpretation","ask":"측정 결과를 해석해 줘","action":"explain","model":"hydrostatic","numbers":[["gauge_pressure","게이지압",15000,"Pa"]]},
+      {"type":"ambiguous","ask":"깊이를 3 kg으로 설정해 줘","action":"unsupported"}
+    ]},
+    {"id":"pipe","initial":"uniform","source":"fluid","basis":"Q = A₁ v₁ = A₂ v₂; 0.06 m² × 1 m/s = 0.06 m³/s.","turns":[
+      {"type":"experiment","ask":"유량 실험에서 입구 단면적 0.06 m², 출구 단면적 0.02 m²로 만들어 줘","action":"create","model":"continuity","values":{"area_in":0.06,"area_out":0.02},"numbers":[["outlet_speed","출구 유속",3,"m/s"]]},
+      {"type":"misconception","ask":"관이 좁아지면 유량도 줄어들까?","action":"explain","model":"continuity","phrases":["매초 통과하는 부피가 같"],"numbers":[["flow","체적 유량",0.06,"m³/s"]]},
+      {"type":"change","ask":"출구 단면적을 400 cm²로 바꿔 줘","action":"modify","model":"continuity","values":{"area_out":0.04},"retain":{"area_in":0.06},"numbers":[["outlet_speed","출구 유속",1.5,"m/s"]]}
+    ]},
+    {"id":"pendulum","initial":"uniform","source":"pendulum","basis":"단진자 접선 가속도는 −g sin θ, 작은 각도에서 T≈2π√(L/g).","turns":[
+      {"type":"concept","ask":"진자 운동의 원리를 설명해 줘","action":"create","model":"pendulum","phrases":["접선 방향","최저점"]},
+      {"type":"change","ask":"길이를 150 cm로 바꿔 줘","action":"modify","model":"pendulum","values":{"length":1.5}},
+      {"type":"followup","ask":"공식을 단계별로 설명해 줘","mode":"equation","action":"explain","model":"pendulum","retain":{"length":1.5},"phrases":["유도 과정","적용 조건","1.5 m"]},
+      {"type":"followup","ask":"복습 문제를 내줘","mode":"review","action":"explain","model":"pendulum","retain":{"length":1.5},"quiz_answer":"2배"},
+      {"type":"out_of_scope","ask":"진자에 구동 주파수를 더해 공명 조건을 찾아 줘","action":"unsupported"}
+    ]},
+    {"id":"inquiries","initial":"free_fall","source":"limits","basis":"발견 단계에서 관측 수치 또는 정답을 공개하지 않는다. 해석 범위·질문 맥락을 유지한다.","turns":[
+      {"type":"followup","ask":"가설을 세워볼래","mode":"discovery","action":"explain","model":"free_fall","phrases":["예상"],"exclude":["도착 시간","가속도는 두 물체에서 같"]},
+      {"type":"ambiguous","ask":"조금 바꿔 줘","action":"unsupported"},
+      {"type":"out_of_scope","ask":"양자역학 터널링을 계산해 줘","action":"unsupported"}
+    ]},
+    {"id":"wave-speed","initial":"uniform","source":"wave","basis":"c = fλ, T = 1/f. 파장 1.5 m, 진동수 2 Hz에서 파형 속력 3 m/s와 주기 0.5 s.","turns":[
+      {"type":"experiment","ask":"사인 횡파 실험을 주파수 2 Hz, 파장 1.5 m로 만들어 줘","action":"create","model":"wave_transverse","values":{"frequency":2,"wavelength":1.5},"numbers":[["wave_speed","전파 속력",3,"m/s"],["wave_period","파동 주기",0.5,"s"]]},
+      {"type":"followup","ask":"주파수를 절반으로 바꿔 줘","action":"modify","model":"wave_transverse","values":{"frequency":1},"retain":{"wavelength":1.5},"numbers":[["wave_speed","전파 속력",1.5,"m/s"]]}
+    ]},
+    {"id":"gas-states","initial":"uniform","source":"gas","basis":"p = nRT/V, R = 8.31446261815324 J/(mol K). 같은 n과 T에서 부피가 두 배면 압력이 절반이다.","turns":[
+      {"type":"experiment","ask":"이상기체 실험을 몰수 1 mol, 온도 300 K, 부피 0.03 m³로 만들어 줘","action":"create","model":"ideal_gas","values":{"moles":1,"temperature":300,"volume":0.03},"numbers":[["pressure","절대압",83144.6261815324,"Pa"]]},
+      {"type":"followup","ask":"부피를 두 배로 바꿔 줘","action":"modify","model":"ideal_gas","values":{"volume":0.06},"retain":{"temperature":300,"moles":1},"numbers":[["pressure","절대압",41572.3130907662,"Pa"]]}
+    ]},
+    {"id":"collision","initial":"uniform","source":"collision","basis":"고립계의 총운동량 보존은 반발계수가 1일 때와 0일 때 모두 적용된다.","turns":[
+      {"type":"concept","ask":"완전 비탄성 충돌에서 운동량이 보존돼?","action":"create","model":"collision","values":{"restitution":0},"phrases":["운동량의 합이 보존"]},
+      {"type":"ambiguous","ask":"탄성 충돌인데 두 물체가 붙어서 움직이게 해 줘","action":"unsupported"},
+      {"type":"out_of_scope","ask":"비스듬한 충돌로 바꿔 줘","action":"unsupported"}
+    ]}
+  ]
+}

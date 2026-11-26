@@ -1,0 +1,202 @@
+[
+  {
+    "group": "ko",
+    "query": "뉴턴의 운동 제2법칙에서 알짜힘과 가속도",
+    "relevant_docs": [
+      "college-m42073",
+      "university1-m58297"
+    ]
+  },
+  {
+    "group": "ko",
+    "query": "관성을 가진 물체가 계속 움직이는 이유",
+    "relevant_docs": [
+      "college-m42130"
+    ]
+  },
+  {
+    "group": "ko",
+    "query": "공기 저항이 작은 곳에서 물체를 떨어뜨리면",
+    "relevant_docs": [
+      "college-m42102",
+      "college-m42080"
+    ]
+  },
+  {
+    "group": "ko",
+    "query": "질량이 같은 물체의 탄성 충돌",
+    "relevant_docs": [
+      "college-m42163"
+    ]
+  },
+  {
+    "group": "ko",
+    "query": "정지한 물에서 수심이 깊어질 때의 압력",
+    "relevant_docs": [
+      "college-m42192"
+    ]
+  },
+  {
+    "group": "ko",
+    "query": "물에 잠긴 물체가 위쪽으로 밀리는 까닭",
+    "relevant_docs": [
+      "college-m42196",
+      "university1-m58356"
+    ]
+  },
+  {
+    "group": "ko",
+    "query": "작은 각도에서 진자의 주기와 질량",
+    "relevant_docs": [
+      "college-m42243",
+      "university1-m58364"
+    ]
+  },
+  {
+    "group": "ko",
+    "query": "뜨거운 물과 차가운 물을 섞은 뒤의 열평형",
+    "relevant_docs": [
+      "university2-m58384",
+      "university2-m58387"
+    ]
+  },
+  {
+    "group": "ko",
+    "query": "자리를 거의 옮기지 않는 마디가 생기는 정상파",
+    "relevant_docs": [
+      "university1-m58373"
+    ]
+  },
+  {
+    "group": "ko",
+    "query": "스칼라와 벡터를 구분하는 기준",
+    "relevant_docs": [
+      "university1-m58277"
+    ]
+  },
+  {
+    "group": "en",
+    "query": "net force acceleration inversely proportional to mass",
+    "relevant_docs": [
+      "college-m42073",
+      "university1-m58297"
+    ]
+  },
+  {
+    "group": "en",
+    "query": "average velocity versus distance traveled",
+    "relevant_docs": [
+      "college-m42096",
+      "university1-m58283",
+      "college-m42033"
+    ]
+  },
+  {
+    "group": "en",
+    "query": "why sliding friction opposes relative motion",
+    "relevant_docs": [
+      "college-m42139"
+    ]
+  },
+  {
+    "group": "en",
+    "query": "why is a circular path accelerated at constant speed",
+    "relevant_docs": [
+      "college-m42084"
+    ]
+  },
+  {
+    "group": "en",
+    "query": "compressibility assumption in the equation of continuity",
+    "relevant_docs": [
+      "college-m42205",
+      "university1-m58357"
+    ]
+  },
+  {
+    "group": "en",
+    "query": "calorimetry at thermal equilibrium",
+    "relevant_docs": [
+      "university2-m58387",
+      "university2-m58384"
+    ]
+  },
+  {
+    "group": "en",
+    "query": "constructive and destructive wave interference",
+    "relevant_docs": [
+      "college-m42249",
+      "university1-m58372"
+    ]
+  },
+  {
+    "group": "en",
+    "query": "thermal energy carried by bulk fluid motion",
+    "relevant_docs": [
+      "university2-m58389",
+      "college-m42229"
+    ]
+  },
+  {
+    "group": "en",
+    "query": "dimensional consistency of an integral",
+    "relevant_docs": [
+      "university1-m58272"
+    ]
+  },
+  {
+    "group": "en",
+    "query": "approaching equilibrium without overshooting",
+    "relevant_docs": [
+      "university1-m58365",
+      "college-m42246"
+    ]
+  },
+  {
+    "group": "symbol",
+    "query": "F=ma",
+    "relevant_docs": [
+      "college-m42073",
+      "university1-m58297"
+    ]
+  },
+  {
+    "group": "symbol",
+    "query": "PV = nRT",
+    "relevant_docs": [
+      "college-m42216",
+      "university2-m58391"
+    ]
+  },
+  {
+    "group": "symbol",
+    "query": "T = 2π√(L/g)",
+    "relevant_docs": [
+      "college-m42243",
+      "university1-m58364"
+    ]
+  },
+  {
+    "group": "symbol",
+    "query": "A₁v₁ = A₂v₂",
+    "relevant_docs": [
+      "college-m42205",
+      "university1-m58357"
+    ]
+  },
+  {
+    "group": "symbol",
+    "query": "dx/dt",
+    "relevant_docs": [
+      "university1-m58283"
+    ]
+  },
+  {
+    "group": "symbol",
+    "query": "v=fλ",
+    "relevant_docs": [
+      "college-m42248",
+      "university1-m58368"
+    ]
+  }
+]

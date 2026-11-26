@@ -1,0 +1,186 @@
+{
+  "artifact": "PHYSIS-AI-0.3.1-win-x64.zip",
+  "sha256": "ba9f4da6c761ea5be2b95bec86a6dd4cf5ca2bb370adfe257242cf758ebbc77f",
+  "archive_bytes": 63925432,
+  "frozen_sha256": "86a18410440acb8f5f83d6afeb78bfc9504241d67d745c7a681b99a17b35edb2",
+  "verified_product_files": 157,
+  "started_utc": "2026-11-25T12:43:15.101164+00:00",
+  "finished_utc": "2026-11-25T12:45:25.482630+00:00",
+  "elapsed_seconds": 130.38,
+  "host": "Windows-11-10.0.26200-SP0",
+  "environment": "Korean and space in extracted path; server inherits PATH with Windows System32 and Windows only; host pytest and Edge/Playwright drive packaged Start-PHYSIS.cmd",
+  "selection": null,
+  "pytest_exit_code": 1,
+  "passed": 27,
+  "total": 28,
+  "cases": [
+    {
+      "case": "test_conversation_modification_and_real_csv",
+      "seconds": "13.795",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_manual_edit_recompute_reload_and_unsupported",
+      "seconds": "0.847",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_discovery_and_failed_solver_are_visible",
+      "seconds": "1.254",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_phone_question_and_layout",
+      "seconds": "0.798",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_every_catalog_model_opens_with_measured_graph",
+      "seconds": "8.467",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_pressure_gauge_moves_with_depth",
+      "seconds": "1.480",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_d_wrong_model_claim_is_visible_and_engine_untouched",
+      "seconds": "8.303",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_reviewed_formulas_render_search_and_open_experiment",
+      "seconds": "8.828",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_symbolic_domain_and_discontinuous_graph_in_browser",
+      "seconds": "16.625",
+      "result": "failure",
+      "detail": "AssertionError: Locator expected to be visible\nActual value: None\nError: element(s) not found \nCall log:\n  - Expect \"to_be_visible\" with timeout 15000ms\n  - waiting for get_by_role(\"region\", name=\"공식 라이브러리\", exact=True).get_by_role(\"region\", name=\"기호 수학 도구\").get_by_role(\"heading\", name=\"정의역 불일치\")"
+    },
+    {
+      "case": "test_a_newton_answer_original_passage_and_reproducible_run",
+      "seconds": "8.008",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_b_pendulum_small_angle_conditions_and_source",
+      "seconds": "1.951",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_c_missing_publication_and_e_unsupported_drag",
+      "seconds": "0.992",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_f_math_prerequisite_roadmap_checkpoint_and_tool",
+      "seconds": "7.181",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_g_offline_browser_library_model_and_math",
+      "seconds": "5.164",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_local_probe_and_manual_provider_selection_survive_reload",
+      "seconds": "7.633",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_followup_in_the_same_tutor_constructs_the_requested_experiment",
+      "seconds": "6.617",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_claim_relation_and_numeric_audit_are_distinct_on_screen",
+      "seconds": "1.673",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_formula_render_and_live_input_in_browser",
+      "seconds": "9.024",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_numeric_method_comparison_and_real_timings",
+      "seconds": "1.000",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_large_unstable_solver_paths_stay_finite_in_browser",
+      "seconds": "1.263",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_field_probe_tracks_real_simulation_time[\\uc9c4\\ud589\\ud558\\ub294 \\uc0ac\\uc778 \\ud6a1\\ud30c-cy]",
+      "seconds": "0.659",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_field_probe_tracks_real_simulation_time[\\uc555\\ucd95\\uacfc \\ud33d\\ucc3d\\uc758 \\uc885\\ud30c-cx]",
+      "seconds": "0.624",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_field_probe_tracks_real_simulation_time[\\uade0\\uc77c\\ud55c \\ud750\\ub984\\uc758 \\ucd94\\uc801 \\uc785\\uc790-cx]",
+      "seconds": "1.538",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_question_controls_measured_chart_and_time",
+      "seconds": "6.711",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_four_workbench_members_share_clock_and_retain_inputs",
+      "seconds": "3.945",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_discovery_review_records_export_restoration_and_deletion",
+      "seconds": "1.638",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_phone_tutor_and_learning_fit_viewport",
+      "seconds": "0.847",
+      "result": "pass",
+      "detail": null
+    },
+    {
+      "case": "test_tutor_recovers_from_cancelled_or_truncated_response",
+      "seconds": "1.626",
+      "result": "pass",
+      "detail": null
+    }
+  ]
+}

@@ -1,0 +1,2298 @@
+{
+  "corpus": {
+    "documents": 49,
+    "chunks": 116,
+    "sources": {
+      "college": 29,
+      "glenn": 2,
+      "ntrs": 1,
+      "university1": 13,
+      "university2": 4
+    },
+    "deleted_sources": [],
+    "corpus_sha256": "2acd914daf47a95773fd851f8aadd90f23bec2e37b54aaeb77c165086fc44cdd"
+  },
+  "results": {
+    "lexical": {
+      "summary": {
+        "ko": {
+          "n": 10,
+          "precision1": 0.0,
+          "recall5": 0.0,
+          "mrr": 0.0,
+          "hit1": 0.0,
+          "hit5": 0.0,
+          "rr5": 0.0,
+          "ms": 3.7569
+        },
+        "all": {
+          "n": 26,
+          "precision1": 0.3846,
+          "recall5": 0.3654,
+          "mrr": 0.3846,
+          "hit1": 0.3846,
+          "hit5": 0.3846,
+          "rr5": 0.3846,
+          "ms": 3.9314
+        },
+        "en": {
+          "n": 10,
+          "precision1": 1.0,
+          "recall5": 0.95,
+          "mrr": 1.0,
+          "hit1": 1.0,
+          "hit5": 1.0,
+          "rr5": 1.0,
+          "ms": 4.6103
+        },
+        "symbol": {
+          "n": 6,
+          "precision1": 0.0,
+          "recall5": 0.0,
+          "mrr": 0.0,
+          "hit1": 0.0,
+          "hit5": 0.0,
+          "rr5": 0.0,
+          "ms": 3.0908
+        }
+      },
+      "queries": [
+        {
+          "query": "뉴턴의 운동 제2법칙에서 알짜힘과 가속도",
+          "group": "ko",
+          "docs": [],
+          "ms": 4.92,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "관성을 가진 물체가 계속 움직이는 이유",
+          "group": "ko",
+          "docs": [],
+          "ms": 2.792,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "공기 저항이 작은 곳에서 물체를 떨어뜨리면",
+          "group": "ko",
+          "docs": [],
+          "ms": 2.553,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "질량이 같은 물체의 탄성 충돌",
+          "group": "ko",
+          "docs": [],
+          "ms": 2.546,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "정지한 물에서 수심이 깊어질 때의 압력",
+          "group": "ko",
+          "docs": [],
+          "ms": 3.429,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "물에 잠긴 물체가 위쪽으로 밀리는 까닭",
+          "group": "ko",
+          "docs": [],
+          "ms": 4.343,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "작은 각도에서 진자의 주기와 질량",
+          "group": "ko",
+          "docs": [],
+          "ms": 4.159,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "뜨거운 물과 차가운 물을 섞은 뒤의 열평형",
+          "group": "ko",
+          "docs": [],
+          "ms": 4.034,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "자리를 거의 옮기지 않는 마디가 생기는 정상파",
+          "group": "ko",
+          "docs": [],
+          "ms": 4.588,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "스칼라와 벡터를 구분하는 기준",
+          "group": "ko",
+          "docs": [],
+          "ms": 4.205,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "net force acceleration inversely proportional to mass",
+          "group": "en",
+          "docs": [
+            "university1-m58297",
+            "college-m42073",
+            "university1-m58361",
+            "college-m42084",
+            "college-m42205"
+          ],
+          "ms": 4.429,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "average velocity versus distance traveled",
+          "group": "en",
+          "docs": [
+            "college-m42096",
+            "college-m42033",
+            "college-m42091",
+            "university1-m58283",
+            "college-m42205"
+          ],
+          "ms": 4.829,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "why sliding friction opposes relative motion",
+          "group": "en",
+          "docs": [
+            "college-m42139",
+            "college-m42102",
+            "college-m42033",
+            "college-m42080",
+            "university1-m58365"
+          ],
+          "ms": 4.593,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "why is a circular path accelerated at constant speed",
+          "group": "en",
+          "docs": [
+            "college-m42084",
+            "university1-m58283",
+            "college-m42100",
+            "university1-m58357",
+            "college-m42096"
+          ],
+          "ms": 4.627,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "compressibility assumption in the equation of continuity",
+          "group": "en",
+          "docs": [
+            "university1-m58357",
+            "college-m42205",
+            "college-m42206",
+            "university1-m58272",
+            "college-m42216"
+          ],
+          "ms": 3.996,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "calorimetry at thermal equilibrium",
+          "group": "en",
+          "docs": [
+            "university2-m58384",
+            "university2-m58387",
+            "university1-m58365",
+            "college-m42246",
+            "university2-m58389"
+          ],
+          "ms": 4.635,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "constructive and destructive wave interference",
+          "group": "en",
+          "docs": [
+            "college-m42249",
+            "university1-m58372",
+            "college-m42248",
+            "university1-m58368",
+            "university1-m58373"
+          ],
+          "ms": 5.641,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "thermal energy carried by bulk fluid motion",
+          "group": "en",
+          "docs": [
+            "university2-m58389",
+            "university2-m58384",
+            "college-m42206",
+            "university1-m58357",
+            "college-m42147"
+          ],
+          "ms": 4.853,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 0.5,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "dimensional consistency of an integral",
+          "group": "en",
+          "docs": [
+            "university1-m58272",
+            "college-m42091"
+          ],
+          "ms": 4.113,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "approaching equilibrium without overshooting",
+          "group": "en",
+          "docs": [
+            "university1-m58365",
+            "college-m42246",
+            "university2-m58384",
+            "university2-m58387",
+            "college-m42074"
+          ],
+          "ms": 4.387,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "F=ma",
+          "group": "symbol",
+          "docs": [],
+          "ms": 4.238,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "PV = nRT",
+          "group": "symbol",
+          "docs": [],
+          "ms": 3.18,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "T = 2π√(L/g)",
+          "group": "symbol",
+          "docs": [],
+          "ms": 2.68,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "A₁v₁ = A₂v₂",
+          "group": "symbol",
+          "docs": [],
+          "ms": 3.247,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "dx/dt",
+          "group": "symbol",
+          "docs": [],
+          "ms": 2.524,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "v=fλ",
+          "group": "symbol",
+          "docs": [],
+          "ms": 2.676,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        }
+      ]
+    },
+    "rrf": {
+      "summary": {
+        "ko": {
+          "n": 10,
+          "precision1": 0.8,
+          "recall5": 0.8,
+          "mrr": 0.85,
+          "hit1": 0.8,
+          "hit5": 0.9,
+          "rr5": 0.85,
+          "ms": 5.3416
+        },
+        "all": {
+          "n": 26,
+          "precision1": 0.8462,
+          "recall5": 0.9038,
+          "mrr": 0.9038,
+          "hit1": 0.8462,
+          "hit5": 0.9615,
+          "rr5": 0.9038,
+          "ms": 5.3032
+        },
+        "en": {
+          "n": 10,
+          "precision1": 0.8,
+          "recall5": 0.95,
+          "mrr": 0.9,
+          "hit1": 0.8,
+          "hit5": 1.0,
+          "rr5": 0.9,
+          "ms": 5.3676
+        },
+        "symbol": {
+          "n": 6,
+          "precision1": 1.0,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "hit1": 1.0,
+          "hit5": 1.0,
+          "rr5": 1.0,
+          "ms": 5.1318
+        }
+      },
+      "queries": [
+        {
+          "query": "뉴턴의 운동 제2법칙에서 알짜힘과 가속도",
+          "group": "ko",
+          "docs": [
+            "college-m42073",
+            "university1-m58297",
+            "college-m42100",
+            "college-m42096"
+          ],
+          "ms": 11.508,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "관성을 가진 물체가 계속 움직이는 이유",
+          "group": "ko",
+          "docs": [
+            "college-m42130"
+          ],
+          "ms": 5.191,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "공기 저항이 작은 곳에서 물체를 떨어뜨리면",
+          "group": "ko",
+          "docs": [
+            "college-m42080"
+          ],
+          "ms": 4.747,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 0.5,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "질량이 같은 물체의 탄성 충돌",
+          "group": "ko",
+          "docs": [
+            "college-m42163"
+          ],
+          "ms": 4.97,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "정지한 물에서 수심이 깊어질 때의 압력",
+          "group": "ko",
+          "docs": [
+            "college-m42189",
+            "college-m42192"
+          ],
+          "ms": 4.854,
+          "hit1": 0,
+          "hit5": 1,
+          "precision1": 0,
+          "recall5": 1.0,
+          "mrr": 0.5,
+          "rr5": 0.5
+        },
+        {
+          "query": "물에 잠긴 물체가 위쪽으로 밀리는 까닭",
+          "group": "ko",
+          "docs": [],
+          "ms": 3.966,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "작은 각도에서 진자의 주기와 질량",
+          "group": "ko",
+          "docs": [
+            "college-m42243",
+            "university1-m58364"
+          ],
+          "ms": 4.488,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "뜨거운 물과 차가운 물을 섞은 뒤의 열평형",
+          "group": "ko",
+          "docs": [
+            "university2-m58384"
+          ],
+          "ms": 4.57,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 0.5,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "자리를 거의 옮기지 않는 마디가 생기는 정상파",
+          "group": "ko",
+          "docs": [
+            "university1-m58373"
+          ],
+          "ms": 4.388,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "스칼라와 벡터를 구분하는 기준",
+          "group": "ko",
+          "docs": [
+            "university1-m58277"
+          ],
+          "ms": 4.734,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "net force acceleration inversely proportional to mass",
+          "group": "en",
+          "docs": [
+            "university1-m58297",
+            "college-m42073",
+            "college-m42100",
+            "university1-m58361",
+            "college-m42084"
+          ],
+          "ms": 5.25,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "average velocity versus distance traveled",
+          "group": "en",
+          "docs": [
+            "college-m42096",
+            "college-m42033",
+            "college-m42091",
+            "university1-m58283",
+            "college-m42205"
+          ],
+          "ms": 5.323,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "why sliding friction opposes relative motion",
+          "group": "en",
+          "docs": [
+            "college-m42139",
+            "college-m42102",
+            "college-m42033",
+            "college-m42080",
+            "university1-m58365"
+          ],
+          "ms": 4.197,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "why is a circular path accelerated at constant speed",
+          "group": "en",
+          "docs": [
+            "college-m42084",
+            "university1-m58283",
+            "college-m42100",
+            "university1-m58357",
+            "college-m42096"
+          ],
+          "ms": 5.16,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "compressibility assumption in the equation of continuity",
+          "group": "en",
+          "docs": [
+            "college-m42205",
+            "university1-m58357",
+            "college-m42206",
+            "university1-m58272",
+            "college-m42216"
+          ],
+          "ms": 5.824,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "calorimetry at thermal equilibrium",
+          "group": "en",
+          "docs": [
+            "university2-m58384",
+            "university2-m58387",
+            "college-m42224",
+            "university1-m58365",
+            "college-m42246"
+          ],
+          "ms": 5.627,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "constructive and destructive wave interference",
+          "group": "en",
+          "docs": [
+            "college-m42249",
+            "university1-m58372",
+            "college-m42248",
+            "university1-m58368",
+            "university1-m58373"
+          ],
+          "ms": 6.46,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "thermal energy carried by bulk fluid motion",
+          "group": "en",
+          "docs": [
+            "college-m42147",
+            "university2-m58389",
+            "university2-m58384",
+            "college-m42206",
+            "university1-m58357"
+          ],
+          "ms": 5.528,
+          "hit1": 0,
+          "hit5": 1,
+          "precision1": 0,
+          "recall5": 0.5,
+          "mrr": 0.5,
+          "rr5": 0.5
+        },
+        {
+          "query": "dimensional consistency of an integral",
+          "group": "en",
+          "docs": [
+            "university1-m58272",
+            "college-m42091"
+          ],
+          "ms": 5.484,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "approaching equilibrium without overshooting",
+          "group": "en",
+          "docs": [
+            "university2-m58384",
+            "university1-m58365",
+            "college-m42246",
+            "university2-m58387",
+            "college-m42074"
+          ],
+          "ms": 4.823,
+          "hit1": 0,
+          "hit5": 1,
+          "precision1": 0,
+          "recall5": 1.0,
+          "mrr": 0.5,
+          "rr5": 0.5
+        },
+        {
+          "query": "F=ma",
+          "group": "symbol",
+          "docs": [
+            "college-m42073",
+            "university1-m58297"
+          ],
+          "ms": 4.759,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "PV = nRT",
+          "group": "symbol",
+          "docs": [
+            "college-m42216",
+            "university2-m58391"
+          ],
+          "ms": 4.868,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "T = 2π√(L/g)",
+          "group": "symbol",
+          "docs": [
+            "college-m42243",
+            "university1-m58364"
+          ],
+          "ms": 5.418,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "A₁v₁ = A₂v₂",
+          "group": "symbol",
+          "docs": [
+            "college-m42205",
+            "university1-m58357"
+          ],
+          "ms": 5.432,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "dx/dt",
+          "group": "symbol",
+          "docs": [
+            "university1-m58283"
+          ],
+          "ms": 5.196,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "v=fλ",
+          "group": "symbol",
+          "docs": [
+            "college-m42248",
+            "university1-m58368"
+          ],
+          "ms": 5.118,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        }
+      ]
+    },
+    "weighted": {
+      "summary": {
+        "ko": {
+          "n": 10,
+          "precision1": 0.8,
+          "recall5": 0.8,
+          "mrr": 0.85,
+          "hit1": 0.8,
+          "hit5": 0.9,
+          "rr5": 0.85,
+          "ms": 4.67
+        },
+        "all": {
+          "n": 26,
+          "precision1": 0.8462,
+          "recall5": 0.9038,
+          "mrr": 0.9038,
+          "hit1": 0.8462,
+          "hit5": 0.9615,
+          "rr5": 0.9038,
+          "ms": 5.1648
+        },
+        "en": {
+          "n": 10,
+          "precision1": 0.8,
+          "recall5": 0.95,
+          "mrr": 0.9,
+          "hit1": 0.8,
+          "hit5": 1.0,
+          "rr5": 0.9,
+          "ms": 5.5008
+        },
+        "symbol": {
+          "n": 6,
+          "precision1": 1.0,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "hit1": 1.0,
+          "hit5": 1.0,
+          "rr5": 1.0,
+          "ms": 5.4295
+        }
+      },
+      "queries": [
+        {
+          "query": "뉴턴의 운동 제2법칙에서 알짜힘과 가속도",
+          "group": "ko",
+          "docs": [
+            "college-m42073",
+            "university1-m58297",
+            "college-m42100",
+            "college-m42096"
+          ],
+          "ms": 5.028,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "관성을 가진 물체가 계속 움직이는 이유",
+          "group": "ko",
+          "docs": [
+            "college-m42130"
+          ],
+          "ms": 4.618,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "공기 저항이 작은 곳에서 물체를 떨어뜨리면",
+          "group": "ko",
+          "docs": [
+            "college-m42080"
+          ],
+          "ms": 4.804,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 0.5,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "질량이 같은 물체의 탄성 충돌",
+          "group": "ko",
+          "docs": [
+            "college-m42163"
+          ],
+          "ms": 5.12,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "정지한 물에서 수심이 깊어질 때의 압력",
+          "group": "ko",
+          "docs": [
+            "college-m42189",
+            "college-m42192"
+          ],
+          "ms": 5.007,
+          "hit1": 0,
+          "hit5": 1,
+          "precision1": 0,
+          "recall5": 1.0,
+          "mrr": 0.5,
+          "rr5": 0.5
+        },
+        {
+          "query": "물에 잠긴 물체가 위쪽으로 밀리는 까닭",
+          "group": "ko",
+          "docs": [],
+          "ms": 4.661,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "작은 각도에서 진자의 주기와 질량",
+          "group": "ko",
+          "docs": [
+            "college-m42243",
+            "university1-m58364"
+          ],
+          "ms": 5.316,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "뜨거운 물과 차가운 물을 섞은 뒤의 열평형",
+          "group": "ko",
+          "docs": [
+            "university2-m58384"
+          ],
+          "ms": 4.009,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 0.5,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "자리를 거의 옮기지 않는 마디가 생기는 정상파",
+          "group": "ko",
+          "docs": [
+            "university1-m58373"
+          ],
+          "ms": 4.039,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "스칼라와 벡터를 구분하는 기준",
+          "group": "ko",
+          "docs": [
+            "university1-m58277"
+          ],
+          "ms": 4.098,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "net force acceleration inversely proportional to mass",
+          "group": "en",
+          "docs": [
+            "university1-m58297",
+            "college-m42073",
+            "college-m42100",
+            "university1-m58361",
+            "college-m42084"
+          ],
+          "ms": 5.558,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "average velocity versus distance traveled",
+          "group": "en",
+          "docs": [
+            "college-m42096",
+            "college-m42033",
+            "college-m42091",
+            "university1-m58283",
+            "college-m42205"
+          ],
+          "ms": 5.639,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "why sliding friction opposes relative motion",
+          "group": "en",
+          "docs": [
+            "college-m42139",
+            "college-m42102",
+            "college-m42033",
+            "college-m42080",
+            "university1-m58365"
+          ],
+          "ms": 5.653,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "why is a circular path accelerated at constant speed",
+          "group": "en",
+          "docs": [
+            "college-m42084",
+            "university1-m58283",
+            "college-m42100",
+            "university1-m58357",
+            "college-m42096"
+          ],
+          "ms": 5.332,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "compressibility assumption in the equation of continuity",
+          "group": "en",
+          "docs": [
+            "university1-m58357",
+            "college-m42205",
+            "college-m42206",
+            "university1-m58272",
+            "college-m42216"
+          ],
+          "ms": 5.326,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "calorimetry at thermal equilibrium",
+          "group": "en",
+          "docs": [
+            "university2-m58384",
+            "university2-m58387",
+            "university1-m58365",
+            "college-m42246",
+            "university2-m58389"
+          ],
+          "ms": 5.361,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "constructive and destructive wave interference",
+          "group": "en",
+          "docs": [
+            "college-m42249",
+            "university1-m58372",
+            "college-m42248",
+            "university1-m58368",
+            "university1-m58373"
+          ],
+          "ms": 5.679,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "thermal energy carried by bulk fluid motion",
+          "group": "en",
+          "docs": [
+            "college-m42147",
+            "university2-m58389",
+            "university2-m58384",
+            "college-m42206",
+            "university1-m58357"
+          ],
+          "ms": 5.581,
+          "hit1": 0,
+          "hit5": 1,
+          "precision1": 0,
+          "recall5": 0.5,
+          "mrr": 0.5,
+          "rr5": 0.5
+        },
+        {
+          "query": "dimensional consistency of an integral",
+          "group": "en",
+          "docs": [
+            "university1-m58272",
+            "college-m42091"
+          ],
+          "ms": 5.196,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "approaching equilibrium without overshooting",
+          "group": "en",
+          "docs": [
+            "university2-m58384",
+            "university1-m58365",
+            "college-m42246",
+            "university2-m58387",
+            "college-m42074"
+          ],
+          "ms": 5.683,
+          "hit1": 0,
+          "hit5": 1,
+          "precision1": 0,
+          "recall5": 1.0,
+          "mrr": 0.5,
+          "rr5": 0.5
+        },
+        {
+          "query": "F=ma",
+          "group": "symbol",
+          "docs": [
+            "college-m42073",
+            "university1-m58297"
+          ],
+          "ms": 5.256,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "PV = nRT",
+          "group": "symbol",
+          "docs": [
+            "college-m42216",
+            "university2-m58391"
+          ],
+          "ms": 5.352,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "T = 2π√(L/g)",
+          "group": "symbol",
+          "docs": [
+            "college-m42243",
+            "university1-m58364"
+          ],
+          "ms": 5.278,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "A₁v₁ = A₂v₂",
+          "group": "symbol",
+          "docs": [
+            "college-m42205",
+            "university1-m58357"
+          ],
+          "ms": 5.835,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "dx/dt",
+          "group": "symbol",
+          "docs": [
+            "university1-m58283"
+          ],
+          "ms": 5.331,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "v=fλ",
+          "group": "symbol",
+          "docs": [
+            "college-m42248",
+            "university1-m58368"
+          ],
+          "ms": 5.525,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        }
+      ]
+    },
+    "hybrid": {
+      "summary": {
+        "ko": {
+          "n": 10,
+          "precision1": 0.8,
+          "recall5": 0.8,
+          "mrr": 0.85,
+          "hit1": 0.8,
+          "hit5": 0.9,
+          "rr5": 0.85,
+          "ms": 5.1588
+        },
+        "all": {
+          "n": 26,
+          "precision1": 0.9231,
+          "recall5": 0.9038,
+          "mrr": 0.9423,
+          "hit1": 0.9231,
+          "hit5": 0.9615,
+          "rr5": 0.9423,
+          "ms": 5.1927
+        },
+        "en": {
+          "n": 10,
+          "precision1": 1.0,
+          "recall5": 0.95,
+          "mrr": 1.0,
+          "hit1": 1.0,
+          "hit5": 1.0,
+          "rr5": 1.0,
+          "ms": 5.4007
+        },
+        "symbol": {
+          "n": 6,
+          "precision1": 1.0,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "hit1": 1.0,
+          "hit5": 1.0,
+          "rr5": 1.0,
+          "ms": 4.9025
+        }
+      },
+      "queries": [
+        {
+          "query": "뉴턴의 운동 제2법칙에서 알짜힘과 가속도",
+          "group": "ko",
+          "docs": [
+            "college-m42073",
+            "university1-m58297",
+            "college-m42100",
+            "college-m42096"
+          ],
+          "ms": 5.51,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "관성을 가진 물체가 계속 움직이는 이유",
+          "group": "ko",
+          "docs": [
+            "college-m42130"
+          ],
+          "ms": 4.615,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "공기 저항이 작은 곳에서 물체를 떨어뜨리면",
+          "group": "ko",
+          "docs": [
+            "college-m42080"
+          ],
+          "ms": 6.283,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 0.5,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "질량이 같은 물체의 탄성 충돌",
+          "group": "ko",
+          "docs": [
+            "college-m42163"
+          ],
+          "ms": 4.809,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "정지한 물에서 수심이 깊어질 때의 압력",
+          "group": "ko",
+          "docs": [
+            "college-m42189",
+            "college-m42192"
+          ],
+          "ms": 5.353,
+          "hit1": 0,
+          "hit5": 1,
+          "precision1": 0,
+          "recall5": 1.0,
+          "mrr": 0.5,
+          "rr5": 0.5
+        },
+        {
+          "query": "물에 잠긴 물체가 위쪽으로 밀리는 까닭",
+          "group": "ko",
+          "docs": [],
+          "ms": 5.623,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "작은 각도에서 진자의 주기와 질량",
+          "group": "ko",
+          "docs": [
+            "college-m42243",
+            "university1-m58364"
+          ],
+          "ms": 4.731,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "뜨거운 물과 차가운 물을 섞은 뒤의 열평형",
+          "group": "ko",
+          "docs": [
+            "university2-m58384"
+          ],
+          "ms": 4.862,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 0.5,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "자리를 거의 옮기지 않는 마디가 생기는 정상파",
+          "group": "ko",
+          "docs": [
+            "university1-m58373"
+          ],
+          "ms": 4.718,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "스칼라와 벡터를 구분하는 기준",
+          "group": "ko",
+          "docs": [
+            "university1-m58277"
+          ],
+          "ms": 5.084,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "net force acceleration inversely proportional to mass",
+          "group": "en",
+          "docs": [
+            "university1-m58297",
+            "college-m42073",
+            "college-m42100",
+            "university1-m58361",
+            "college-m42084"
+          ],
+          "ms": 5.154,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "average velocity versus distance traveled",
+          "group": "en",
+          "docs": [
+            "college-m42096",
+            "college-m42033",
+            "college-m42091",
+            "university1-m58283",
+            "college-m42205"
+          ],
+          "ms": 6.122,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "why sliding friction opposes relative motion",
+          "group": "en",
+          "docs": [
+            "college-m42139",
+            "college-m42102",
+            "college-m42033",
+            "college-m42080",
+            "university1-m58365"
+          ],
+          "ms": 5.51,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "why is a circular path accelerated at constant speed",
+          "group": "en",
+          "docs": [
+            "college-m42084",
+            "university1-m58283",
+            "college-m42100",
+            "university1-m58357",
+            "college-m42096"
+          ],
+          "ms": 5.157,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "compressibility assumption in the equation of continuity",
+          "group": "en",
+          "docs": [
+            "university1-m58357",
+            "college-m42205",
+            "college-m42206",
+            "university1-m58272",
+            "college-m42216"
+          ],
+          "ms": 4.792,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "calorimetry at thermal equilibrium",
+          "group": "en",
+          "docs": [
+            "university2-m58384",
+            "university2-m58387",
+            "university1-m58365",
+            "college-m42246",
+            "university2-m58389"
+          ],
+          "ms": 5.596,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "constructive and destructive wave interference",
+          "group": "en",
+          "docs": [
+            "college-m42249",
+            "university1-m58372",
+            "college-m42248",
+            "university1-m58368",
+            "university1-m58373"
+          ],
+          "ms": 5.637,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "thermal energy carried by bulk fluid motion",
+          "group": "en",
+          "docs": [
+            "university2-m58389",
+            "college-m42147",
+            "university2-m58384",
+            "college-m42206",
+            "university1-m58357"
+          ],
+          "ms": 5.564,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 0.5,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "dimensional consistency of an integral",
+          "group": "en",
+          "docs": [
+            "university1-m58272",
+            "college-m42091"
+          ],
+          "ms": 5.079,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "approaching equilibrium without overshooting",
+          "group": "en",
+          "docs": [
+            "university1-m58365",
+            "university2-m58384",
+            "college-m42246",
+            "university2-m58387",
+            "college-m42074"
+          ],
+          "ms": 5.396,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "F=ma",
+          "group": "symbol",
+          "docs": [
+            "college-m42073",
+            "university1-m58297"
+          ],
+          "ms": 4.916,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "PV = nRT",
+          "group": "symbol",
+          "docs": [
+            "college-m42216",
+            "university2-m58391"
+          ],
+          "ms": 4.849,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "T = 2π√(L/g)",
+          "group": "symbol",
+          "docs": [
+            "college-m42243",
+            "university1-m58364"
+          ],
+          "ms": 4.814,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "A₁v₁ = A₂v₂",
+          "group": "symbol",
+          "docs": [
+            "college-m42205",
+            "university1-m58357"
+          ],
+          "ms": 5.089,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "dx/dt",
+          "group": "symbol",
+          "docs": [
+            "university1-m58283"
+          ],
+          "ms": 5.055,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "v=fλ",
+          "group": "symbol",
+          "docs": [
+            "college-m42248",
+            "university1-m58368"
+          ],
+          "ms": 4.692,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        }
+      ]
+    },
+    "hybrid+lsa": {
+      "summary": {
+        "ko": {
+          "n": 10,
+          "precision1": 0.8,
+          "recall5": 0.85,
+          "mrr": 0.85,
+          "hit1": 0.8,
+          "hit5": 0.9,
+          "rr5": 0.85,
+          "ms": 67.6452
+        },
+        "all": {
+          "n": 26,
+          "precision1": 0.9231,
+          "recall5": 0.9423,
+          "mrr": 0.9423,
+          "hit1": 0.9231,
+          "hit5": 0.9615,
+          "rr5": 0.9423,
+          "ms": 28.6952
+        },
+        "en": {
+          "n": 10,
+          "precision1": 1.0,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "hit1": 1.0,
+          "hit5": 1.0,
+          "rr5": 1.0,
+          "ms": 4.3948
+        },
+        "symbol": {
+          "n": 6,
+          "precision1": 1.0,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "hit1": 1.0,
+          "hit5": 1.0,
+          "rr5": 1.0,
+          "ms": 4.2792
+        }
+      },
+      "queries": [
+        {
+          "query": "뉴턴의 운동 제2법칙에서 알짜힘과 가속도",
+          "group": "ko",
+          "docs": [
+            "college-m42073",
+            "university1-m58297",
+            "college-m42100",
+            "college-m42084",
+            "college-m42096"
+          ],
+          "ms": 638.461,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "관성을 가진 물체가 계속 움직이는 이유",
+          "group": "ko",
+          "docs": [
+            "college-m42130",
+            "college-m42229",
+            "college-m42102",
+            "college-m42073",
+            "college-m42074"
+          ],
+          "ms": 3.812,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "공기 저항이 작은 곳에서 물체를 떨어뜨리면",
+          "group": "ko",
+          "docs": [
+            "college-m42080",
+            "college-m42074",
+            "college-m42246",
+            "university1-m58364",
+            "university1-m58365"
+          ],
+          "ms": 4.071,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 0.5,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "질량이 같은 물체의 탄성 충돌",
+          "group": "ko",
+          "docs": [
+            "college-m42163",
+            "college-m42228",
+            "college-m42216"
+          ],
+          "ms": 3.228,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "정지한 물에서 수심이 깊어질 때의 압력",
+          "group": "ko",
+          "docs": [
+            "college-m42189",
+            "college-m42192",
+            "college-m42216",
+            "university1-m58356",
+            "college-m42206"
+          ],
+          "ms": 3.218,
+          "hit1": 0,
+          "hit5": 1,
+          "precision1": 0,
+          "recall5": 1.0,
+          "mrr": 0.5,
+          "rr5": 0.5
+        },
+        {
+          "query": "물에 잠긴 물체가 위쪽으로 밀리는 까닭",
+          "group": "ko",
+          "docs": [],
+          "ms": 4.729,
+          "hit1": 0,
+          "hit5": 0,
+          "precision1": 0,
+          "recall5": 0.0,
+          "mrr": 0,
+          "rr5": 0
+        },
+        {
+          "query": "작은 각도에서 진자의 주기와 질량",
+          "group": "ko",
+          "docs": [
+            "college-m42243",
+            "university1-m58364",
+            "university1-m58361",
+            "college-m42242"
+          ],
+          "ms": 4.832,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "뜨거운 물과 차가운 물을 섞은 뒤의 열평형",
+          "group": "ko",
+          "docs": [
+            "university2-m58384",
+            "university1-m58365",
+            "college-m42246",
+            "university2-m58387",
+            "university1-m58277"
+          ],
+          "ms": 5.13,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "자리를 거의 옮기지 않는 마디가 생기는 정상파",
+          "group": "ko",
+          "docs": [
+            "university1-m58373",
+            "university1-m58368",
+            "university1-m58372",
+            "college-m42249",
+            "college-m42248"
+          ],
+          "ms": 5.42,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "스칼라와 벡터를 구분하는 기준",
+          "group": "ko",
+          "docs": [
+            "university1-m58277",
+            "college-m42033",
+            "university2-m58384",
+            "college-m42091",
+            "university1-m58272"
+          ],
+          "ms": 3.551,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "net force acceleration inversely proportional to mass",
+          "group": "en",
+          "docs": [
+            "university1-m58297",
+            "college-m42073",
+            "college-m42100",
+            "college-m42084",
+            "university1-m58361"
+          ],
+          "ms": 3.571,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "average velocity versus distance traveled",
+          "group": "en",
+          "docs": [
+            "college-m42096",
+            "college-m42033",
+            "college-m42091",
+            "university1-m58283",
+            "college-m42205"
+          ],
+          "ms": 5.223,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "why sliding friction opposes relative motion",
+          "group": "en",
+          "docs": [
+            "college-m42139",
+            "college-m42102",
+            "college-m42033",
+            "university1-m58365",
+            "university1-m58361"
+          ],
+          "ms": 5.457,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "why is a circular path accelerated at constant speed",
+          "group": "en",
+          "docs": [
+            "college-m42084",
+            "college-m42100",
+            "university1-m58283",
+            "university1-m58357",
+            "college-m42096"
+          ],
+          "ms": 5.06,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "compressibility assumption in the equation of continuity",
+          "group": "en",
+          "docs": [
+            "university1-m58357",
+            "college-m42205",
+            "college-m42206",
+            "university1-m58272",
+            "college-m42216"
+          ],
+          "ms": 4.058,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "calorimetry at thermal equilibrium",
+          "group": "en",
+          "docs": [
+            "university2-m58384",
+            "university2-m58387",
+            "university1-m58365",
+            "college-m42246",
+            "university2-m58389"
+          ],
+          "ms": 3.826,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "constructive and destructive wave interference",
+          "group": "en",
+          "docs": [
+            "college-m42249",
+            "university1-m58372",
+            "college-m42248",
+            "university1-m58368",
+            "university1-m58373"
+          ],
+          "ms": 5.008,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "thermal energy carried by bulk fluid motion",
+          "group": "en",
+          "docs": [
+            "university2-m58389",
+            "college-m42147",
+            "university2-m58384",
+            "college-m42206",
+            "college-m42229"
+          ],
+          "ms": 3.545,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "dimensional consistency of an integral",
+          "group": "en",
+          "docs": [
+            "university1-m58272",
+            "college-m42091",
+            "university1-m58361",
+            "college-m42206"
+          ],
+          "ms": 4.203,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "approaching equilibrium without overshooting",
+          "group": "en",
+          "docs": [
+            "university1-m58365",
+            "university2-m58384",
+            "college-m42246",
+            "university2-m58387",
+            "college-m42074"
+          ],
+          "ms": 3.997,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "F=ma",
+          "group": "symbol",
+          "docs": [
+            "college-m42073",
+            "university1-m58297",
+            "college-m42130",
+            "college-m42084",
+            "college-m42156"
+          ],
+          "ms": 4.772,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "PV = nRT",
+          "group": "symbol",
+          "docs": [
+            "university2-m58391",
+            "college-m42216",
+            "university1-m58277",
+            "college-m42189"
+          ],
+          "ms": 4.172,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "T = 2π√(L/g)",
+          "group": "symbol",
+          "docs": [
+            "college-m42243",
+            "university1-m58364",
+            "university1-m58361",
+            "college-m42242"
+          ],
+          "ms": 5.44,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "A₁v₁ = A₂v₂",
+          "group": "symbol",
+          "docs": [
+            "university1-m58357",
+            "college-m42205",
+            "college-m42229",
+            "university2-m58389"
+          ],
+          "ms": 3.636,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "dx/dt",
+          "group": "symbol",
+          "docs": [
+            "university1-m58283",
+            "college-m42096",
+            "college-m42100",
+            "college-m42084",
+            "college-m42205"
+          ],
+          "ms": 4.084,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        },
+        {
+          "query": "v=fλ",
+          "group": "symbol",
+          "docs": [
+            "university1-m58368",
+            "college-m42248",
+            "university1-m58373",
+            "university1-m58372",
+            "college-m42249"
+          ],
+          "ms": 3.571,
+          "hit1": 1,
+          "hit5": 1,
+          "precision1": 1,
+          "recall5": 1.0,
+          "mrr": 1.0,
+          "rr5": 1.0
+        }
+      ]
+    }
+  }
+}

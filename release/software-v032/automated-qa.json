@@ -1,0 +1,2571 @@
+{
+  "finished_utc": "2026-11-25T14:21:07.669832+00:00",
+  "scope": "Mock, captured assistant content via Replay, in-memory ASGI or owned loopback test servers",
+  "new_real_model_requests": 0,
+  "gpu_ai_used": false,
+  "embedding_model_used": false,
+  "live_education_performance": "unmeasured",
+  "models": 23,
+  "formulas": 27,
+  "backend": {
+    "total": 504,
+    "passed": 504,
+    "cases": [
+      {
+        "name": "backend.tests.test_alignment_v031.test_claims_are_split_into_independent_sentences",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_exact_evidence_is_direct",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_exact_match_preserves_numeric_signs_and_inequalities",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_unsigned_passage_is_not_a_verified_source",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_opposed_verified_rows_are_undecidable",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_negated_newton_relation_is_never_certified_as_positive",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_unseen_free_fall_paraphrase_is_partial_only_under_the_source_condition",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_opposite_free_fall_relation_is_a_contradiction",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_related_vocabulary_does_not_count_as_support",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_missing_or_mismatched_evidence_abstains",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_education_cards_are_conditioned_on_a_vetted_source_and_cover_four_levels",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_report_aligns_each_claim_and_withholds_only_unsupported_sentences",
+        "time_s": 0.022,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_unsupported_reading_only_surfaces_full_abstention_and_adjudicated_text",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_report_keeps_verified_numeric_observations_without_literature",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_report_preserves_only_the_exact_question_bound_registry_unit_note",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_report_rebuilds_graph_observation_from_current_run_samples",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_report_rejects_stale_graph_sample",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_alignment_v031.test_equation_mode_keeps_only_the_recomputed_registered_derivation",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_lesson_with_persistent_identity_and_computed_evidence",
+        "time_s": 0.105,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_unsupported_preserves_previous_state",
+        "time_s": 0.078,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_invalid_patch_rolls_back[invalid0]",
+        "time_s": 0.078,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_invalid_patch_rolls_back[invalid1]",
+        "time_s": 0.057,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_invalid_patch_rolls_back[invalid2]",
+        "time_s": 0.069,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_invalid_patch_rolls_back[invalid3]",
+        "time_s": 0.056,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_invalid_patch_rolls_back[invalid4]",
+        "time_s": 0.093,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_invalid_patch_rolls_back[invalid5]",
+        "time_s": 0.083,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_invalid_patch_rolls_back[invalid6]",
+        "time_s": 0.08,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_invalid_patch_rolls_back[invalid7]",
+        "time_s": 0.07,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_invalid_patch_rolls_back[invalid8]",
+        "time_s": 0.058,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_concurrent_updates_cannot_overwrite",
+        "time_s": 0.082,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_interpretation_failure_does_not_commit_proposed_edit",
+        "time_s": 0.063,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_explanation_provider_receives_calculated_evidence_after_local_plan",
+        "time_s": 0.061,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_failed_verification_is_exposed",
+        "time_s": 0.076,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_restart_reloads_experiment_inputs",
+        "time_s": 0.077,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_api_contract_rejects_incomplete_context_and_nonfinite",
+        "time_s": 0.045,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_api.test_enabled_catalog_runs_with_finite_aligned_series",
+        "time_s": 0.22,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_benchmark_v3.test_split_structure_and_golds_are_separate_from_the_tutor",
+        "time_s": 0.014,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_benchmark_v3.test_numeric_checks_the_named_quantity_unit_and_conflicting_prose",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_benchmark_v3.test_source_record_must_match_original_and_missing_citation_is_scored",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_benchmark_v3.test_three_real_arms_use_same_model_and_question_and_only_requested_context",
+        "time_s": 0.009,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_benchmark_v3.test_partial_review_requires_matching_responses_and_preserves_missing_denominators",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_benchmark_v3.test_real_call_cli_gate_fails_before_network",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_benchmark_v3.test_no_provider_key_keeps_all_real_arms_unmeasured",
+        "time_s": 0.192,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_clarification.test_generic_prediction_asks_for_essential_height_then_runs_with_answer",
+        "time_s": 0.075,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_clarification.test_partial_answers_keep_only_unresolved_conditions_and_recover",
+        "time_s": 0.088,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_clarification.test_newton_inverse_waits_for_both_mass_and_acceleration_then_uses_them",
+        "time_s": 0.097,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_clarification.test_explicit_demo_uses_registry_defaults_and_discloses_assumptions",
+        "time_s": 0.095,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_clarification.test_real_measurement_without_data_never_uses_default_simulation",
+        "time_s": 0.064,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_clarification.test_unrelated_followup_does_not_attach_to_pending_dialogue",
+        "time_s": 0.058,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_clarification.test_tutor_stream_uses_same_recovery_without_changing_unrelated_current_experiment",
+        "time_s": 0.353,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_clarification.test_answer_from_another_experiment_is_stale_and_does_not_cross_conversations",
+        "time_s": 0.105,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_router_keeps_multiple_intents_and_model_for_calculation_plus_concept",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_router_uses_registered_law_aliases_for_concept_and_formula_intents",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_hypothetical_numerical_question_is_a_detached_calculation_not_an_edit",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_nonimperative_numeric_condition_creates_a_detached_case_for_the_active_model",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_explicit_imperative_change_remains_a_current_experiment_edit",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_read_only_current_numeric_question_does_not_request_an_edit",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_execute_simulation_variants_are_detected_as_explicit_runs",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_newton_law_meta_question_does_not_ask_for_numeric_conditions",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_router_uses_active_model_only_for_an_explicit_current_experiment_reference",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_router_reuses_registered_values_for_a_current_experiment_calculation",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_router_separates_supported_theory_from_an_unsupported_simulation_request",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_router_returns_domain_specific_recovery_for_simulations_without_registered_models",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_router_marks_an_unanchored_followup_for_clarification",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_new_object_numeric_question_does_not_inherit_active_experiment_defaults",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_current_experiment_question_reuses_its_existing_conditions",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_why_retrieval_prefers_a_causal_source_for_the_requested_concept",
+        "time_s": 0.033,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_reading_only_answers_a_grounded_basic_science_question_and_lists_related_features",
+        "time_s": 0.03,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_reading_only_preserves_scope_reason_with_a_supported_related_explanation",
+        "time_s": 0.019,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_reading_only_fails_closed_when_local_index_is_not_initialized",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_unsupported_drag_simulation_is_explicitly_labeled_while_theory_remains_available",
+        "time_s": 0.019,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_verified_model_mechanism_survives_while_contradictory_provider_prose_is_withheld",
+        "time_s": 0.022,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_pipeline_v032.test_wave_orientation_question_includes_the_registered_mechanism_and_rejects_wrong_relation",
+        "time_s": 0.025,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_provider.test_explanation_filters_optional_metadata_and_records_numeric_proposal",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_provider.test_invalid_optional_metadata_is_dropped_without_losing_text",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_provider.test_empty_explanation_is_rejected_without_retry",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_provider.test_ollama_preload_is_a_separate_non_streaming_request",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_provider.test_cold_ollama_is_preloaded_before_inference_with_distinct_metrics",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_provider.test_plain_prose_is_salvaged_only_as_unreferenced_text",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_provider.test_truncated_json_is_not_salvaged_as_prose",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_provider.test_legacy_section_only_output_keeps_well_formed_number_diagnostics",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_provider.test_explanation_cancellation_propagates_and_does_not_retry",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_state_v032.test_simple_wording_is_local_to_the_explanation",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_state_v032.test_numeric_hypothesis_preserves_source_and_has_a_resolvable_run[\\uc9c8\\ub7c9 2 kg\\uc778 \\uc218\\ub808\\uc5d0 \\uc54c\\uc9dc\\ud798 14 N\\uc774 \\uc791\\uc6a9\\ud569\\ub2c8\\ub2e4. \\uac00\\uc18d\\ub3c4\\ub97c \\uacc4\\uc0b0\\ud574 \\uc918.-7 m/s\\xb2]",
+        "time_s": 0.226,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_state_v032.test_numeric_hypothesis_preserves_source_and_has_a_resolvable_run[\\uc9c8\\ub7c9 3 kg\\uc778 \\uce74\\ud2b8\\uc5d0 \\uc624\\ub978\\ucabd\\uc73c\\ub85c 15 N\\uc758 \\uc54c\\uc9dc\\ud798\\uc774 \\uc791\\uc6a9\\ud574. \\uac00\\uc18d\\ub3c4 \\ud06c\\uae30\\uc640 \\ubc29\\ud5a5\\uc744 \\uc54c\\ub824 \\uc918.-5 m/s\\xb2]",
+        "time_s": 0.285,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_state_v032.test_concept_packet_has_no_sample_values_and_keeps_compound_intents",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_state_v032.test_one_variable_math_uses_existing_sandboxed_tool",
+        "time_s": 0.522,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_state_v032.test_simulator_specific_requests_return_the_missing_physics_dependency",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_cognitive_state_v032.test_gas_lesson_separates_the_molecular_explanation_from_the_pressure_readout",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_comparison_evidence_v3.test_created_and_saved_comparison_references_two_real_runs",
+        "time_s": 0.478,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_comparison_evidence_v3.test_assessment_comparison_keeps_predicted_answers_hidden[discovery]",
+        "time_s": 0.247,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_comparison_evidence_v3.test_assessment_comparison_keeps_predicted_answers_hidden[review]",
+        "time_s": 0.217,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_dsl.test_full_dsl_round_trip",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_dsl.test_independent_engine_rejects_redefined_model_metadata[unit]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_dsl.test_independent_engine_rejects_redefined_model_metadata[max]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_dsl.test_independent_engine_rejects_redefined_model_metadata[model]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_dsl.test_independent_engine_rejects_redefined_model_metadata[methods]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_dsl.test_mutated_in_memory_inputs_are_checked_at_engine_boundary",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_guard.test_denied_reservation_precedes_outgoing_generation_or_preload[plan]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_guard.test_denied_reservation_precedes_outgoing_generation_or_preload[explanation]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_guard.test_denied_reservation_precedes_outgoing_generation_or_preload[preload]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_runner.test_replay_refuses_mixed_or_remote_profiles_before_reading_fixtures",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_runner.test_reserved_requests_survive_resume_and_consume_cumulative_cap",
+        "time_s": 0.027,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_runner.test_resume_rejects_different_input_config_or_product",
+        "time_s": 0.015,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_runner.test_run_defaults_to_dry_run_without_creating_progress_or_calling_executor",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_runner.test_comparison_joins_completed_outputs_by_provider_arm_and_case",
+        "time_s": 0.051,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_runner.test_origin_is_persisted_and_exported_as_replay_mock_or_actual",
+        "time_s": 0.044,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_runner.test_compare_opens_progress_read_only_and_does_not_create_missing_path",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_runner.test_no_provider_call_does_not_keep_selected_remote_model_or_latency",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_runner.test_keyless_compatible_profile_clears_unrelated_global_credential",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_runner.test_missing_named_compatible_secret_fails_before_endpoint_use",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_runner.test_replay_transport_is_offline_and_does_not_consume_generation_budget",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evaluation_runner.test_archived_b_import_is_labelled_and_never_runs_the_archived_app",
+        "time_s": 0.029,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evidence_v3.test_independent_quote_checks",
+        "time_s": 0.017,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evidence_v3.test_measurements_checked_independently",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evidence_v3.test_provider_mismatch_surfaces_end_to_end",
+        "time_s": 0.201,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evidence_v3.test_reviewed_paraphrases_require_the_actual_passage",
+        "time_s": 0.032,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evidence_v3.test_explicit_source_conflict_needs_distinct_supported_comparable_statements",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evidence_v3.test_lab_chat_delivers_the_checked_explanation_in_every_view",
+        "time_s": 0.068,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_evidence_v3.test_roadmap_and_candidate_separation",
+        "time_s": 0.089,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[free_fall]",
+        "time_s": 0.033,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[uniform]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[acceleration]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[newton]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[friction]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[collision]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[collision_restitution]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[spring]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[damped]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[pendulum]",
+        "time_s": 0.011,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[pendulum_small_angle]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[pendulum_equation]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[circular]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[hydrostatic]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[buoyancy]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[continuity]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[wave_transverse]",
+        "time_s": 0.038,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[wave_longitudinal]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[wave_superposition]",
+        "time_s": 0.04,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[wave_standing]",
+        "time_s": 0.015,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[ideal_gas]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[heat_equilibrium]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[heat_exchange]",
+        "time_s": 0.018,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[cooling]",
+        "time_s": 0.009,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[heat_diffusion]",
+        "time_s": 0.023,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[bernoulli]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_registered_relation_against_engine[fluid_tracer]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_formula_registry.test_complete_catalog_and_independent_conditions",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_knowledge_engine.test_seed_integrity_and_rights",
+        "time_s": 0.129,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_knowledge_engine.test_filters_exact_symbols_and_unknowns",
+        "time_s": 0.077,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_knowledge_engine.test_legacy_embedding_request_uses_filtered_text_index",
+        "time_s": 0.051,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_knowledge_engine.test_source_removal_is_durable_and_reversible",
+        "time_s": 0.111,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_knowledge_engine.test_concurrent_first_run_and_wrong_database",
+        "time_s": 0.054,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_knowledge_engine.test_corrupt_payload_is_rejected_atomically",
+        "time_s": 0.056,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_knowledge_engine.test_download_cache_validates_bytes_hosts_and_missing_entries",
+        "time_s": 0.404,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_knowledge_engine.test_html_markdown_structure_and_inert_text",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_knowledge_engine.test_text_pdf_page_anchors_and_missing_layer",
+        "time_s": 0.215,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_knowledge_engine.test_api_uses_canonical_passage_and_does_not_expose_maintenance",
+        "time_s": 0.032,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_unverified_qualifiers_never_confirm_a_real_title[Cite \\u201cPendulums\\u201d by An Invented Author.]",
+        "time_s": 0.015,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_unverified_qualifiers_never_confirm_a_real_title[Cite \\u201cPendulums\\u201d, 45th edition.]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_unverified_qualifiers_never_confirm_a_real_title[Cite \\u201cPendulums\\u201d (1872).]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_unverified_qualifiers_never_confirm_a_real_title[Cite \\u201cPendulums\\u201d, DOI 10.0000/unknown.]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_unverified_qualifiers_never_confirm_a_real_title[\\u300aPendulums\\u300b\\ub97c \\uc778\\uc6a9\\ud574\\uc918. \\uc800\\uc790 \\uac00\\uc9dc\\uc774\\ub984, 2021\\ub144 \\ucd9c\\ud310.]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_unverified_qualifiers_never_confirm_a_real_title[Cite \\u201cPendulums\\u201d, section \\u201cThe Simple Pendulum\\u201d, page 999.]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_unverified_qualifiers_never_confirm_a_real_title[Cite \\u201cPendulums\\u201d, section \\u201cThe Simple Pendulum\\u201d, paragraph 1.]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_unverified_qualifiers_never_confirm_a_real_title[Cite \\u201cPendulums\\u201d, section \\u201cSamuel J. Ling\\u201d.]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_unverified_qualifiers_never_confirm_a_real_title[\\u300aPendulums\\u300b \\uc808 \\u201cSamuel J. Ling\\u201d \\uc778\\uc6a9\\ud574 \\uc8fc\\uc138\\uc694.]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_unverified_qualifiers_never_confirm_a_real_title[Cite \\u201cPendulums\\u201d by The Simple Pendulum.]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_unverified_qualifiers_never_confirm_a_real_title[Cite \\u201cPendulums\\u201d, section \\u201cNonexistent Heading\\u201d.]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_exact_unqualified_title_and_recorded_author[\\u300aPendulums\\u300b\\uc758 \\uc6d0\\ubb38\\uc744 \\uc778\\uc6a9\\ud574 \\uc8fc\\uc138\\uc694.]",
+        "time_s": 0.011,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_exact_unqualified_title_and_recorded_author[Please cite \\u201cPendulums\\u201d.]",
+        "time_s": 0.01,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_exact_unqualified_title_and_recorded_author[Cite the section titled \\u201cPendulums\\u201d.]",
+        "time_s": 0.011,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_exact_unqualified_title_and_recorded_author[Cite \\u201cPendulums\\u201d by Samuel J. Ling.]",
+        "time_s": 0.01,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_exact_unqualified_title_and_recorded_author[Quote \"Newton's Second Law\".]",
+        "time_s": 0.011,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_literature_qualifiers.test_section_and_paragraph_must_belong_to_same_record",
+        "time_s": 0.009,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_numerics_v031.test_different_inputs_bind_to_the_actual_run[\\uc9c8\\ub7c9 4 kg \\uc218\\ub808\\uc5d0 18 N\\uc744 \\uac00\\ud560 \\ub54c \\uac00\\uc18d\\ub3c4\\ub294?-newton-acceleration-4.5]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_numerics_v031.test_different_inputs_bind_to_the_actual_run[\\uc218\\ub808 \\uc9c8\\ub7c9 2.5 kg, \\uac00\\uc18d\\ub3c4 -1.4 m/s\\xb2\\uc77c \\ub54c \\uc54c\\uc9dc\\ud798\\uc740?-newton-net_force--3.5]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_numerics_v031.test_different_inputs_bind_to_the_actual_run[\\ubc00\\ub3c4 750 kg/m\\xb3\\uc5d0\\uc11c 2 L\\ub97c \\ubc00\\uc5b4\\ub0b8 \\ube14\\ub85d\\uc758 \\ubd80\\ub825, g=9 m/s\\xb2-buoyancy-buoyancy-13.5]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_numerics_v031.test_different_inputs_bind_to_the_actual_run[\\ud3c9\\ud615 \\uc628\\ub3c4\\ub294? \\ucc98\\uc74c \\ub450 \\uc628\\ub3c4\\uac00 300 K\\uc640 330 K, \\uc5f4\\uc6a9\\ub7c9\\uc740 4 J/K\\uc640 8 J/K\\uc785\\ub2c8\\ub2e4.-heat_equilibrium-equilibrium_temp-320]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_numerics_v031.test_different_inputs_bind_to_the_actual_run[\\uad00\\uc758 \\uc785\\uad6c \\uc720\\uc18d 3 m/s, \\uc785\\uad6c \\ub2e8\\uba74\\uc801 200 cm\\xb2, \\ucd9c\\uad6c \\ub2e8\\uba74\\uc801 500 cm\\xb2\\uc77c \\ub54c \\ucd9c\\uad6c \\uc18d\\ub3c4\\ub294?-continuity-outlet_speed-1.2]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_numerics_v031.test_failed_run_is_diagnostic_and_rejects_mislabelled_units",
+        "time_s": 0.007,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_numerics_v031.test_numerical_spelling_preserves_small_and_large_values",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_numerics_v031.test_highlight_is_bound_to_the_requested_series_and_execution",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_numerics_v031.test_measured_acceleration_cannot_silently_override_a_conflicting_force",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_numerics_v031.test_unit_guidance_uses_registry_and_dimension_arithmetic",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_numerics_v031.test_saved_v03_reports_recheck_units_and_values_against_reconstructed_run",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_core.test_free_fall_20m_from_rest",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_core.test_preimpact_horizon_and_partial_step",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_core.test_euler_convergence_and_impact_bracket[euler]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_core.test_euler_convergence_and_impact_bracket[semi_implicit]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_core.test_uniform_signed_speed[analytic]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_core.test_uniform_signed_speed[euler]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_core.test_uniform_signed_speed[semi_implicit]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_core.test_uniform_signed_speed[rk4]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_core.test_accelerated_force_work_and_position[acceleration-params0--2]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_core.test_accelerated_force_work_and_position[newton-params1--8]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_full_space_time_wavefield_against_translated_profiles[wave_transverse]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_full_space_time_wavefield_against_translated_profiles[wave_longitudinal]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_full_space_time_wavefield_against_translated_profiles[wave_superposition]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_full_space_time_wavefield_against_translated_profiles[wave_standing]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_interference_cancellation_and_quarter_period_motion",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_gas_law_standard_reference_and_boyle_scaling",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_heat_exchange_independent_ivp_and_energy_balance[pair0]",
+        "time_s": 0.009,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_heat_exchange_independent_ivp_and_energy_balance[pair1]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_heat_exchange_independent_ivp_and_energy_balance[pair2]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_cooling_and_warming_independent_ivp[260]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_cooling_and_warming_independent_ivp[290]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_cooling_and_warming_independent_ivp[360]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_heat_diffusion_independent_dirichlet_grid",
+        "time_s": 0.009,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_bernoulli_pressure_difference_and_stationary_limit",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_fields.test_tracer_advection_reference",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[free_fall]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[uniform]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[acceleration]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[newton]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[friction]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[collision]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[spring]",
+        "time_s": 0.011,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[damped]",
+        "time_s": 0.015,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[pendulum]",
+        "time_s": 0.015,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[circular]",
+        "time_s": 0.019,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[hydrostatic]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[buoyancy]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[continuity]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[wave_transverse]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[wave_longitudinal]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[wave_superposition]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[wave_standing]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[ideal_gas]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[heat_equilibrium]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[cooling]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[heat_diffusion]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[bernoulli]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_defaults_match_registry_and_pass[fluid_tracer]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_friction_negative_velocity_stop_and_force_sign",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_no_friction_and_event_beyond_horizon",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_collision_event_loss_momentum_and_restitution[0.0]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_collision_event_loss_momentum_and_restitution[0.25]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_collision_event_loss_momentum_and_restitution[1.0]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_elastic_equal_masses_exchange_velocity_at_final_horizon",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_spring_convergence_order[rk4-14-18]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_spring_convergence_order[euler-1.7-2.8]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_spring_convergence_order[semi_implicit-1.7-2.4]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_coarse_euler_fails_and_resolved_rk4_passes",
+        "time_s": 0.01,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_marginal_symplectic_euler_jordan_block",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_nonfinite_state_only_returns_finite_prefix",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_damped_all_regimes_independent_ivp[0.0]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_damped_all_regimes_independent_ivp[1.0]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_damped_all_regimes_independent_ivp[4.0]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_damped_all_regimes_independent_ivp[4.0000000001]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_damped_all_regimes_independent_ivp[6.0]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_critical_damping_textbook_value",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_full_angle_pendulum_reference_vs_independent_ivp[-1.45]",
+        "time_s": 0.012,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_full_angle_pendulum_reference_vs_independent_ivp[0.1]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_full_angle_pendulum_reference_vs_independent_ivp[1.45]",
+        "time_s": 0.012,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_circular_negative_direction",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_stationary_equilibria",
+        "time_s": 0.016,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_physics_models.test_static_fluids_textbook_values",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_structured_upstream_stream_usage_and_sanitized_progress[openai]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_structured_upstream_stream_usage_and_sanitized_progress[anthropic]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_structured_upstream_stream_usage_and_sanitized_progress[ollama]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_structured_upstream_stream_usage_and_sanitized_progress[compatible]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_partial_refused_and_nonconforming_streams_rejected[incomplete-openai]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_partial_refused_and_nonconforming_streams_rejected[incomplete-anthropic]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_partial_refused_and_nonconforming_streams_rejected[incomplete-ollama]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_partial_refused_and_nonconforming_streams_rejected[incomplete-compatible]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_partial_refused_and_nonconforming_streams_rejected[refusal-openai]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_partial_refused_and_nonconforming_streams_rejected[refusal-anthropic]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_partial_refused_and_nonconforming_streams_rejected[refusal-ollama]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_partial_refused_and_nonconforming_streams_rejected[refusal-compatible]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_partial_refused_and_nonconforming_streams_rejected[invalid-openai]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_partial_refused_and_nonconforming_streams_rejected[invalid-anthropic]",
+        "time_s": 0.007,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_partial_refused_and_nonconforming_streams_rejected[invalid-ollama]",
+        "time_s": 0.007,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_partial_refused_and_nonconforming_streams_rejected[invalid-compatible]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_early_untrusted_openai_frames_cannot_be_overwritten_by_later_valid_frame[delta0]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_early_untrusted_openai_frames_cannot_be_overwritten_by_later_valid_frame[delta1]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_early_untrusted_openai_frames_cannot_be_overwritten_by_later_valid_frame[delta2]",
+        "time_s": 0.009,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_unregistered_visual_action_does_not_leak_its_payload",
+        "time_s": 0.007,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_inflight_request_cancellation_deadline_or_disconnect_closes_without_resubmission[cancel]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_inflight_request_cancellation_deadline_or_disconnect_closes_without_resubmission[timeout]",
+        "time_s": 0.047,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_inflight_request_cancellation_deadline_or_disconnect_closes_without_resubmission[disconnect]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_parallel_selections_and_actions_are_isolated",
+        "time_s": 0.01,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_model_metadata_only_retries_safe_get_and_sanitizes_ids[openai]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_model_metadata_only_retries_safe_get_and_sanitizes_ids[anthropic]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_model_metadata_only_retries_safe_get_and_sanitizes_ids[ollama]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_model_metadata_only_retries_safe_get_and_sanitizes_ids[compatible]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_local_routes_selection_and_configured_state_never_require_generation",
+        "time_s": 0.014,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_api_key_cannot_be_sent_over_remote_plain_http",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_provider_cannot_write_without_matching_user_operation_and_conditions[\\uc65c \\ub450 \\uacf5\\uc740 \\ub3d9\\uc2dc\\uc5d0 \\ub5a8\\uc5b4\\uc838?-modify-changes0]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_provider_cannot_write_without_matching_user_operation_and_conditions[\\ub192\\uc774\\uac00 \\uc65c \\uc911\\uc694\\ud574?-modify-changes1]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_provider_cannot_write_without_matching_user_operation_and_conditions[\\uc65c \\ub450 \\uacf5\\uc740 \\ub3d9\\uc2dc\\uc5d0 \\ub5a8\\uc5b4\\uc838?-create-changes2]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_provider_cannot_write_without_matching_user_operation_and_conditions[\\ub192\\uc774\\ub97c 3m\\ub85c \\ubc14\\uafd4-modify-changes3]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_provider_cannot_write_without_matching_user_operation_and_conditions[\\ub192\\uc774\\ub97c 3m\\ub85c \\ubc14\\uafd4-modify-changes4]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_provider_cannot_write_without_matching_user_operation_and_conditions[\\ub192\\uc774\\ub97c 3m\\ub85c \\ubc14\\uafd4-modify-changes5]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_provider_cannot_write_without_matching_user_operation_and_conditions[\\ub192\\uc774\\ub97c \\uc870\\uae08 \\uc904\\uc5ec-modify-changes6]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_provider_cannot_write_without_matching_user_operation_and_conditions[\\ub192\\uc774\\ub97c \\ub450 \\ubc30\\ub85c \\ubc14\\uafd4-modify-changes7]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_provider_cannot_write_without_matching_user_operation_and_conditions[\\ub192\\uc774\\ub97c 30m\\ub85c \\ubc14\\uafb8\\uc9c0 \\ub9d0\\uace0 \\uc124\\uba85\\ud574 \\uc918-modify-changes8]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_independently_confirmed_user_changes_and_established_followups_still_work[\\ub192\\uc774\\ub97c 250 cm\\ub85c \\ubc14\\uafd4-modify-free_fall-changes0]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_independently_confirmed_user_changes_and_established_followups_still_work[\\uc9c8\\ub7c9 \\ucc28\\uc774\\ub97c \\ub354 \\ud06c\\uac8c \\ud574\\ubd10-modify-free_fall-changes1]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_independently_confirmed_user_changes_and_established_followups_still_work[\\uc0c8 \\uc2e4\\ud5d8\\uc73c\\ub85c \\uc790\\uc720\\ub099\\ud558\\ub97c \\ud574\\uc918-create-free_fall-changes2]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_independently_confirmed_user_changes_and_established_followups_still_work[\\uc9c4\\uc790 \\uc2e4\\ud5d8\\uc744 \\ub9cc\\ub4e4\\uc5b4 \\uc918-create-pendulum-changes3]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_independently_confirmed_user_changes_and_established_followups_still_work[\\ub192\\uc774\\uac00 \\uc65c \\uc911\\uc694\\ud574?-explain-free_fall-changes4]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_forged_provider_edit_never_commits_on_actual_tutor_route",
+        "time_s": 0.199,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_provider_v2.test_mass_difference_remains_grounded_when_values_cross",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_guided_free_fall_conversation",
+        "time_s": 0.02,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_model_selection[\\ub4f1\\uc18d \\uc6b4\\ub3d9 \\uc2e4\\ud5d8-uniform]",
+        "time_s": 0.011,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_model_selection[\\ub4f1\\uac00\\uc18d\\ub3c4 \\uc6b4\\ub3d9\\uc744 \\uad00\\ucc30\\ud574\\uc918-acceleration]",
+        "time_s": 0.012,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_model_selection[\\ub274\\ud134\\uc758 \\uc81c2\\ubc95\\uce59-newton]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_model_selection[\\ubbf8\\ub044\\ub7fc \\ub9c8\\ucc30-friction]",
+        "time_s": 0.012,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_model_selection[\\ub450 \\uc218\\ub808\\uc758 \\ucda9\\ub3cc-collision]",
+        "time_s": 0.016,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_model_selection[\\uc6a9\\uc218\\ucca0 \\uc8fc\\uae30-spring]",
+        "time_s": 0.014,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_model_selection[\\uc9c4\\uc790\\uc758 \\uc8fc\\uae30-pendulum]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_model_selection[\\uac10\\uc1e0\\ud558\\ub294 \\uc6a9\\uc218\\ucca0-damped]",
+        "time_s": 0.013,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_model_selection[\\ub4f1\\uc18d \\uc6d0\\uc6b4\\ub3d9-circular]",
+        "time_s": 0.013,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_model_selection[\\uc218\\uc2ec\\uacfc \\uc555\\ub825-hydrostatic]",
+        "time_s": 0.012,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_model_selection[\\uc7a0\\uae34 \\ubb3c\\uccb4\\uc758 \\ubd80\\ub825-buoyancy]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_model_selection[\\uad00\\uc758 \\ub2e8\\uba74\\uacfc \\uc720\\uc18d\\uc758 \\uad00\\uacc4-continuity]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_partial_si_edits[free_fall-\\ub192\\uc774\\ub97c 250cm\\ub85c \\ubc14\\uafd4-height-2.5]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_partial_si_edits[free_fall-\\ubb3c\\uccb4 B\\uc758 \\uc9c8\\ub7c9\\uc744 750\\uadf8\\ub7a8\\uc73c\\ub85c-mass_b-0.75]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_partial_si_edits[pendulum-\\ucc98\\uc74c \\uac01\\ub3c4\\ub97c 30\\ub3c4\\ub85c \\ubcc0\\uacbd-angle-0.5235987755982988]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_partial_si_edits[uniform-\\ucd08\\uae30 \\uc18d\\ub3c4\\ub97c -10.8 km/h\\ub85c \\ubcc0\\uacbd-v0--3]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_partial_si_edits[uniform-\\uc9c8\\ub7c9\\uc744 2kg \\ub298\\ub824-mass-3]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_partial_si_edits[uniform-\\uc9c8\\ub7c9\\uc744 2kg\\uc73c\\ub85c \\ub298\\ub824-mass-2]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_partial_si_edits[uniform-\\uc9c8\\ub7c9\\uc744 2\\ubc30\\ub85c \\ubc14\\uafd4-mass-2]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_partial_si_edits[uniform-\\uc9c8\\ub7c9\\uc744 50% \\uc904\\uc5ec-mass-0.5]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_partial_si_edits[hydrostatic-\\uc218\\uba74 \\uc555\\ub825\\uc744 101.3kPa\\ub85c \\ubcc0\\uacbd-p0-101300]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_partial_si_edits[continuity-\\uc785\\uad6c \\ub2e8\\uba74\\uc801\\uc744 100cm\\xb2\\ub85c \\ubc14\\uafd4-area_in-0.01]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_multiple_fields_and_grid_are_explicit",
+        "time_s": 0.011,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_explanatory_request_can_change_a_stated_condition",
+        "time_s": 0.014,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_collision_qualifiers[\\uc644\\uc804\\ube44\\ud0c4\\uc131 \\ucda9\\ub3cc\\ub85c \\ubc14\\uafd4-modify-0]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_collision_qualifiers[\\ucda9\\ub3cc\\ud55c \\ud6c4 \\ub450 \\uc218\\ub808\\uac00 \\ubd99\\uc5b4\\uc11c \\uc6c0\\uc9c1\\uc774\\uba74?-modify-0]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_collision_qualifiers[\\uc644\\uc804 \\ud0c4\\uc131 \\ucda9\\ub3cc\\ub85c \\ubcc0\\uacbd-modify-1]",
+        "time_s": 0.009,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_collision_qualifiers[\\ube44\\ud0c4\\uc131 \\ucda9\\ub3cc-unsupported-None]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_collision_qualifiers[\\ube44\\ud0c4\\uc131 \\ucda9\\ub3cc\\uc5d0\\uc11c \\ubc18\\ubc1c \\uacc4\\uc218\\ub97c 0.4\\ub85c \\uc124\\uc815-modify-0.4]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_collision_qualifiers[\\uc644\\uc804\\ube44\\ud0c4\\uc131 \\ucda9\\ub3cc\\uc5d0\\uc11c \\ubc18\\ubc1c \\uacc4\\uc218\\ub97c 0.5\\ub85c-unsupported-None]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_negation_selects_the_intended_model[\\ub9c8\\ucc30 \\uc5c6\\ub294 \\uc6a9\\uc218\\ucca0 \\uc9c4\\ub3d9-spring]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_negation_selects_the_intended_model[\\ub9c8\\ucc30 \\uc5c6\\ub294 \\ub4f1\\uc18d \\uc6b4\\ub3d9-uniform]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_negation_selects_the_intended_model[\\uac10\\uc1e0\\uac00 \\uc5c6\\ub294 \\uc6a9\\uc218\\ucca0-spring]",
+        "time_s": 0.009,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_negation_selects_the_intended_model[\\uacf5\\uae30 \\uc800\\ud56d\\uc744 \\ubb34\\uc2dc\\ud55c \\uc790\\uc720\\ub099\\ud558-free_fall]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_incompatible_idealizations_are_declined[\\uc774\\ucc28\\uc6d0 \\ucda9\\ub3cc]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_incompatible_idealizations_are_declined[\\uac15\\uc81c \\uc9c4\\ub3d9\\ud558\\ub294 \\uc6a9\\uc218\\ucca0]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_incompatible_idealizations_are_declined[\\uc218\\uba74\\uc5d0\\uc11c \\ub5a0\\uc624\\ub974\\ub294 \\ubb3c\\uccb4\\uc758 \\ubd80\\ub825]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_incompatible_idealizations_are_declined[\\uc790\\uc720\\ub099\\ud558\\uc5d0\\uc11c \\uc704\\ub85c \\ub358\\uc9d0]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_incompatible_idealizations_are_declined[\\ub2ec\\uc5d0\\uc11c\\uc758 \\uc790\\uc720\\ub099\\ud558]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_incompatible_idealizations_are_declined[\\ucda9\\ub3cc\\uacfc \\ub9c8\\ucc30\\uc744 \\ud568\\uaed8 \\uacc4\\uc0b0]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\ub192\\uc774\\ub97c 4kg\\ub85c \\ubc14\\uafd4]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\ub192\\uc774\\ub97c 7km/h\\ub85c]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\ub192\\uc774\\ub97c 2m/s\\ub85c]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\ub192\\uc774\\ub97c 2000m\\ub85c]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\ub192\\uc774\\ub97c 1,000m\\ub85c]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\ub192\\uc774\\ub97c 3.2.1\\ubbf8\\ud130\\ub85c]",
+        "time_s": 0.007,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\ub192\\uc774\\ub97c 1e90\\uad11\\ub144\\uc73c\\ub85c]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\uc9c8\\ub7c9\\uc744 4kg\\uc73c\\ub85c]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\uc591\\uc790 \\ud130\\ub110\\ub9c1 \\uc2e4\\ud5d8]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\uc57c\\uad6c\\uacf5\\uc5d0 \\uacf5\\uae30 \\uc800\\ud56d\\uc744 \\ucd94\\uac00\\ud574\\uc918]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\ub0a0\\uc528 \\uacb0\\uacfc\\uac00 \\uc5b4\\ub54c?]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\uc65c \\uac15\\uc544\\uc9c0\\ub294 \\uadc0\\uc5ec\\uc6cc?]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\uc790\\uc720\\ub099\\ud558\\uc5d0 \\uad00\\ud55c \\uc2dc\\ub97c \\uc368 \\uc918]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\ud0c4\\ub3c4 \\uacc4\\uc0b0\\uc744 \\uc704\\ud55c \\uc790\\uc720\\ub099\\ud558]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_unsupported_and_ambiguous_inputs_do_not_mutate_current[\\ud3ec\\ubb3c\\uc120 \\uc6b4\\ub3d9]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_explanations_use_observed_numbers_and_honor_missing_arrival",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning.test_failed_check_is_reported_without_asserting_a_successful_comparison",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_each_protocol_writes_and_reads_its_own_envelope[openai-https://api.openai.com/v1/chat/completions]",
+        "time_s": 0.011,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_each_protocol_writes_and_reads_its_own_envelope[anthropic-https://api.anthropic.com/v1/messages]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_each_protocol_writes_and_reads_its_own_envelope[ollama-http://127.0.0.1:11434/api/chat]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_each_protocol_writes_and_reads_its_own_envelope[compatible-https://provider.test/v1/chat/completions]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_rejects_malformed_or_untrusted_generated_fields[bad0]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_rejects_malformed_or_untrusted_generated_fields[bad1]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_rejects_malformed_or_untrusted_generated_fields[bad2]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_rejects_malformed_or_untrusted_generated_fields[bad3]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_rejects_malformed_or_untrusted_generated_fields[bad4]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_rejects_malformed_or_untrusted_generated_fields[bad5]",
+        "time_s": 0.007,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_rejects_malformed_or_untrusted_generated_fields[bad6]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_rejects_malformed_or_untrusted_generated_fields[bad7]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_rejects_malformed_or_untrusted_generated_fields[{}]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_rejects_malformed_or_untrusted_generated_fields[[1,2]]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_rejects_malformed_or_untrusted_generated_fields[not json]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_rejects_malformed_or_untrusted_generated_fields[```json\\n{}\\n```]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_rejects_malformed_or_untrusted_generated_fields[{\"action\":\"create\",\"action\":\"modify\",\"level\":\"school\",\"model\":null,\"patch\":{}}]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_incomplete_provider_output_is_not_used[anthropic-body0]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_incomplete_provider_output_is_not_used[ollama-body1]",
+        "time_s": 0.006,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_incomplete_provider_output_is_not_used[openai-body2]",
+        "time_s": 0.007,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_incomplete_provider_output_is_not_used[compatible-body3]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_registry_validation_applies_after_provider_response[proposal0]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_registry_validation_applies_after_provider_response[proposal1]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_registry_validation_applies_after_provider_response[proposal2]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_registry_validation_applies_after_provider_response[proposal3]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_registry_validation_applies_after_provider_response[proposal4]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_registry_validation_applies_after_provider_response[proposal5]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_registry_validation_applies_after_provider_response[proposal6]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_missing_credentials_unknown_provider_and_transport_error_are_safe",
+        "time_s": 0.009,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_after_computation_each_protocol_receives_evidence_and_only_renders_allowed_text[openai]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_after_computation_each_protocol_receives_evidence_and_only_renders_allowed_text[anthropic]",
+        "time_s": 0.007,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_after_computation_each_protocol_receives_evidence_and_only_renders_allowed_text[ollama]",
+        "time_s": 0.007,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_after_computation_each_protocol_receives_evidence_and_only_renders_allowed_text[compatible]",
+        "time_s": 0.008,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_interpretation_rejects_untrusted_numbers_prose_or_unknown_selection[output0]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_interpretation_rejects_untrusted_numbers_prose_or_unknown_selection[output1]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_interpretation_rejects_untrusted_numbers_prose_or_unknown_selection[output2]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_interpretation_rejects_untrusted_numbers_prose_or_unknown_selection[output3]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_interpretation_rejects_untrusted_numbers_prose_or_unknown_selection[output4]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_interpretation_rejects_untrusted_numbers_prose_or_unknown_selection[output5]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_interpretation_rejects_untrusted_numbers_prose_or_unknown_selection[output6]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_interpretation_cannot_reintroduce_success_narrative_after_failed_check",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_actual_conditions_checked_even_if_provider_outputs_well_formed_json[\\ub192\\uc774\\ub97c 5kg\\ub85c-free_fall-patch0]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_actual_conditions_checked_even_if_provider_outputs_well_formed_json[\\ub192\\uc774\\ub97c 500cm\\ub85c-free_fall-patch1]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_actual_conditions_checked_even_if_provider_outputs_well_formed_json[\\uc644\\uc804 \\ube44\\ud0c4\\uc131 \\ucda9\\ub3cc-collision-patch2]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_actual_conditions_checked_even_if_provider_outputs_well_formed_json[\\ub9c8\\ucc30 \\uc5c6\\ub294 \\uc6a9\\uc218\\ucca0-friction-patch3]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_reasoning_providers.test_explicit_outside_idealization_is_handled_before_provider",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_replay_provider.test_archived_content_replay_uses_runtime_answer_contract_and_marks_origin",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_replay_provider.test_wire_message_replay_uses_same_metadata_filtering_as_runtime",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_replay_provider.test_scoped_replay_fixture_is_mock_only_and_one_shot",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_replay_provider.test_saved_replay_flows_through_mock_tutor_screening_and_grounded_report",
+        "time_s": 0.036,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_replay_provider.test_environment_provider_default_is_inert_without_explicit_opt_in",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_replay_provider.test_environment_provider_default_requires_explicit_opt_in",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_schema.test_inputs_are_finite_si_numbers[nan]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_schema.test_inputs_are_finite_si_numbers[inf]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_schema.test_inputs_are_finite_si_numbers[True]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_schema.test_inputs_are_finite_si_numbers[1.0]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_schema.test_only_declared_operations",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_schema.test_invalid_physical_domain",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_formula_catalog_keys_symbols_units_and_real_graphs",
+        "time_s": 0.025,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_numerical_lab_closed_form_metrics_timing_and_order",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_zero_reference_and_invalid_input",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_stiff_spring_unstable_methods_remain_finite_across_accepted_grid[0.2]",
+        "time_s": 0.003,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_stiff_spring_unstable_methods_remain_finite_across_accepted_grid[0.14018691588785046]",
+        "time_s": 0.005,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_stiff_spring_unstable_methods_remain_finite_across_accepted_grid[0.14142]",
+        "time_s": 0.004,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_sampled_wave_aliasing_report_and_solver_error_explanation",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_new_models_create_in_mock_and_report_a_calculated_observation[wave_transverse-\\uc8fc\\ud30c\\uc218\\uac00 2 Hz\\uc778 \\uc0ac\\uc778\\ud30c \\uc2e4\\ud5d8]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_new_models_create_in_mock_and_report_a_calculated_observation[wave_longitudinal-\\uc885\\ud30c\\ub97c \\uad00\\ucc30\\ud560\\ub798]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_new_models_create_in_mock_and_report_a_calculated_observation[wave_standing-\\uc815\\uc0c1\\ud30c\\ub97c \\ubcf4\\uc5ec \\uc918]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_new_models_create_in_mock_and_report_a_calculated_observation[wave_superposition-\\ud30c\\ub3d9\\uc758 \\uc911\\ucca9 \\uc2e4\\ud5d8]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_new_models_create_in_mock_and_report_a_calculated_observation[cooling-\\ub274\\ud134\\uc758 \\ub0c9\\uac01 \\ubc95\\uce59]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_new_models_create_in_mock_and_report_a_calculated_observation[bernoulli-\\ubca0\\ub974\\ub204\\uc774 \\uc6d0\\ub9ac\\ub85c \\uc720\\uc18d\\uc744 \\ube44\\uad50\\ud574\\uc918]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_new_models_create_in_mock_and_report_a_calculated_observation[fluid_tracer-\\uc720\\uccb4 \\uc785\\uc790 \\uc774\\ub3d9]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_new_models_create_in_mock_and_report_a_calculated_observation[ideal_gas-\\uc628\\ub3c4 320 K\\uc778 \\uc774\\uc0c1\\uae30\\uccb4]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_new_models_create_in_mock_and_report_a_calculated_observation[heat_equilibrium-\\ub450 \\ubb3c\\uccb4\\uc758 \\uc5f4\\ud3c9\\ud615 \\uc2e4\\ud5d8]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_science_lab.test_new_models_create_in_mock_and_report_a_calculated_observation[heat_diffusion-\\ub9c9\\ub300\\uc758 \\uc5f4\\ud655\\uc0b0 \\uc2e4\\ud5d8]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_studio.test_clone_input_independence_limit_and_concurrent_capacity",
+        "time_s": 0.153,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_studio.test_lesson_highlights_computed_interval_and_seeks",
+        "time_s": 0.322,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_studio.test_tutor_comparison_uses_engine_and_keeps_original",
+        "time_s": 0.394,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_studio.test_rejected_provider_action_never_writes",
+        "time_s": 0.213,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_studio.test_explicit_graph_then_provider_graph_take_priority_over_default",
+        "time_s": 0.338,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_studio.test_learning_erase_clears_db_and_usage",
+        "time_s": 0.208,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_studio.test_existing_v01_sqlite_inputs_open_modify_and_compare",
+        "time_s": 0.199,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_algebra_and_calculus",
+        "time_s": 0.328,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_domain_preservation_and_uncertainty",
+        "time_s": 0.119,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_dimension_and_graph_numeric_comparison",
+        "time_s": 0.257,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_grammar_and_complexity_limits[x.y]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_grammar_and_complexity_limits[a[0]]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_grammar_and_complexity_limits[unknown(x)]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_grammar_and_complexity_limits[x^z]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_grammar_and_complexity_limits[(x^8)^8]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_grammar_and_complexity_limits[exp(exp(x))]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_grammar_and_complexity_limits[2^100]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_grammar_and_complexity_limits[1.0000000000000001]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_grammar_and_complexity_limits[1e-99999]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_grammar_and_complexity_limits[sin(x,2)]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_grammar_and_complexity_limits[x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x+x]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_router_worker_and_schema",
+        "time_s": 0.615,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_worker_timeout_is_explicit_and_releases_capacity",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_symbolic_math.test_verified_formula_claim_checks_expression_names_units_and_actual_conditions",
+        "time_s": 1.519,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_closed_protocol[action0]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_closed_protocol[action1]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_closed_protocol[action2]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_closed_protocol[action3]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_closed_protocol[action4]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_closed_protocol[action5]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_closed_protocol[action6]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_closed_protocol[action7]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_closed_protocol[action8]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_closed_protocol[action9]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_closed_protocol[action10]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action0]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action1]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action2]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action3]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action4]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action5]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action6]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action7]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action8]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action9]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action10]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action11]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action12]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action13]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_unavailable_or_invalid_operation_is_rejected[action14]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_protocol_batches_are_validated_before_any_mutation",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_describing_a_number_on_a_graph_does_not_request_a_display_change",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_visual_instruction_from_korean_question[\\ubb3c\\uccb4 B\\ub97c \\uac15\\uc870\\ud574 \\uc918-action0]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_visual_instruction_from_korean_question[\\ubb3c\\uccb4 B\\uc758 \\uac00\\uc18d\\ub3c4 \\ubca1\\ud130\\ub97c \\ubcf4\\uc5ec \\uc918-action1]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_visual_instruction_from_korean_question[0.6\\ucd08\\ub85c \\uc774\\ub3d9\\ud574 \\uc918-action2]",
+        "time_s": 0.0,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_visual_instruction_from_korean_question[\\ub192\\uc774 \\uadf8\\ub798\\ud504 0.1\\ucd08\\ubd80\\ud130 1\\ucd08\\uae4c\\uc9c0 \\uac15\\uc870\\ud574 \\uc918-action3]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_visual_instruction_from_korean_question[\\uacf5\\uc2dd\\uc5d0\\uc11c g \\ubcc0\\uc218\\ub97c \\uac15\\uc870\\ud574 \\uc918-action4]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_visual_instruction_from_korean_question[\\uacf5\\uc2dd\\uc5d0\\uc11c \\ub192\\uc774\\ub97c \\uac15\\uc870\\ud574 \\uc918-action5]",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_visual_instruction_from_korean_question[\\uac00\\uc18d\\ub3c4\\ub97c \\uac15\\uc870\\ud574 \\uc918-action6]",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_mismatched_model_or_scope_is_left_to_planner",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_no_vector_fabricated_for_static_sensor",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_discovery_and_review_delay_revelation",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_experiment_and_explain_grounded",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_all_enabled_models_have_a_review_item",
+        "time_s": 0.001,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_comparison_conditions_survive_language_normalization",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor.test_interpretation_request_is_read_only_while_analytic_method_is_selectable",
+        "time_s": 0.002,
+        "result": "pass"
+      },
+      {
+        "name": "backend.tests.test_tutor_disconnect.test_client_disconnect_cancels_tutor_and_preserves_revision",
+        "time_s": 1.062,
+        "result": "pass"
+      }
+    ]
+  },
+  "source_browser": {
+    "total": 4,
+    "passed": 4,
+    "cases": [
+      {
+        "name": "scripts.test_cognitive_browser_v032.test_missing_input_and_scope_are_visible_without_running_a_new_scene",
+        "time_s": 4.168,
+        "result": "pass"
+      },
+      {
+        "name": "scripts.test_reliability_browser.test_followup_in_the_same_tutor_constructs_the_requested_experiment",
+        "time_s": 2.624,
+        "result": "pass"
+      },
+      {
+        "name": "scripts.test_reliability_browser.test_claim_relation_and_numeric_audit_are_distinct_on_screen",
+        "time_s": 1.094,
+        "result": "pass"
+      },
+      {
+        "name": "scripts.test_evidence_mismatch_browser.test_d_wrong_model_claim_is_visible_and_engine_untouched",
+        "time_s": 3.58,
+        "result": "pass"
+      }
+    ]
+  },
+  "frontend": {
+    "tests_passed": 12,
+    "tests_total": 12,
+    "suites": 4,
+    "command": "npm.cmd test"
+  },
+  "recovery_scenarios": 13,
+  "source_state_cases": 3,
+  "packaged_browser_receipt": "Distributed alongside ZIP after verifying the extraction."
+}

@@ -1,0 +1,445 @@
+{
+  "schema_version": 1,
+  "evaluation": "PHYSIS v0.3.1 claim-evidence alignment deterministic controls",
+  "evaluated_utc": "2026-11-25T11:53:21.079770+00:00",
+  "scope": {
+    "method": "Direct execution of physis.alignment.align_claim against actual bundled corpus passages plus explicitly labeled synthetic stress controls.",
+    "labels": "Expected relations were manually assigned from the cited source text before running this script; labels were not blinded or independently graded.",
+    "independence": "Control claims are authored in this script and do not import education cards, education held-out fixtures, or prior 72-turn regression outcomes.",
+    "limits": [
+      "This small deterministic control set is not an estimate of open-domain semantic accuracy.",
+      "Most controls exercise curated relation patterns; unseen paraphrase coverage is bounded to the listed claims.",
+      "Synthetic controls test conflict aggregation and sign normalization, not citation authenticity.",
+      "No language model, network request, or provider inference was used."
+    ]
+  },
+  "inputs": {
+    "corpus_sha256": "2acd914daf47a95773fd851f8aadd90f23bec2e37b54aaeb77c165086fc44cdd",
+    "alignment_module_sha256": "a4ef5282223461cdb3da6bd521937a34cbc057a30e654653dfecb09b0e8020f2",
+    "control_script_sha256": "e3a1df7f3bc3e29e12f95c800b85d32146ca9fcdcee08ac69bd696c3888815fe",
+    "case_count": 19
+  },
+  "summary": {
+    "matched": 17,
+    "total": 19,
+    "accuracy_on_this_control_set": 0.8947,
+    "by_expected_label": {
+      "contradiction": {
+        "total": 4,
+        "matched": 4
+      },
+      "direct": {
+        "total": 1,
+        "matched": 1
+      },
+      "insufficient": {
+        "total": 1,
+        "matched": 1
+      },
+      "partial": {
+        "total": 7,
+        "matched": 5
+      },
+      "related": {
+        "total": 2,
+        "matched": 2
+      },
+      "undecidable": {
+        "total": 4,
+        "matched": 4
+      }
+    },
+    "by_control_kind": {
+      "contradiction-control": {
+        "total": 4,
+        "matched": 4
+      },
+      "corpus-exact": {
+        "total": 1,
+        "matched": 1
+      },
+      "insufficient-control": {
+        "total": 1,
+        "matched": 1
+      },
+      "related-only-control": {
+        "total": 1,
+        "matched": 1
+      },
+      "scope-control": {
+        "total": 2,
+        "matched": 2
+      },
+      "synthetic-conflict-stress-control": {
+        "total": 1,
+        "matched": 1
+      },
+      "synthetic-normalization-control": {
+        "total": 1,
+        "matched": 1
+      },
+      "undecidable-control": {
+        "total": 1,
+        "matched": 1
+      },
+      "unseen-paraphrase-control": {
+        "total": 7,
+        "matched": 5
+      }
+    },
+    "confusion_matrix": {
+      "direct": {
+        "direct": 1,
+        "partial": 0,
+        "related": 0,
+        "contradiction": 0,
+        "insufficient": 0,
+        "undecidable": 0
+      },
+      "partial": {
+        "direct": 0,
+        "partial": 5,
+        "related": 1,
+        "contradiction": 0,
+        "insufficient": 0,
+        "undecidable": 1
+      },
+      "related": {
+        "direct": 0,
+        "partial": 0,
+        "related": 2,
+        "contradiction": 0,
+        "insufficient": 0,
+        "undecidable": 0
+      },
+      "contradiction": {
+        "direct": 0,
+        "partial": 0,
+        "related": 0,
+        "contradiction": 4,
+        "insufficient": 0,
+        "undecidable": 0
+      },
+      "insufficient": {
+        "direct": 0,
+        "partial": 0,
+        "related": 0,
+        "contradiction": 0,
+        "insufficient": 1,
+        "undecidable": 0
+      },
+      "undecidable": {
+        "direct": 0,
+        "partial": 0,
+        "related": 0,
+        "contradiction": 0,
+        "insufficient": 0,
+        "undecidable": 4
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "direct-freefall-source-sentence",
+      "kind": "corpus-exact",
+      "claim": "The most remarkable and unexpected fact about falling objects is that, if air resistance and friction are negligible, then in a given location all objects fall toward the center of Earth with the same constant acceleration, independent of their mass.",
+      "source_ids": [
+        "college-m42102:import-auto-id2006874"
+      ],
+      "expected": "direct",
+      "observed": "direct",
+      "matched": true,
+      "rationale": "A complete verified source sentence should be directly supported.",
+      "observed_reason": "주장 전체가 검증된 인용문의 한 문장과 일치합니다.",
+      "observed_references": [
+        "college-m42102:import-auto-id2006874"
+      ]
+    },
+    {
+      "id": "freefall-ignored-drag-paraphrase",
+      "kind": "unseen-paraphrase-control",
+      "claim": "When drag can be ignored, objects with different masses accelerate downward at the same rate in one place.",
+      "source_ids": [
+        "college-m42102:import-auto-id2006874"
+      ],
+      "expected": "partial",
+      "observed": "related",
+      "matched": false,
+      "rationale": "Restates mass-independent acceleration and preserves the source's drag/location conditions.",
+      "observed_reason": "인용문에 관련 용어가 있지만 이 관계를 뒷받침하지는 않습니다.",
+      "observed_references": [
+        "college-m42102:import-auto-id2006874"
+      ]
+    },
+    {
+      "id": "freefall-opposite-relation-under-condition",
+      "kind": "contradiction-control",
+      "claim": "In a vacuum, the heavier object falls with greater acceleration than the lighter one.",
+      "source_ids": [
+        "college-m42102:import-auto-id2006874"
+      ],
+      "expected": "contradiction",
+      "observed": "contradiction",
+      "matched": true,
+      "rationale": "The stated vacuum condition is compatible with negligible drag, while the acceleration relation is opposite.",
+      "observed_reason": "인용문은 명시된 조건에서 가속도가 질량과 무관하다고 하지만, 주장은 반대 관계를 말합니다.",
+      "observed_references": [
+        "college-m42102:import-auto-id2006874"
+      ]
+    },
+    {
+      "id": "freefall-unverified-drag-scope",
+      "kind": "scope-control",
+      "claim": "When air resistance is significant, objects of unequal mass still share the same falling acceleration.",
+      "source_ids": [
+        "college-m42102:import-auto-id2006874"
+      ],
+      "expected": "undecidable",
+      "observed": "undecidable",
+      "matched": true,
+      "rationale": "The source restricts its claim to negligible drag and does not settle significant-drag behavior.",
+      "observed_reason": "근거는 항력이 무시 가능하고 위치가 일정한 조건에 한정되지만, 주장은 그 범위를 바꿉니다.",
+      "observed_references": [
+        "college-m42102:import-auto-id2006874"
+      ]
+    },
+    {
+      "id": "freefall-topically-related-color",
+      "kind": "related-only-control",
+      "claim": "Mass changes the color of a falling body.",
+      "source_ids": [
+        "college-m42102:import-auto-id2006874"
+      ],
+      "expected": "related",
+      "observed": "related",
+      "matched": true,
+      "rationale": "The topic overlaps, but the source says nothing about color.",
+      "observed_reason": "인용문에 관련 용어가 있지만 이 관계를 뒷받침하지는 않습니다.",
+      "observed_references": [
+        "college-m42102:import-auto-id2006874"
+      ]
+    },
+    {
+      "id": "freefall-unrelated-granite",
+      "kind": "insufficient-control",
+      "claim": "Granite forms under cooling magma.",
+      "source_ids": [
+        "college-m42102:import-auto-id2006874"
+      ],
+      "expected": "insufficient",
+      "observed": "insufficient",
+      "matched": true,
+      "rationale": "The verified passage provides no relevant information for this claim.",
+      "observed_reason": "검증된 인용문은 이 주장을 다루지 않습니다.",
+      "observed_references": []
+    },
+    {
+      "id": "newton-force-acceleration-paraphrase",
+      "kind": "unseen-paraphrase-control",
+      "claim": "More net force produces greater acceleration in the system.",
+      "source_ids": [
+        "college-m42073:import-auto-id1355832"
+      ],
+      "expected": "partial",
+      "observed": "partial",
+      "matched": true,
+      "rationale": "Restates the positive force/acceleration relation from the verified Newton passage.",
+      "observed_reason": "계의 가속도와 알짜 외력에 관한 이 관계는 검토된 문단에 있습니다.",
+      "observed_references": [
+        "college-m42073:import-auto-id1355832"
+      ]
+    },
+    {
+      "id": "newton-inverse-force-contradiction",
+      "kind": "contradiction-control",
+      "claim": "Acceleration is inversely proportional to net force.",
+      "source_ids": [
+        "college-m42073:import-auto-id1355832"
+      ],
+      "expected": "contradiction",
+      "observed": "contradiction",
+      "matched": true,
+      "rationale": "The source states direct proportionality to net external force.",
+      "observed_reason": "근거는 가속도와 알짜 외력 또는 질량 사이에 이 주장과 반대되는 관계를 제시합니다.",
+      "observed_references": [
+        "college-m42073:import-auto-id1355832"
+      ]
+    },
+    {
+      "id": "newton-relation-unspecified",
+      "kind": "undecidable-control",
+      "claim": "Acceleration depends on net force and mass.",
+      "source_ids": [
+        "college-m42073:import-auto-id1355832"
+      ],
+      "expected": "undecidable",
+      "observed": "undecidable",
+      "matched": true,
+      "rationale": "The terms are present but the direction or form of the relation is not stated.",
+      "observed_reason": "근거는 관련 있지만 힘과 가속도 사이의 주장을 판단하기 어렵습니다.",
+      "observed_references": [
+        "college-m42073:import-auto-id1355832"
+      ]
+    },
+    {
+      "id": "pendulum-small-angle-paraphrase",
+      "kind": "unseen-paraphrase-control",
+      "claim": "At small angles, a pendulum's restoring force grows in proportion to displacement.",
+      "source_ids": [
+        "college-m42243:import-auto-id2672250"
+      ],
+      "expected": "partial",
+      "observed": "undecidable",
+      "matched": false,
+      "rationale": "Restates the supported small-angle restoring-force relation.",
+      "observed_reason": "근거는 작은 각도 조건을 제시하지만 이 주장은 뒷받침되는 복원력 관계를 밝히지 않습니다.",
+      "observed_references": [
+        "college-m42243:import-auto-id2672250"
+      ]
+    },
+    {
+      "id": "pendulum-large-angle-scope",
+      "kind": "scope-control",
+      "claim": "For large angles, a pendulum's restoring force is proportional to displacement.",
+      "source_ids": [
+        "college-m42243:import-auto-id2672250"
+      ],
+      "expected": "undecidable",
+      "observed": "undecidable",
+      "matched": true,
+      "rationale": "The source limits this approximation to angles below about 15 degrees.",
+      "observed_reason": "인용된 관계는 작은 각도에 한정되어 제시된 큰 각도에 적용되는지 알 수 없습니다.",
+      "observed_references": [
+        "college-m42243:import-auto-id2672250"
+      ]
+    },
+    {
+      "id": "pendulum-square-relation-contradiction",
+      "kind": "contradiction-control",
+      "claim": "A pendulum's restoring force is proportional to the square of displacement.",
+      "source_ids": [
+        "college-m42243:import-auto-id2672250"
+      ],
+      "expected": "contradiction",
+      "observed": "contradiction",
+      "matched": true,
+      "rationale": "The source's small-angle relation is linear in displacement, not quadratic.",
+      "observed_reason": "근거는 작은 각도에서 정비례 관계를 제시하며 반비례 관계를 말하지 않습니다.",
+      "observed_references": [
+        "college-m42243:import-auto-id2672250"
+      ]
+    },
+    {
+      "id": "velocity-vector-paraphrase",
+      "kind": "unseen-paraphrase-control",
+      "claim": "Velocity includes a direction as well as a magnitude.",
+      "source_ids": [
+        "college-m42100:import-auto-id3526102"
+      ],
+      "expected": "partial",
+      "observed": "partial",
+      "matched": true,
+      "rationale": "Restates both defining vector attributes in the verified source.",
+      "observed_reason": "속도의 크기와 방향을 함께 가진다는 설명은 검토된 문장에 있습니다.",
+      "observed_references": [
+        "college-m42100:import-auto-id3526102"
+      ]
+    },
+    {
+      "id": "velocity-scalar-contradiction",
+      "kind": "contradiction-control",
+      "claim": "Velocity is a scalar with only magnitude; direction is irrelevant.",
+      "source_ids": [
+        "college-m42100:import-auto-id3526102"
+      ],
+      "expected": "contradiction",
+      "observed": "contradiction",
+      "matched": true,
+      "rationale": "The source explicitly states that velocity has both magnitude and direction.",
+      "observed_reason": "검토된 문장은 속도에 크기와 방향이 모두 있다고 설명합니다.",
+      "observed_references": [
+        "college-m42100:import-auto-id3526102"
+      ]
+    },
+    {
+      "id": "momentum-product-paraphrase",
+      "kind": "unseen-paraphrase-control",
+      "claim": "Momentum is mass times velocity.",
+      "source_ids": [
+        "college-m42156:import-auto-id1120695"
+      ],
+      "expected": "partial",
+      "observed": "partial",
+      "matched": true,
+      "rationale": "Restates the source definition of momentum as the product of mass and velocity.",
+      "observed_reason": "운동량이 질량과 속도의 곱이라는 관계는 검토된 문장에 있습니다.",
+      "observed_references": [
+        "college-m42156:import-auto-id1120695"
+      ]
+    },
+    {
+      "id": "density-ratio-paraphrase",
+      "kind": "unseen-paraphrase-control",
+      "claim": "Density is the amount of mass per unit volume.",
+      "source_ids": [
+        "college-m42187:import-auto-id3217118"
+      ],
+      "expected": "partial",
+      "observed": "partial",
+      "matched": true,
+      "rationale": "Restates the verified mass-per-unit-volume definition.",
+      "observed_reason": "밀도가 부피당 질량이라는 관계는 검토된 문장에 있습니다.",
+      "observed_references": [
+        "college-m42187:import-auto-id3217118"
+      ]
+    },
+    {
+      "id": "average-velocity-paraphrase",
+      "kind": "unseen-paraphrase-control",
+      "claim": "Average velocity is displacement divided by elapsed time.",
+      "source_ids": [
+        "college-m42096:import-auto-id3538220"
+      ],
+      "expected": "partial",
+      "observed": "partial",
+      "matched": true,
+      "rationale": "Restates the verified displacement-over-time definition.",
+      "observed_reason": "평균 속도가 변위를 걸린 시간으로 나눈 값이라는 관계는 검토된 문장에 있습니다.",
+      "observed_references": [
+        "college-m42096:import-auto-id3538220"
+      ]
+    },
+    {
+      "id": "conflicting-verified-row-control",
+      "kind": "synthetic-conflict-stress-control",
+      "claim": "The most remarkable and unexpected fact about falling objects is that, if air resistance and friction are negligible, then in a given location all objects fall toward the center of Earth with the same constant acceleration, independent of their mass.",
+      "source_ids": [
+        "college-m42102:import-auto-id2006874"
+      ],
+      "expected": "undecidable",
+      "observed": "undecidable",
+      "matched": true,
+      "rationale": "A synthetic opposing statement is paired with the real verified passage; the conflict should prevent certification.",
+      "observed_reason": "검증된 문단 사이에서 이 주장에 관한 관계가 서로 충돌합니다.",
+      "observed_references": [
+        "college-m42102:import-auto-id2006874"
+      ]
+    },
+    {
+      "id": "signed-quantity-control",
+      "kind": "synthetic-normalization-control",
+      "claim": "The acceleration is +4 m/s².",
+      "source_ids": [
+        "synthetic-numeric-control"
+      ],
+      "expected": "related",
+      "observed": "related",
+      "matched": true,
+      "rationale": "The shared quantity terms make this related-only, but the plus sign must not normalize to the negative source value or earn direct support.",
+      "observed_reason": "인용문에 관련 용어가 있지만 이 관계를 뒷받침하지는 않습니다.",
+      "observed_references": [
+        "synthetic-numeric-control"
+      ]
+    }
+  ]
+}

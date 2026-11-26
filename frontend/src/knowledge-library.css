@@ -1,0 +1,30 @@
+.knowledge-library {width:100%;max-width:1360px;margin:0 auto;padding:clamp(16px,3vw,32px);color:var(--text);}
+.kl-head {display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.kl-head h2 {font-size:1.5rem;margin:0;}
+.kl-head p,.kl-detail p,.kl-list p {color:var(--muted);font-size:.87rem;line-height:1.65;}
+.kl-controls {display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin:16px 0 20px;}
+.kl-controls label {display:grid;gap:6px;color:var(--muted);font-size:.8rem;}
+.kl-query {flex:1 1 200px;}
+.kl-controls input,.kl-controls select,.kl-controls button,.kl-actions button {font:inherit;min-height:36px;padding:7px 10px;border:1px solid var(--line);border-radius:5px;color:var(--text);background:var(--panel2);}
+.kl-controls .kl-submit {background:var(--lime);color:#1b2318;font-weight:650;cursor:pointer;}
+.kl-columns {display:grid;grid-template-columns:minmax(220px,.43fr) minmax(0,1fr);gap:16px;align-items:start;}
+.kl-list,.kl-detail {padding:clamp(12px,2vw,20px);background:var(--panel);border:1px solid var(--line);border-radius:8px;}
+.kl-list {max-height:72vh;overflow:auto;}
+.kl-list h3 {display:flex;align-items:baseline;justify-content:space-between;margin:0 0 10px;}
+.kl-list h3 small,.kl-book {font-size:.75rem;color:var(--muted);font-weight:400;}
+.kl-item {width:100%;display:grid;gap:4px;text-align:left;margin:5px 0;padding:10px;background:var(--panel2);border:1px solid var(--line);border-radius:5px;color:var(--text);cursor:pointer;}
+.kl-item[aria-pressed=true] {border-color:var(--lime);background:#273023;}
+.kl-item small,.kl-item span,.kl-quote figcaption {font-size:.73rem;color:var(--muted);}
+.kl-detail {overflow-wrap:anywhere;min-height:220px;}
+.kl-detail h3 {font-size:1.28rem;line-height:1.4;margin:8px 0;}
+.kl-detail h4 {margin:20px 0 8px;}
+.kl-links,.kl-actions {display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 14px;}
+.kl-links a,.kl-detail figcaption a {font-size:.83rem;color:var(--lime);}
+.kl-quote {border-left:2px solid #62774b;background:#171d21;margin:8px 0;padding:10px 13px;}
+.kl-quote.current {border-color:var(--lime);}
+.kl-quote blockquote {margin:0 0 7px;line-height:1.6;font-size:.94rem;}
+.kl-actions button {cursor:pointer;font-size:.8rem;}
+.kl-provenance {margin-top:20px;font-size:.8rem;color:var(--muted);}
+.kl-provenance summary {cursor:pointer;}
+@media(max-width:760px) {.kl-columns {grid-template-columns:1fr;}.kl-list {max-height:38vh;}.kl-controls select {max-width:200px;}}
+

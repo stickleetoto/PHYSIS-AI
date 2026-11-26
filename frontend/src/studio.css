@@ -1,0 +1,47 @@
+.masthead .topnav { flex:0 1 auto; }
+.catalog-tools { display:flex;align-items:center;gap:4px;margin-left:auto; }
+.catalog-tools button,.bench-tools button,.bench-tools select,.member-tools button,.tutor-playbar button {
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  color:var(--text,#e3e8e8); background:#20292d; border:1px solid #3b484b;
+  padding:7px 10px;border-radius:6px;font:inherit;font-size:12px;
+}
+.catalog-tools button { background:transparent;border-color:transparent;color:#bbc7c9;white-space:nowrap; }
+.masthead .provider { margin-left:8px;background:transparent;display:flex;gap:7px;align-items:center; }
+.layout.study-layout {display:block;}
+.study-layout>.assistant {display:none;}
+.study-layout>main {max-width:1460px;margin:auto;}
+.bench-tools,.member-tools,.tutor-playbar {display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.bench-tools {padding:12px 15px;}
+.bench-tools select {max-width:215px;}
+.bench-tools label {font-size:12px;color:#bdc9cc;}
+.bench-cards {display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;padding:0 14px 12px;}
+.bench-member {background:#171e22;border:1px solid #344249;border-top:3px solid;border-radius:6px;padding:9px;}
+.bench-member.current {background:#27312c;}
+.bench-select {display:grid;gap:6px;text-align:left;color:#e3ece9;font:inherit;font-size:13px;width:100%;background:transparent;border:0;}
+.bench-select small,.bench-value small {font-size:11px;color:#acb9bb;}
+.bench-value {display:flex;gap:5px;justify-content:space-between;align-items:baseline;margin:10px 0 7px;}
+.member-tools button {font-size:10px;padding:3px 6px;}
+.multi-bench .plot-svg {width:100%;max-height:230px;}
+.comparison-notes {font-size:12px;line-height:1.7;padding:0 20px 12px 30px;color:#bdc8c9;}
+.comparison-notes b {color:#d8eaa9;}
+.focus-readout,.tutor-playbar {display:flex;align-items:center;flex-wrap:wrap;gap:12px;color:#d9ebc4;background:#273027;
+  border-left:3px solid #c4ee83;border-radius:3px;padding:10px 14px;font-size:13px;}
+.focus-readout mark,.tutor-variable {background:#36432a;color:#e5f4ca;}
+.tutor-playbar {background:#1d252b;border:1px solid #354249;}
+.tutor-playbar input {flex:1;min-width:80px;accent-color:#c4ee83;}
+.tutor-evidence {min-width:0;display:grid;gap:6px;}
+.lab-progress {max-height:90px;overflow:auto;padding:0 14px;color:#bdccbf;font-size:12px;}
+@media(max-width:1050px) {
+  .masthead {gap:7px;}
+  .masthead .product-name,.masthead .brand-divider {display:none;}
+  .masthead .topnav button {padding:6px 7px;white-space:nowrap;}
+}
+@media(max-width:750px) {
+  .masthead {display:flex;flex-wrap:wrap;height:auto;min-height:88px;padding:6px 8px;row-gap:4px;}
+  .masthead .topnav {display:flex;order:5;flex:1 1 100%;height:34px;overflow-x:auto;gap:2px;margin:0;}
+  .masthead .topnav button {height:32px;flex:1;font-size:12px;justify-content:center;}
+  .masthead .catalog-tools {margin-left:auto;font-size:11px;}.catalog-tools button {padding:4px;}
+  .masthead .provider {display:inline-flex;margin:0;font-size:11px;}
+  .layout.study-layout main {padding:12px;}
+  .bench-cards {grid-template-columns:repeat(2,minmax(0,1fr));}
+}

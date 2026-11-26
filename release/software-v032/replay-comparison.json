@@ -1,0 +1,73 @@
+{
+  "purpose": "Offline comparison plumbing only; model and education performance unmeasured.",
+  "dry_run_rows": 5,
+  "first": {
+    "run_id": "c496ae28-fb00b273-0f73bf75",
+    "attempted_cases": 5,
+    "request_count": 0,
+    "product_id": "0f73bf75c6966fce13e083732e4ae37148351b7743ceafe799e9ef849484b1ad"
+  },
+  "resume": {
+    "run_id": "c496ae28-fb00b273-0f73bf75",
+    "attempted_cases": 0,
+    "request_count": 0,
+    "product_id": "0f73bf75c6966fce13e083732e4ae37148351b7743ceafe799e9ef849484b1ad"
+  },
+  "comparison": [
+    {
+      "run_id": "c496ae28-fb00b273-0f73bf75",
+      "provider_config": "mock",
+      "arm": "A",
+      "case_id": "archived-answer-demo",
+      "status": "ok",
+      "request_count": 0,
+      "text": "힘의 SI 단위는 Newton(N)입니다. 1 Newton은 1 kg·m/s²와 동치입니다. 따라서 5 Newton은 5 kg·m/s²와 같습니다.\n\nkg, m, s는 기본 SI 단위입니다. 따라서 5 kg·m/s²를 기본 단위로 풀면 5입니다. \n\n따라서, 5 Newton은 5 kg·m/s²와 동치이므로, 기본 단위로 풀면 5입니다.",
+      "origin": "replay",
+      "trust_label": "UNTRUSTED_MODEL_OUTPUT_REQUIRES_REVIEW"
+    },
+    {
+      "run_id": "c496ae28-fb00b273-0f73bf75",
+      "provider_config": "mock",
+      "arm": "C",
+      "case_id": "archived-answer-demo",
+      "status": "ok",
+      "request_count": 0,
+      "text": "힘의 SI 단위는 Newton(N)입니다. 1 Newton은 1 kg·m/s²와 동치입니다. 따라서 5 Newton은 5 kg·m/s²와 같습니다.\n\nkg, m, s는 기본 SI 단위입니다. 따라서 5 kg·m/s²를 기본 단위로 풀면 5입니다. \n\n따라서, 5 Newton은 5 kg·m/s²와 동치이므로, 기본 단위로 풀면 5입니다.",
+      "origin": "replay",
+      "trust_label": "UNTRUSTED_MODEL_OUTPUT_REQUIRES_REVIEW"
+    },
+    {
+      "run_id": "c496ae28-fb00b273-0f73bf75",
+      "provider_config": "mock",
+      "arm": "D",
+      "case_id": "archived-answer-demo",
+      "status": "ok",
+      "request_count": 0,
+      "text": "힘의 SI 단위는 Newton(N)입니다. 1 Newton은 1 kg·m/s²와 동치입니다. 따라서 5 Newton은 5 kg·m/s²와 같습니다.\n\nkg, m, s는 기본 SI 단위입니다. 따라서 5 kg·m/s²를 기본 단위로 풀면 5입니다. \n\n따라서, 5 Newton은 5 kg·m/s²와 동치이므로, 기본 단위로 풀면 5입니다.",
+      "origin": "replay",
+      "trust_label": "UNTRUSTED_MODEL_OUTPUT_REQUIRES_REVIEW"
+    },
+    {
+      "run_id": "c496ae28-fb00b273-0f73bf75",
+      "provider_config": "mock",
+      "arm": "E",
+      "case_id": "archived-answer-demo",
+      "status": "ok",
+      "request_count": 0,
+      "text": "힘의 SI 단위는 Newton(N)입니다. 1 Newton은 1 kg·m/s²와 동치입니다. 따라서 5 Newton은 5 kg·m/s²와 같습니다.\n\nkg, m, s는 기본 SI 단위입니다. 따라서 5 kg·m/s²를 기본 단위로 풀면 5입니다. \n\n따라서, 5 Newton은 5 kg·m/s²와 동치이므로, 기본 단위로 풀면 5입니다.",
+      "origin": "replay",
+      "trust_label": "UNTRUSTED_MODEL_OUTPUT_REQUIRES_REVIEW"
+    },
+    {
+      "run_id": "c496ae28-fb00b273-0f73bf75",
+      "provider_config": "mock",
+      "arm": "F",
+      "case_id": "archived-answer-demo",
+      "status": "ok",
+      "request_count": 0,
+      "text": "물리량을 연결하는 방정식에는 양변의 차원이 일치해야 한다는 조건이 있습니다. 인용문과 함께 조건을 확인하세요.\n\n관련 기능·자료: Physical Quantities and Units, Unit Conversion, Dimensional Analysis.",
+      "origin": "mock",
+      "trust_label": "UNTRUSTED_MODEL_OUTPUT_REQUIRES_REVIEW"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "provider": "Mock only",
+  "live_model_evaluated": false,
+  "cases": [
+    {
+      "case": "given_values",
+      "question": "질량 3 kg인 카트에 오른쪽으로 15 N의 알짜힘이 작용해. 가속도 크기와 방향을 알려 줘.",
+      "event": "result",
+      "action": "create",
+      "state": "PARTIALLY_ANSWERED",
+      "source_revision_before": 1,
+      "source_revision_after": 1,
+      "source_values_before": {
+        "mass": 1.0,
+        "x0": 0.0,
+        "v0": 2.0,
+        "force": 3.0
+      },
+      "source_values_after": {
+        "mass": 1.0,
+        "x0": 0.0,
+        "v0": 2.0,
+        "force": 3.0
+      },
+      "returned_distinct_experiment": true,
+      "changed_source": false,
+      "expected_change": false,
+      "passed": true,
+      "returned_message": "같은 힘을 가하면 질량이 클수록 가속도가 작아집니다. 힘의 방향은 가속도의 부호로 확인할 수 있습니다.\n\n이 실행에서 확인한 값: 가속도 5 m/s², 알짜힘 15 N, 마지막 속도 22 m/s, 마지막 위치 48 m"
+    },
+    {
+      "case": "conditional",
+      "question": "알짜힘을 그대로 둔 채 카트 질량을 두 배로 하면 가속도는 어떻게 돼? 왜 그런지 식으로 설명해 줘.",
+      "event": "result",
+      "action": "create",
+      "state": "PARTIALLY_ANSWERED",
+      "source_revision_before": 1,
+      "source_revision_after": 1,
+      "source_values_before": {
+        "mass": 1.0,
+        "x0": 0.0,
+        "v0": 2.0,
+        "force": 3.0
+      },
+      "source_values_after": {
+        "mass": 1.0,
+        "x0": 0.0,
+        "v0": 2.0,
+        "force": 3.0
+      },
+      "returned_distinct_experiment": true,
+      "changed_source": false,
+      "expected_change": false,
+      "passed": true,
+      "returned_message": "같은 힘을 가하면 질량이 클수록 가속도가 작아집니다. 힘의 방향은 가속도의 부호로 확인할 수 있습니다."
+    },
+    {
+      "case": "explicit_edit",
+      "question": "현재 카트의 질량을 2 kg으로 바꿔 줘.",
+      "event": "result",
+      "action": "modify",
+      "state": "PARTIALLY_ANSWERED",
+      "source_revision_before": 1,
+      "source_revision_after": 2,
+      "source_values_before": {
+        "mass": 1.0,
+        "x0": 0.0,
+        "v0": 2.0,
+        "force": 3.0
+      },
+      "source_values_after": {
+        "mass": 2.0,
+        "x0": 0.0,
+        "v0": 2.0,
+        "force": 3.0
+      },
+      "returned_distinct_experiment": false,
+      "changed_source": true,
+      "expected_change": true,
+      "passed": true,
+      "returned_message": "계의 알짜 외력이 커지면 가속도도 커집니다. 알짜 외력이 같을 때에는 질량이 큰 계의 가속도가 작습니다.\n\n이 실행에서 확인한 값: 가속도 1.5 m/s², 마지막 속도 8 m/s, 마지막 위치 20 m, 알짜힘 3 N"
+    }
+  ]
+}

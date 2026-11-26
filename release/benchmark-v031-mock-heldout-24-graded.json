@@ -1,0 +1,1930 @@
+{
+  "schema_version": 1,
+  "run_id": "30471b288e5240d8aa78264c159df897",
+  "started_utc": "2026-11-25T12:05:54.738952+00:00",
+  "cohort": "heldout",
+  "pre_generation_seal": {
+    "file": "release/education-v031-heldout-seal.json",
+    "sha256": "63c2b188c9f5a701789d9bf00462cb7d1835d999b5c8ca8d8373dc5171b83528",
+    "heldout_sha256": "276b32e62c6db1fc67ff6a7560fbd6de9b5a46a57290e492d0406f19d72a48c9",
+    "rubric_sha256": "f5211900702df2314de934fa27eeb299a02f0812f0d7daacac6b475a93c76d63"
+  },
+  "product_freeze": {
+    "snapshot_sha256": "86a18410440acb8f5f83d6afeb78bfc9504241d67d745c7a681b99a17b35edb2",
+    "manifest_file_sha256": "b7405950db7e19a6719c7ad77e7f789fd51379d178b5eb48b887f6b862ff2c06",
+    "recorded_utc": "2026-11-25T11:49:52.629324+00:00",
+    "file_count": 157,
+    "verified_files": 157
+  },
+  "fixture_file": "release/education-v031-heldout.jsonl",
+  "fixture_sha256": "276b32e62c6db1fc67ff6a7560fbd6de9b5a46a57290e492d0406f19d72a48c9",
+  "canonical_split_sha256": "032e43a26cd4b4adf3691fd82b5c176ab158fd0e030fa0d8335dbfa851fc8338",
+  "selected_ids": [
+    "h-concept-01",
+    "h-concept-02",
+    "h-misconception-01",
+    "h-misconception-02",
+    "h-formula-01",
+    "h-formula-02",
+    "h-applicability-01",
+    "h-applicability-02",
+    "h-units-01",
+    "h-units-02",
+    "h-numeric-01",
+    "h-numeric-02",
+    "h-citation-01",
+    "h-citation-02",
+    "h-followup-01",
+    "h-followup-02",
+    "h-ambiguous-01",
+    "h-ambiguous-02",
+    "h-insufficient-01",
+    "h-insufficient-02",
+    "h-unsupported-01",
+    "h-unsupported-02",
+    "h-fabricated-01",
+    "h-fabricated-02"
+  ],
+  "case_count": 24,
+  "answer_keys_or_basis_sent_to_model": false,
+  "code_sha256": {
+    "scripts/benchmark_v3.py": "fc68caf21d26509aa150d8b9f6ea4a328d2a500ad1caf6619db28bd706bf2a81",
+    "scripts/benchmark_scoring.py": "895fc497b0d5c68ad6b30ae2c0b3186af330bc493dff22a763ef7b263db7d447",
+    "scripts/independent_v031.py": "ee286c048943c2457a5138017d9ec9afaf20934b2bea582bb8e8eafed95c99cd",
+    "scripts/independent_v031_fresh.py": "e9ad865ad3d0f248937bad822991097a5decec42792f9032c59fdb483cd6bdd7",
+    "backend/physis/__init__.py": "a3f9e3b04bdf54ef5a7d2578d54d981028c7151652bbc020311623e038f436c6",
+    "backend/physis/alignment.py": "a4ef5282223461cdb3da6bd521937a34cbc057a30e654653dfecb09b0e8020f2",
+    "backend/physis/api.py": "ac6b10b842a45f3d78d3974ea70fdee3da699e864496b96988e87f32043a7ba1",
+    "backend/physis/clarification.py": "d56336dcc277830b0757b58c8fe7f51204116765e69eb29a51171ddeb433a300",
+    "backend/physis/classroom_units.py": "f46610282d86ead952957a3859e1480bb92b8520c4fb985e4eeac64ea74e9cc9",
+    "backend/physis/curriculum.py": "78c87c922534668a58393b0d55f4dd857c5e545b50c6719f8105579a5fca7d05",
+    "backend/physis/education.py": "d8c4da9d8c2335e1ca011a2fd0d9cd9893640f82368cba071dbd0a19b1070db4",
+    "backend/physis/evidence.py": "704bc0b6309a85fdeb98c098daf0a5a21932d0c40e53f0016c2b4ed1bd8725d2",
+    "backend/physis/formula_registry.py": "f00e7087553174d248f8a57776d049244ff725b183504538dd4ca5b6ef8b924b",
+    "backend/physis/grounded.py": "a868f33fdc4f4a67ea4592c92da20b2ec6dcd8ac6192d328f1650d54ad9086dc",
+    "backend/physis/knowledge.py": "b8d0061b7cfe4e14602049c26f415f7f2210de9b5c90dfca62e40ee0217143ff",
+    "backend/physis/knowledge_api.py": "107419078730b30979faa4b002b19236a95d5b9f6636d21b8fde363d57989083",
+    "backend/physis/knowledge_processing.py": "174f9c54dadf09d4a9eac53d3a166069c5335cef814d5a816430eb66ed340aa5",
+    "backend/physis/knowledge_sources.py": "37c003c7ab65dbb412b61b02504d40efd93e3093feb8ab162d8795fe0ade6b1d",
+    "backend/physis/knowledge_terms.py": "1e4efdf1f73ad2557df63cde4ce9edf45abeb78a3e1c7831f7e875d168af32d9",
+    "backend/physis/math_router.py": "692fd295c8db3b80d4a3e14fe1a1f07df8fcd1b7d8dc165bf08182d8e413404a",
+    "backend/physis/model_lesson.py": "f3c7fc6772ff2edcdbac4815459934f4e493630e71d2821f65579e619337d4e1",
+    "backend/physis/physics.py": "a133c58b64ea6f0f48821b084b1d42acbd2f58f11694a5f2bdb57f0346df60a2",
+    "backend/physis/physics_common.py": "3f456d9224b7da90952adc772b894d9b51fed62638b368034114ad73d47a2546",
+    "backend/physis/physics_events.py": "00454842b13e5b8775a24a58aacc7e9ee380a1a7365c4b46cdcec8e22d31fa80",
+    "backend/physis/physics_fields.py": "037fb44c7dbab3b575e0fcdcfd61be7fe906e232087d871dddf941d348fc1a70",
+    "backend/physis/physics_fluids.py": "9e197fbc5f3425b829494973481701e88727e1436eeb276f886f7ef73b73f8be",
+    "backend/physis/physics_motion.py": "4bfe98d96c10bc4cdc43275285a07fca53693d67e95012eaeadcd858aa15b3b0",
+    "backend/physis/physics_oscillations.py": "295ec47887217cf0425f5f89bf749c380bc844220d136e382c4043e55cd43356",
+    "backend/physis/provider_config.py": "b4948387e332225499919147049a1d1d2ed06d14327646bb57fa574b7dc1b8e9",
+    "backend/physis/provider_routes.py": "e7d5af9321a88211d3ffccfda8f48ae031c198ff6c584cdcee017376d8c80c9e",
+    "backend/physis/provider_stream.py": "101f3d0a41ee9845d84c4dae1e5a58f414ac412bd181b4070de923a5899ee38a",
+    "backend/physis/providers.py": "a297dd5cba5d24a91afb079bad9fb5c8d7d254d56cc8652f57d04791f84ef370",
+    "backend/physis/reasoning.py": "8df612c5fd754aac817895cfa328ee742a9f7433cd8f038240f3514c27fd6a41",
+    "backend/physis/reviewed_claims.py": "a07f87cdc599f59428cc64dc154baa74968198b323212e4e6dddadc8237cd8b0",
+    "backend/physis/schema.py": "43f77b8f74ff1d6ea8ebe27351021f12c20e1cdef78776e4d6f914136a6000bc",
+    "backend/physis/science_api.py": "1c9458feb993eff6f99219a19e29110eb618b642d4324a97d9a1b6eabe7e1265",
+    "backend/physis/science_formulas.py": "5fe1aca46d0ef001848816ec3969bb8d68f0bb28a8688051a07b04334a4fd7ba",
+    "backend/physis/science_language.py": "896f65ac69995645d2ba70fd80dee651155fcaf3ed3aadb0065f5ff710e765b9",
+    "backend/physis/state.py": "028ee9a89305587dea8e7f0f6064ea9c1150adbc9d7e61f7b8e27646cd524dec",
+    "backend/physis/studio.py": "f988a166633e464747ad0eae274d95f70621f85c4a320d4b58e38449d683a17f",
+    "backend/physis/study_api.py": "1c22b2acbf51ae179babfaab8ec4888025b166a2089cf8ac88d14d27490abbd4",
+    "backend/physis/symbolic_core.py": "a4e4ce0558790d5829dfd9ddb6723337dc1e9f9e3c1cb7690a3d099a3ddcf545",
+    "backend/physis/symbolic_units.py": "cda1455b8bfefb3e1a5d7b545a0ad06b1eee26db59d41138d07bc42ed4ca74b5",
+    "backend/physis/symbolic_worker.py": "7bdf729cd25f63a9d22b88f7030c9f710e1ce8e1b16a97c6119649095ab1f376",
+    "backend/physis/tutor.py": "d026ffe441131f16c393c8407fae5d37f86b764d80e679badf1895eb25151ae8",
+    "backend/physis/tutor_protocol.py": "90fcbd0d831ff29355255c28abb6a9de622d7d6a1bd8c4d12fa533fdb06ac41c",
+    "backend/physis/workbenches.py": "abf092a28be94df75383d3f1a1b6cb7e655f7fe09e30530dcf10fecb1752c7eb"
+  },
+  "provider": "mock",
+  "model": "local-rules",
+  "execution_path": "POST /api/tutor/stream through TestClient",
+  "arms": {
+    "mock": {
+      "provider": "mock",
+      "model": "local-rules",
+      "rows": [
+        {
+          "case": {
+            "id": "h-concept-01",
+            "category": "concept",
+            "model": "newton",
+            "patch": {
+              "values": {
+                "force": 0
+              }
+            },
+            "question": "뉴턴 실험에서 질량 1 kg인 카트에 4 N 오른쪽 힘과 4 N 왼쪽 힘이 동시에 작용한다. 속도가 일정할 수 있는 이유를 설명하고, 각 힘이 사라진 것은 아닌지 구분해 줘.",
+            "reference": "force",
+            "basis": "같은 물체에 반대 방향으로 작용하는 두 힘의 벡터합은 0이므로 가속도는 0이다. 개별 힘은 존재하며 서로 다른 물체에 작용하는 반작용 쌍과 구분해야 한다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/5-3-newtons-second-law"
+          },
+          "status": "ok",
+          "checks": {
+            "concept_accuracy": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              0
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 142.494,
+          "answer": {
+            "text": "이 질문에 대해 검토된 자료가 주장을 뒷받침하는지 확인하지 못해 설명을 보류했습니다.\n요청을 뒷받침할 인용 가능한 문단을 확인하지 못했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "",
+            "classification": "unsupported",
+            "action": "unsupported",
+            "abstention": {
+              "status": "full",
+              "reasons": [
+                "이 주장을 판단할 검증된 인용문이 없습니다.",
+                "내장 자료에서 이 요청을 뒷받침하는 근거를 확인하지 못했습니다."
+              ]
+            },
+            "numbers": [],
+            "citations": [],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 142.51,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Full abstention on an answerable force-cancellation question; no explanation of the existing equal and opposite forces."
+          }
+        },
+        {
+          "case": {
+            "id": "h-concept-02",
+            "category": "concept",
+            "model": "ideal_gas",
+            "question": "강체 용기 안의 이상기체를 데우면 왜 벽을 미는 압력이 커질 수 있는지 분자 모형과 절대온도 기준으로 설명해 줘.",
+            "reference": "gas",
+            "basis": "고정된 부피와 기체량에서 절대온도가 오르면 분자의 평균 운동에너지가 증가하고 벽과의 충돌이 더 강하거나 빈번해져 압력이 증가한다. 섭씨 온도 대신 켈빈을 기준으로 한다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-2/pages/2-1-molecular-model-of-an-ideal-gas"
+          },
+          "status": "ok",
+          "checks": {
+            "source_trace": [
+              2,
+              2
+            ],
+            "concept_accuracy": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              11
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 137.549,
+          "answer": {
+            "text": "기체의 양과 부피를 고정하면 절대압은 켈빈 온도에 비례합니다. 섭씨 온도를 두 배로 한 경우에는 켈빈 온도의 비를 다시 계산해야 합니다.\n\n이 실행에서 확인한 값: 절대압 9.977e+04 Pa, 기체 · 마지막 pressure 9.977e+04 Pa, 기체 · 마지막 temperature 300 K, 기체 · 마지막 volume 0.025 m³\n기체가 열평형에 도달\n분자 부피·상호작용 무시\n상태량 고정\n인용문은 원문과 대조했습니다. 각 설명 문장은 근거 관계를 따로 판정했으며, 확인되지 않은 문장은 보류했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "p=nRT/V",
+            "classification": "sufficient",
+            "action": "explain",
+            "abstention": {
+              "status": "partial",
+              "reasons": [
+                "검증된 인용문은 이 주장을 다루지 않습니다."
+              ]
+            },
+            "numbers": [
+              {
+                "key": "pressure",
+                "label": "절대압",
+                "value": 99773.55141783887,
+                "unit": "Pa"
+              },
+              {
+                "key": "last.0.pressure",
+                "label": "기체 · 마지막 pressure",
+                "value": 99773.55141783887,
+                "unit": "Pa"
+              },
+              {
+                "key": "last.0.temperature",
+                "label": "기체 · 마지막 temperature",
+                "value": 300.0,
+                "unit": "K"
+              },
+              {
+                "key": "last.0.volume",
+                "label": "기체 · 마지막 volume",
+                "value": 0.025,
+                "unit": "m³"
+              }
+            ],
+            "citations": [
+              {
+                "id": "university2-m58391:fs-id1172100572336",
+                "title": "Molecular Model of an Ideal Gas",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-university-physics-bundle/blob/9364cbc32511afea3d4695e70a88687ffc1a3696/modules/m58391/index.cnxml#L48",
+                "locator": "The Gas Laws · ¶7 (fs-id1172100572336)",
+                "quote": "Similar is Amonton’s or Gay-Lussac’s law, which states that at constant volume and number of molecules, the pressure is proportional to the temperature. That law is the basis of the constant-volume gas thermometer, discussed in the previous chapter. (The histories of these laws and the appropriate credit for them are more complicated than can be discussed here.)"
+              },
+              {
+                "id": "college-m42216:import-auto-id1149559",
+                "title": "The Ideal Gas Law",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-college-physics-bundle/blob/84147e8ddbb1a7d2689e235630b230e6b4f20480/modules/m42216/index.cnxml#L34",
+                "locator": "The Ideal Gas Law · ¶6 (import-auto-id1149559)",
+                "quote": "In many common circumstances, including, for example, room temperature air, the gas particles have negligible volume and do not interact with each other, aside from perfectly elastic collisions. In such cases, the gas is called an ideal gas, and the relationship between the pressure, volume, and temperature is given by the equation called the ideal gas law."
+              }
+            ],
+            "simulation_supported": true,
+            "ran_simulation": true
+          },
+          "dialogue_elapsed_ms": 140.553,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "States the correct fixed-volume Kelvin proportionality and p=nRT/V but omits the requested molecular kinetic-energy/collision mechanism, so it does not explain why pressure rises."
+          }
+        },
+        {
+          "case": {
+            "id": "h-misconception-01",
+            "category": "misconception",
+            "model": "friction",
+            "question": "오른쪽으로 미끄러지는 상자에는 운동 마찰력도 오른쪽으로 작용할까? 접촉면 사이의 상대운동을 기준으로 설명해 줘.",
+            "reference": "friction",
+            "basis": "운동 마찰력은 접촉면의 상대운동에 반대 방향이다. 상자가 바닥에 대해 오른쪽으로 미끄러지면 바닥이 상자에 주는 운동 마찰력은 왼쪽이다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/6-2-friction"
+          },
+          "status": "ok",
+          "checks": {
+            "source_trace": [
+              1,
+              1
+            ],
+            "concept_accuracy": [
+              1,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              11
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 137.201,
+          "answer": {
+            "text": "움직이는 물체에 작용하는 운동 마찰력은 속도와 반대 방향입니다. 마찰 계수가 클수록 물체의 속력이 빠르게 줄어듭니다.\n\n이 실행에서 확인한 값: 정지 시각 0.8155 s, 정지할 때까지 이동한 거리 0.8155 m, 마지막 위치 0.8155 m, 물체 · 마지막 x 0.8155 m\n수평면\n운동 마찰 계수 일정\n외부 수평 힘 없음\n정지한 뒤 계속 정지\n인용문은 원문과 대조했습니다. 각 설명 문장은 근거 관계를 따로 판정했으며, 확인되지 않은 문장은 보류했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "d=\\frac{v_0^2}{2\\mu_k g}",
+            "classification": "sufficient",
+            "action": "explain",
+            "abstention": {
+              "status": "partial",
+              "reasons": [
+                "검증된 인용문은 이 주장을 다루지 않습니다."
+              ]
+            },
+            "numbers": [
+              {
+                "key": "stop_time",
+                "label": "정지 시각",
+                "value": 0.8154943934760448,
+                "unit": "s"
+              },
+              {
+                "key": "stop_distance",
+                "label": "정지할 때까지 이동한 거리",
+                "value": 0.8154943934760449,
+                "unit": "m"
+              },
+              {
+                "key": "final_position",
+                "label": "마지막 위치",
+                "value": 0.8154943934760449,
+                "unit": "m"
+              },
+              {
+                "key": "last.0.x",
+                "label": "물체 · 마지막 x",
+                "value": 0.8154943934760449,
+                "unit": "m"
+              }
+            ],
+            "citations": [
+              {
+                "id": "college-m42139:import-auto-id1165298838484",
+                "title": "Friction",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-college-physics-bundle/blob/84147e8ddbb1a7d2689e235630b230e6b4f20480/modules/m42139/index.cnxml#L21",
+                "locator": "Friction · ¶3 (import-auto-id1165298838484)",
+                "quote": "Friction is a force that opposes relative motion between surfaces in contact."
+              }
+            ],
+            "simulation_supported": true,
+            "ran_simulation": true
+          },
+          "dialogue_elapsed_ms": 138.852,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Correctly says kinetic friction opposes motion and explains slowing; the stationary-floor context makes the direction correct, though it does not explicitly say relative surface motion."
+          }
+        },
+        {
+          "case": {
+            "id": "h-misconception-02",
+            "category": "misconception",
+            "model": "acceleration",
+            "patch": {
+              "values": {
+                "v0": 9.81,
+                "a": -9.81
+              },
+              "duration": 1.0
+            },
+            "question": "위로 던진 공이 최고점에서 순간적으로 멈출 때 중력가속도도 0이 되는 거지? 순간속도와 가속도를 구분해 줘.",
+            "reference": "acceleration",
+            "basis": "최고점에서 순간속도는 0이지만 중력가속도는 계속 아래쪽으로 g이다. 속도가 0인 것과 가속도가 0인 것은 다르다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/3-4-motion-with-constant-acceleration"
+          },
+          "status": "ok",
+          "checks": {
+            "concept_accuracy": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              0
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 131.994,
+          "answer": {
+            "text": "이 질문에 대해 검토된 자료가 주장을 뒷받침하는지 확인하지 못해 설명을 보류했습니다.\n요청을 뒷받침할 인용 가능한 문단을 확인하지 못했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "",
+            "classification": "unsupported",
+            "action": "unsupported",
+            "abstention": {
+              "status": "full",
+              "reasons": [
+                "이 주장을 판단할 검증된 인용문이 없습니다.",
+                "내장 자료에서 이 요청을 뒷받침하는 근거를 확인하지 못했습니다."
+              ]
+            },
+            "numbers": [],
+            "citations": [],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 132.008,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Full abstention; it does not distinguish zero instantaneous velocity from continuing downward gravitational acceleration."
+          }
+        },
+        {
+          "case": {
+            "id": "h-formula-01",
+            "category": "formula",
+            "model": "circular",
+            "question": "반지름 r인 원을 속력 v로 도는 물체의 구심가속도를 v와 r로 나타내는 식을 써 줘.",
+            "reference": "circle",
+            "basis": "균일 원운동의 구심가속도는 a_c=v²/r이며 중심을 향한다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/4-4-uniform-and-nonuniform-circular-motion"
+          },
+          "status": "ok",
+          "checks": {
+            "source_trace": [
+              1,
+              1
+            ],
+            "formula_accuracy": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              11
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 141.37,
+          "answer": {
+            "text": "등속 원운동에서는 속력의 크기는 일정해도 접선 방향이 계속 바뀝니다. 속도 벡터의 이 변화 때문에 가속도가 생기며 방향은 원의 중심을 향합니다.\n\n이 실행에서 확인한 값: 이론 구심 가속도 4 m/s², 이론 주기 3.142 s, 이론 속력 2 m/s, 증폭 행렬 스펙트럼 반경 1 1\n평면 운동\n원점 방향의 선형 중심력\n초기 속도는 원의 접선 방향\n인용문은 원문과 대조했습니다. 각 설명 문장은 근거 관계를 따로 판정했으며, 확인되지 않은 문장은 보류했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "a_c=\\omega^2R",
+            "classification": "sufficient",
+            "action": "explain",
+            "abstention": {
+              "status": "partial",
+              "reasons": [
+                "인용문에 관련 용어가 있지만 이 관계를 뒷받침하지는 않습니다.",
+                "검증된 인용문은 이 주장을 다루지 않습니다."
+              ]
+            },
+            "numbers": [
+              {
+                "key": "centripetal_acceleration",
+                "label": "이론 구심 가속도",
+                "value": 4.0,
+                "unit": "m/s²"
+              },
+              {
+                "key": "reference_period",
+                "label": "이론 주기",
+                "value": 3.141592653589793,
+                "unit": "s"
+              },
+              {
+                "key": "reference_speed",
+                "label": "이론 속력",
+                "value": 2.0,
+                "unit": "m/s"
+              },
+              {
+                "key": "spectral_radius",
+                "label": "증폭 행렬 스펙트럼 반경",
+                "value": 0.9999999999715612,
+                "unit": "1"
+              }
+            ],
+            "citations": [
+              {
+                "id": "college-m42084:import-auto-id2422195",
+                "title": "Centripetal Acceleration",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-college-physics-bundle/blob/84147e8ddbb1a7d2689e235630b230e6b4f20480/modules/m42084/index.cnxml#L17",
+                "locator": "Centripetal Acceleration · ¶3 (import-auto-id2422195)",
+                "quote": "The direction of the instantaneous velocity is shown at two points along the path. Acceleration is in the direction of the change in velocity, which points directly toward the center of rotation (the center of the circular path). This pointing is shown with the vector diagram in the figure."
+              }
+            ],
+            "simulation_supported": true,
+            "ran_simulation": true
+          },
+          "dialogue_elapsed_ms": 143.592,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Gives a_c=omega^2 R but does not express the requested variables v and r or connect omega=v/r."
+          }
+        },
+        {
+          "case": {
+            "id": "h-formula-02",
+            "category": "formula",
+            "model": "heat_equilibrium",
+            "question": "같은 물질의 물 두 양 m₁, m₂를 초기온도 T₁, T₂에서 섞고 열손실이 없다고 할 때 평형온도를 질량과 온도로 나타내 줘.",
+            "reference": "heat",
+            "basis": "같은 비열 c이고 외부 열손실이 없으면 에너지 보존으로 T_f=(m₁T₁+m₂T₂)/(m₁+m₂)이다. 이 관계는 두 물이 같은 물질이라는 조건을 쓴다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-2/pages/1-4-heat-transfer-specific-heat-and-calorimetry"
+          },
+          "status": "ok",
+          "checks": {
+            "source_trace": [
+              3,
+              3
+            ],
+            "formula_accuracy": [
+              1,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              11
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 138.481,
+          "answer": {
+            "text": "이 실행에서 확인한 값: 평형 온도 310 K, 관측 물체의 마지막 온도 313.3 K, 물체 A · 마지막 temperature 313.3 K, 물체 A · 마지막 heat -440.6 J\n외부와 단열\n각 물체 내부 온도 균일\n열용량·접촉 열전도도 일정\n상변화 없음\n인용문은 원문과 대조했습니다. 각 설명 문장은 근거 관계를 따로 판정했으며, 확인되지 않은 문장은 보류했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "T_\\mathrm{eq}=\\frac{C_aT_{a0}+C_bT_{b0}}{C_a+C_b}",
+            "classification": "sufficient",
+            "action": "explain",
+            "abstention": {
+              "status": "partial",
+              "reasons": [
+                "검증된 인용문은 이 주장을 다루지 않습니다."
+              ]
+            },
+            "numbers": [
+              {
+                "key": "equilibrium_temp",
+                "label": "평형 온도",
+                "value": 310.0,
+                "unit": "K"
+              },
+              {
+                "key": "final_temp",
+                "label": "관측 물체의 마지막 온도",
+                "value": 313.28339994495593,
+                "unit": "K"
+              },
+              {
+                "key": "last.0.temperature",
+                "label": "물체 A · 마지막 temperature",
+                "value": 313.28339994495593,
+                "unit": "K"
+              },
+              {
+                "key": "last.0.heat",
+                "label": "물체 A · 마지막 heat",
+                "value": -440.5992006605288,
+                "unit": "J"
+              }
+            ],
+            "citations": [
+              {
+                "id": "university2-m58387:fs-id1170903831782",
+                "title": "Heat Transfer, Specific Heat, and Calorimetry",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-university-physics-bundle/blob/9364cbc32511afea3d4695e70a88687ffc1a3696/modules/m58387/index.cnxml#L247",
+                "locator": "Temperature Change and Heat Capacity · ¶22 (fs-id1170903831782)",
+                "quote": "We express this idea by writing that the sum of the heats equals zero because the heat gained is usually considered positive; the heat lost, negative."
+              },
+              {
+                "id": "university2-m58384:fs-id1170902769734",
+                "title": "Temperature and Thermal Equilibrium",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-university-physics-bundle/blob/9364cbc32511afea3d4695e70a88687ffc1a3696/modules/m58384/index.cnxml#L21",
+                "locator": "Temperature · ¶3 (fs-id1170902769734)",
+                "quote": "The concept of temperature has evolved from the common concepts of hot and cold. The scientific definition of temperature explains more than our senses of hot and cold."
+              },
+              {
+                "id": "college-m42224:import-auto-id3122646",
+                "title": "Temperature Change and Heat Capacity",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-college-physics-bundle/blob/84147e8ddbb1a7d2689e235630b230e6b4f20480/modules/m42224/index.cnxml#L17",
+                "locator": "Temperature Change and Heat Capacity · ¶2 (import-auto-id3122646)",
+                "quote": "One of the major effects of heat transfer is temperature change: heating increases the temperature while cooling decreases it. We assume that there is no phase change and that no work is done on or by the system."
+              }
+            ],
+            "simulation_supported": true,
+            "ran_simulation": true
+          },
+          "dialogue_elapsed_ms": 143.242,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Gives the equivalent heat-capacity weighted mean; for the same material C_i=m_i c, so the common c cancels. Extra simulation state is not needed for the formula."
+          }
+        },
+        {
+          "case": {
+            "id": "h-applicability-01",
+            "category": "applicability",
+            "model": "acceleration",
+            "question": "위치식 x=x₀+v₀t+½at²를 그대로 써도 될까? 실험에서 순힘이 시간에 따라 바뀌어 가속도도 일정하지 않다고 나왔어.",
+            "reference": "acceleration",
+            "basis": "해당 식은 일정한 가속도 조건에서만 그대로 적용된다. 가속도가 시간에 따라 달라지면 속도·위치 변화는 적분하거나 적절한 수치 방법으로 구해야 한다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/3-4-motion-with-constant-acceleration"
+          },
+          "status": "ok",
+          "checks": {
+            "applicability_accuracy": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              0
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 144.072,
+          "answer": {
+            "text": "이 질문에 대해 검토된 자료가 주장을 뒷받침하는지 확인하지 못해 설명을 보류했습니다.\n요청을 뒷받침할 인용 가능한 문단을 확인하지 못했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "",
+            "classification": "unsupported",
+            "action": "unsupported",
+            "abstention": {
+              "status": "full",
+              "reasons": [
+                "이 주장을 판단할 검증된 인용문이 없습니다.",
+                "내장 자료에서 이 요청을 뒷받침하는 근거를 확인하지 못했습니다."
+              ]
+            },
+            "numbers": [],
+            "citations": [],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 144.088,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Full abstention; it does not identify constant acceleration as the formula's applicability condition."
+          }
+        },
+        {
+          "case": {
+            "id": "h-applicability-02",
+            "category": "applicability",
+            "model": "bernoulli",
+            "question": "점성이 중요한 긴 관에서 압력 손실을 무시한 이상적인 베르누이식을 그대로 적용하면 어떤 전제가 빠져 있을까?",
+            "reference": "bernoulli",
+            "basis": "기본 베르누이식은 흐름 경로에서 비점성·정상 흐름 같은 이상화 조건을 쓴다. 점성 마찰에 따른 에너지 손실을 무시할 수 없으면 손실항 또는 다른 모델이 필요하다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/14-6-bernoullis-equation"
+          },
+          "status": "ok",
+          "checks": {
+            "source_trace": [
+              1,
+              1
+            ],
+            "applicability_accuracy": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              1,
+              10
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 144.496,
+          "answer": {
+            "text": "이 실행에서 확인한 값: 출구 절대압 9.982e+04 Pa, 체적 유량 0.04 m³/s, 출구 유속 2 m/s, 입구 · 마지막 pressure 1.013e+05 Pa\n정상·비압축성·비점성 흐름\n수평 유선\n손실·펌프 없음\n인용문은 원문과 대조했습니다. 각 설명 문장은 근거 관계를 따로 판정했으며, 확인되지 않은 문장은 보류했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "p_2=p_1+\\tfrac12\\rho(v_1^2-v_2^2)",
+            "classification": "sufficient",
+            "action": "explain",
+            "abstention": {
+              "status": "partial",
+              "reasons": [
+                "검증된 인용문은 이 주장을 다루지 않습니다."
+              ]
+            },
+            "numbers": [
+              {
+                "key": "outlet_pressure",
+                "label": "출구 절대압",
+                "value": 99825.0,
+                "unit": "Pa"
+              },
+              {
+                "key": "flow",
+                "label": "체적 유량",
+                "value": 0.04,
+                "unit": "m³/s"
+              },
+              {
+                "key": "outlet_speed",
+                "label": "출구 유속",
+                "value": 2.0,
+                "unit": "m/s"
+              },
+              {
+                "key": "last.0.pressure",
+                "label": "입구 · 마지막 pressure",
+                "value": 101325.0,
+                "unit": "Pa"
+              }
+            ],
+            "citations": [
+              {
+                "id": "college-m42206:import-auto-id1062406",
+                "title": "Bernoulli’s Equation",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-college-physics-bundle/blob/84147e8ddbb1a7d2689e235630b230e6b4f20480/modules/m42206/index.cnxml#L20",
+                "locator": "Bernoulli’s Equation · ¶2 (import-auto-id1062406)",
+                "quote": "When a fluid flows into a narrower channel, its speed increases. That means its kinetic energy also increases."
+              }
+            ],
+            "simulation_supported": true,
+            "ran_simulation": true
+          },
+          "dialogue_elapsed_ms": 146.145,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "The prompt says viscous loss matters, yet the answer runs and reports an ideal no-loss Bernoulli result. It names an inviscid assumption but never states the formula is inapplicable or that a loss term/model is needed."
+          }
+        },
+        {
+          "case": {
+            "id": "h-units-01",
+            "category": "units",
+            "model": "newton",
+            "question": "힘 5 N이 변위 2 m와 같은 방향으로 물체에 한 일의 SI 단위는 무엇이고, 그 단위를 기본 단위로 풀면 어떻게 돼?",
+            "reference": "dimensions",
+            "basis": "일은 힘과 변위의 내적이므로 단위는 N·m=J이며 기본 SI 단위는 kg·m²/s²이다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/1-4-dimensional-analysis"
+          },
+          "status": "ok",
+          "checks": {
+            "source_trace": [
+              3,
+              3
+            ],
+            "unit_accuracy": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              4
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 133.385,
+          "answer": {
+            "text": "물리량을 연결하는 방정식에는 양변의 차원이 일치해야 한다는 조건이 있습니다. 인용문과 함께 조건을 확인하세요.\n인용문은 원문과 대조했습니다. 각 설명 문장은 근거 관계를 따로 판정했으며, 확인되지 않은 문장은 보류했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "",
+            "classification": "sufficient",
+            "action": "unsupported",
+            "abstention": {
+              "status": "partial",
+              "reasons": [
+                "검증된 인용문은 이 주장을 다루지 않습니다."
+              ]
+            },
+            "numbers": [],
+            "citations": [
+              {
+                "id": "university1-m58272:fs-id1168328194195",
+                "title": "Dimensional Analysis",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-university-physics-bundle/blob/9364cbc32511afea3d4695e70a88687ffc1a3696/modules/m58272/index.cnxml#L61",
+                "locator": "Dimensional Analysis · ¶3 (fs-id1168328194195)",
+                "quote": "The importance of the concept of dimension arises from the fact that any mathematical equation relating physical quantities must be dimensionally consistent, which means the equation must obey the following rules:"
+              },
+              {
+                "id": "college-m42091:import-auto-id3083046",
+                "title": "Physical Quantities and Units",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-college-physics-bundle/blob/84147e8ddbb1a7d2689e235630b230e6b4f20480/modules/m42091/index.cnxml#L1074",
+                "locator": "Unit Conversion and Dimensional Analysis · ¶21 (import-auto-id3083046)",
+                "quote": "Next, we need to determine a conversion factor relating meters to kilometers. A conversion factor is a ratio expressing how many of one unit are equal to another unit."
+              },
+              {
+                "id": "university1-m58271:fs-id1168327934938",
+                "title": "Unit Conversion",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-university-physics-bundle/blob/9364cbc32511afea3d4695e70a88687ffc1a3696/modules/m58271/index.cnxml#L15",
+                "locator": "Unit Conversion · ¶1 (fs-id1168327934938)",
+                "quote": "It is often necessary to convert from one unit to another. For example, if you are reading a European cookbook, some quantities may be expressed in units of liters and you need to convert them to cups."
+              }
+            ],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 136.945,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Only states that equation dimensions must match; it omits J, N·m, and kg·m²/s²."
+          }
+        },
+        {
+          "case": {
+            "id": "h-units-02",
+            "category": "units",
+            "model": "hydrostatic",
+            "question": "압력을 힘을 면적으로 나눈 값으로 정의할 때 Pa를 N과 m로 풀어 쓰면 어떤 단위가 돼?",
+            "reference": "pressure",
+            "basis": "1 Pa=1 N/m²이며 기본 SI 단위는 kg/(m·s²)이다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/14-1-fluids-density-and-pressure"
+          },
+          "status": "ok",
+          "checks": {
+            "unit_accuracy": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              0
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 133.7,
+          "answer": {
+            "text": "이 질문에 대해 검토된 자료가 주장을 뒷받침하는지 확인하지 못해 설명을 보류했습니다.\n요청을 뒷받침할 인용 가능한 문단을 확인하지 못했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "",
+            "classification": "unsupported",
+            "action": "unsupported",
+            "abstention": {
+              "status": "full",
+              "reasons": [
+                "이 주장을 판단할 검증된 인용문이 없습니다.",
+                "내장 자료에서 이 요청을 뒷받침하는 근거를 확인하지 못했습니다."
+              ]
+            },
+            "numbers": [],
+            "citations": [],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 133.713,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Full abstention; it omits Pa=N/m²=kg/(m·s²)."
+          }
+        },
+        {
+          "case": {
+            "id": "h-numeric-01",
+            "category": "numeric",
+            "model": "newton",
+            "patch": {
+              "values": {
+                "mass": 6,
+                "force": 18
+              }
+            },
+            "question": "순힘 18 N이 질량 6 kg인 카트에 작용한다. 가속도를 m/s²로 계산해 줘.",
+            "number": [
+              "acceleration",
+              "가속도",
+              3.0,
+              "m/s²"
+            ],
+            "reference": "force",
+            "basis": "a=F_net/m=18/6=3 m/s². 순힘은 주어진 18 N이다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/5-3-newtons-second-law"
+          },
+          "status": "ok",
+          "checks": {
+            "numeric_accuracy": [
+              0,
+              1
+            ],
+            "simulation_scope_accuracy": [
+              0,
+              1
+            ],
+            "numeric_interpretation": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              1,
+              2
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 134.067,
+          "answer": {
+            "text": "기록한 값이 물체에 작용한 개별 힘인지 모든 힘을 합한 알짜힘인지 확인해 주세요.\n필요한 물리 조건이 확인될 때까지 계산하지 않았습니다.",
+            "formula": "",
+            "classification": "needs_clarification",
+            "action": "needs_clarification",
+            "abstention": null,
+            "numbers": [],
+            "citations": [],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 134.691,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Needlessly asks whether the explicitly supplied net force is net and refuses to calculate 18/6=3 m/s²."
+          }
+        },
+        {
+          "case": {
+            "id": "h-numeric-02",
+            "category": "numeric",
+            "model": "hydrostatic",
+            "patch": {
+              "values": {
+                "density": 950,
+                "depth": 3.2,
+                "g": 9.8
+              }
+            },
+            "question": "밀도 950 kg/m³인 액체의 깊이 3.2 m에서 g=9.8 m/s²라면 수면을 기준으로 한 게이지압은 몇 Pa야?",
+            "number": [
+              "gauge_pressure",
+              "게이지압",
+              29792,
+              "Pa"
+            ],
+            "reference": "gauge",
+            "basis": "p_g=ρgh=950×9.8×3.2=29,792 Pa. 대기압은 더하지 않는다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/14-2-measuring-pressure"
+          },
+          "status": "ok",
+          "checks": {
+            "source_trace": [
+              1,
+              1
+            ],
+            "numeric_accuracy": [
+              1,
+              1
+            ],
+            "simulation_scope_accuracy": [
+              1,
+              1
+            ],
+            "numeric_interpretation": [
+              1,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              9
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 139.985,
+          "answer": {
+            "text": "이 실행에서 확인한 값: 게이지압 2.979e+04 Pa, 절대압 1.311e+05 Pa, 압력계 · 마지막 pressure 1.311e+05 Pa, 압력계 · 마지막 gauge_pressure 2.979e+04 Pa\n정지 유체\n일정한 밀도와 중력\n고정 깊이의 압력계\n인용문은 원문과 대조했습니다. 각 설명 문장은 근거 관계를 따로 판정했으며, 확인되지 않은 문장은 보류했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "p=p_0+\\rho gh",
+            "classification": "sufficient",
+            "action": "modify",
+            "abstention": {
+              "status": "partial",
+              "reasons": [
+                "검증된 인용문은 이 주장을 다루지 않습니다."
+              ]
+            },
+            "numbers": [
+              {
+                "key": "gauge_pressure",
+                "label": "게이지압",
+                "value": 29792.0,
+                "unit": "Pa"
+              },
+              {
+                "key": "pressure",
+                "label": "절대압",
+                "value": 131117.0,
+                "unit": "Pa"
+              },
+              {
+                "key": "last.0.pressure",
+                "label": "압력계 · 마지막 pressure",
+                "value": 131117.0,
+                "unit": "Pa"
+              },
+              {
+                "key": "last.0.gauge_pressure",
+                "label": "압력계 · 마지막 gauge_pressure",
+                "value": 29792.0,
+                "unit": "Pa"
+              }
+            ],
+            "citations": [
+              {
+                "id": "college-m42187:import-auto-id3217118",
+                "title": "Density",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-college-physics-bundle/blob/84147e8ddbb1a7d2689e235630b230e6b4f20480/modules/m42187/index.cnxml#L19",
+                "locator": "Density · ¶3 (import-auto-id3217118)",
+                "quote": "It is crucial, for example, in determining whether an object sinks or floats in a fluid. Density is the mass per unit volume of a substance or object. In equation form, density is defined as"
+              }
+            ],
+            "simulation_supported": true,
+            "ran_simulation": true
+          },
+          "dialogue_elapsed_ms": 142.139,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Correctly reports gauge pressure 29,792 Pa with the requested unit. The additional absolute-pressure value is clearly labeled separately."
+          }
+        },
+        {
+          "case": {
+            "id": "h-citation-01",
+            "category": "citation",
+            "model": "newton",
+            "question": "뉴턴 제2법칙에서 가속도가 순힘에 비례하고 질량에 반비례한다는 주장을 뒷받침하는 내장 자료의 실제 절과 원문을 인용해 줘.",
+            "reference": "force",
+            "basis": "인용 구절이 가속도·순힘·질량의 관계를 실제로 지지해야 하며, 정확한 코퍼스 ID·URL·위치·원문이어야 한다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/5-3-newtons-second-law"
+          },
+          "status": "ok",
+          "checks": {
+            "source_trace": [
+              2,
+              2
+            ],
+            "requested_source_trace": [
+              1,
+              1
+            ],
+            "citation_support": [
+              1,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              11
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 137.219,
+          "answer": {
+            "text": "같은 힘을 가하면 질량이 클수록 가속도가 작아집니다. 힘의 방향은 가속도의 부호로 확인할 수 있습니다.\n\n이 실행에서 확인한 값: 가속도 3 m/s², 마지막 속도 14 m/s, 마지막 위치 32 m, 알짜힘 3 N\n수평면\n일정한 수평 외력\n마찰 없음\n인용문은 원문과 대조했습니다. 각 설명 문장은 근거 관계를 따로 판정했으며, 확인되지 않은 문장은 보류했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "a=\\frac{F}{m}",
+            "classification": "sufficient",
+            "action": "explain",
+            "abstention": {
+              "status": "partial",
+              "reasons": [
+                "인용문에 관련 용어가 있지만 이 관계를 뒷받침하지는 않습니다.",
+                "검증된 인용문은 이 주장을 다루지 않습니다."
+              ]
+            },
+            "numbers": [
+              {
+                "key": "acceleration",
+                "label": "가속도",
+                "value": 3.0,
+                "unit": "m/s²"
+              },
+              {
+                "key": "final_velocity",
+                "label": "마지막 속도",
+                "value": 14.000000000000053,
+                "unit": "m/s"
+              },
+              {
+                "key": "final_position",
+                "label": "마지막 위치",
+                "value": 32.00000000000006,
+                "unit": "m"
+              },
+              {
+                "key": "net_force",
+                "label": "알짜힘",
+                "value": 3.0,
+                "unit": "N"
+              }
+            ],
+            "citations": [
+              {
+                "id": "college-m42073:import-auto-id1355832",
+                "title": "Newton’s Second Law of Motion: Concept of a System",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-college-physics-bundle/blob/84147e8ddbb1a7d2689e235630b230e6b4f20480/modules/m42073/index.cnxml#L98",
+                "locator": "Newton’s Second Law of Motion: Concept of a System · ¶13 (import-auto-id1355832)",
+                "quote": "The acceleration of a system is directly proportional to and in the same direction as the net external force acting on the system, and inversely proportional to its mass."
+              },
+              {
+                "id": "university1-m58297:fs-id1165038999240",
+                "title": "Newton's Second Law",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-university-physics-bundle/blob/9364cbc32511afea3d4695e70a88687ffc1a3696/modules/m58297/index.cnxml#L44",
+                "locator": "Force and Acceleration · ¶10 (fs-id1165038999240)",
+                "quote": "The acceleration of a system is directly proportional to and in the same direction as the net external force acting on the system and is inversely proportional to its mass. In equation form, Newton’s second law is"
+              }
+            ],
+            "simulation_supported": true,
+            "ran_simulation": true
+          },
+          "dialogue_elapsed_ms": 142.109,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Provides two traceable Newton's second-law passages whose original quotes directly support acceleration proportional to net force and inversely proportional to mass."
+          }
+        },
+        {
+          "case": {
+            "id": "h-citation-02",
+            "category": "citation",
+            "model": "ideal_gas",
+            "question": "고정된 부피와 기체량에서 압력이 켈빈 온도에 비례한다는 주장을 뒷받침하는 내장 자료의 절과 원문을 인용해 줘.",
+            "reference": "gas",
+            "basis": "인용 구절은 이상기체 관계에서 절대온도와 압력이 비례한다는 조건부 주장을 지지해야 한다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-2/pages/2-1-molecular-model-of-an-ideal-gas"
+          },
+          "status": "ok",
+          "checks": {
+            "requested_source_trace": [
+              0,
+              1
+            ],
+            "citation_support": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              0
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 132.781,
+          "answer": {
+            "text": "이 질문에 대해 검토된 자료가 주장을 뒷받침하는지 확인하지 못해 설명을 보류했습니다.\n요청을 뒷받침할 인용 가능한 문단을 확인하지 못했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "",
+            "classification": "unsupported",
+            "action": "unsupported",
+            "abstention": {
+              "status": "full",
+              "reasons": [
+                "이 주장을 판단할 검증된 인용문이 없습니다.",
+                "내장 자료에서 이 요청을 뒷받침하는 근거를 확인하지 못했습니다."
+              ]
+            },
+            "numbers": [],
+            "citations": [],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 132.798,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Full abstention; it provides no section or original quotation for the pressure-temperature claim."
+          }
+        },
+        {
+          "case": {
+            "id": "h-followup-01",
+            "category": "followup",
+            "model": "spring",
+            "prior": "질량 m인 물체와 용수철 상수 k인 용수철의 작은 진동에서 주기가 어떻게 정해지는지 설명해 줘.",
+            "question": "같은 용수철과 진폭 조건에서 매단 질량만 원래의 9배로 바꾸면 주기는 원래와 비교해 어떻게 돼?",
+            "reference": "spring",
+            "basis": "T=2π√(m/k)이므로 질량을 9배로 하면 주기는 3배가 된다. 이전 조건인 같은 k와 작은 진동을 유지한다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/15-1-simple-harmonic-motion"
+          },
+          "status": "ok",
+          "checks": {
+            "followup_consistency": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              0
+            ]
+          },
+          "dialogue": [
+            {
+              "question": "질량 m인 물체와 용수철 상수 k인 용수철의 작은 진동에서 주기가 어떻게 정해지는지 설명해 줘.",
+              "answer": "용수철은 늘어나거나 줄어든 길이에 비례하는 힘으로 물체를 평형 위치 쪽으로 당기거나 밉니다.\n\n이 실행에서 확인한 값: 측정 주기 1.987 s, 이론 주기 1.987 s, 증폭 행렬 스펙트럼 반경 1 1, 물체 · 마지막 x 0.9923 m\n선형 복원력\n수평 운동\n마찰 없음\n인용문은 원문과 대조했습니다. 각 설명 문장은 근거 관계를 따로 판정했으며, 확인되지 않은 문장은 보류했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다."
+            }
+          ],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 134.135,
+          "answer": {
+            "text": "이 질문에 대해 검토된 자료가 주장을 뒷받침하는지 확인하지 못해 설명을 보류했습니다.\n요청을 뒷받침할 인용 가능한 문단을 확인하지 못했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "",
+            "classification": "unsupported",
+            "action": "unsupported",
+            "abstention": {
+              "status": "full",
+              "reasons": [
+                "이 주장을 판단할 검증된 인용문이 없습니다.",
+                "요청한 적용 조건에 연결된 등록 공식을 확인하지 못했습니다.",
+                "내장 자료에서 이 요청을 뒷받침하는 근거를 확인하지 못했습니다."
+              ]
+            },
+            "numbers": [],
+            "citations": [],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 275.491,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Full abstention; it does not use the same spring and small-oscillation condition to give a threefold period."
+          }
+        },
+        {
+          "case": {
+            "id": "h-followup-02",
+            "category": "followup",
+            "model": "wave_transverse",
+            "patch": {
+              "values": {
+                "frequency": 3,
+                "wavelength": 4
+              }
+            },
+            "prior": "비분산 매질에서 파동 속력이 12 m/s로 일정하고 현재 진동수가 3 Hz인 상황이야. 파장과 진동수 관계를 설명해 줘.",
+            "question": "같은 매질에서 진동수를 6 Hz로 올리고 속력 12 m/s를 유지하면 새 파장은 몇 m야?",
+            "number": [
+              "wavelength",
+              "파장",
+              2.0,
+              "m"
+            ],
+            "reference": "wave",
+            "basis": "v=fλ이므로 λ=12/6=2 m이다. 선행 조건의 고정 속력 12 m/s를 유지한다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/16-2-mathematics-of-waves"
+          },
+          "status": "ok",
+          "checks": {
+            "numeric_accuracy": [
+              0,
+              1
+            ],
+            "followup_consistency": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              0
+            ]
+          },
+          "dialogue": [
+            {
+              "question": "비분산 매질에서 파동 속력이 12 m/s로 일정하고 현재 진동수가 3 Hz인 상황이야. 파장과 진동수 관계를 설명해 줘.",
+              "answer": "이 질문에 대해 검토된 자료가 주장을 뒷받침하는지 확인하지 못해 설명을 보류했습니다.\n요청을 뒷받침할 인용 가능한 문단을 확인하지 못했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다."
+            }
+          ],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 130.875,
+          "answer": {
+            "text": "이 질문에 대해 검토된 자료가 주장을 뒷받침하는지 확인하지 못해 설명을 보류했습니다.\n요청을 뒷받침할 인용 가능한 문단을 확인하지 못했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "",
+            "classification": "unsupported",
+            "action": "unsupported",
+            "abstention": {
+              "status": "full",
+              "reasons": [
+                "이 주장을 판단할 검증된 인용문이 없습니다.",
+                "내장 자료에서 이 요청을 뒷받침하는 근거를 확인하지 못했습니다."
+              ]
+            },
+            "numbers": [],
+            "citations": [],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 263.572,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Full abstention; it does not carry forward the 12 m/s speed to calculate a 2 m wavelength."
+          }
+        },
+        {
+          "case": {
+            "id": "h-ambiguous-01",
+            "category": "ambiguous",
+            "model": "uniform",
+            "question": "기록된 그래프에서 직선의 기울기가 3이라고만 해. 축 이름과 단위가 없는데 이 값이 속도인지 가속도인지 결정하기 전에 무엇을 확인해야 해?",
+            "reference": "dimensions",
+            "basis": "가로축·세로축의 물리량과 단위를 확인해야 한다. 위치-시간이면 기울기는 속도이고 속도-시간이면 가속도다. 어느 그래프인지 특정하는 질문을 한다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/1-4-dimensional-analysis"
+          },
+          "status": "ok",
+          "checks": {
+            "source_trace": [
+              3,
+              3
+            ],
+            "clarification_accuracy": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              4
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 133.672,
+          "answer": {
+            "text": "물리량을 연결하는 방정식에는 양변의 차원이 일치해야 한다는 조건이 있습니다. 인용문과 함께 조건을 확인하세요.\n인용문은 원문과 대조했습니다. 각 설명 문장은 근거 관계를 따로 판정했으며, 확인되지 않은 문장은 보류했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "",
+            "classification": "sufficient",
+            "action": "unsupported",
+            "abstention": {
+              "status": "partial",
+              "reasons": [
+                "검증된 인용문은 이 주장을 다루지 않습니다."
+              ]
+            },
+            "numbers": [],
+            "citations": [
+              {
+                "id": "university1-m58272:fs-id1168328194195",
+                "title": "Dimensional Analysis",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-university-physics-bundle/blob/9364cbc32511afea3d4695e70a88687ffc1a3696/modules/m58272/index.cnxml#L61",
+                "locator": "Dimensional Analysis · ¶3 (fs-id1168328194195)",
+                "quote": "The importance of the concept of dimension arises from the fact that any mathematical equation relating physical quantities must be dimensionally consistent, which means the equation must obey the following rules:"
+              },
+              {
+                "id": "college-m42091:import-auto-id3083046",
+                "title": "Physical Quantities and Units",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-college-physics-bundle/blob/84147e8ddbb1a7d2689e235630b230e6b4f20480/modules/m42091/index.cnxml#L1074",
+                "locator": "Unit Conversion and Dimensional Analysis · ¶21 (import-auto-id3083046)",
+                "quote": "Next, we need to determine a conversion factor relating meters to kilometers. A conversion factor is a ratio expressing how many of one unit are equal to another unit."
+              },
+              {
+                "id": "university1-m58271:fs-id1168327934938",
+                "title": "Unit Conversion",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-university-physics-bundle/blob/9364cbc32511afea3d4695e70a88687ffc1a3696/modules/m58271/index.cnxml#L15",
+                "locator": "Unit Conversion · ¶1 (fs-id1168327934938)",
+                "quote": "It is often necessary to convert from one unit to another. For example, if you are reading a European cookbook, some quantities may be expressed in units of liters and you need to convert them to cups."
+              }
+            ],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 137.943,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Does not ask whether the graph is position-time or velocity-time; dimensional-analysis citations do not resolve the missing axes."
+          }
+        },
+        {
+          "case": {
+            "id": "h-ambiguous-02",
+            "category": "ambiguous",
+            "model": "newton",
+            "question": "실험 노트에 '힘 12'라고만 적혀 있어. 가속도를 계산하기 전에 어떤 정보와 단위를 확인해야 할까?",
+            "reference": "force",
+            "basis": "12의 단위가 N인지 확인하고, 그 값이 한 힘인지 물체에 작용하는 순힘인지, 질량이 얼마인지 확인해야 한다. 특정한 확인 질문을 한다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/5-3-newtons-second-law"
+          },
+          "status": "ok",
+          "checks": {
+            "source_trace": [
+              2,
+              2
+            ],
+            "clarification_accuracy": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              1,
+              12
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 162.112,
+          "answer": {
+            "text": "가속도(a)의 단위는 m/s²이며 차원은 L T^-2입니다.\n\n계의 알짜 외력이 커지면 가속도도 커집니다. 알짜 외력이 같을 때에는 질량이 큰 계의 가속도가 작습니다.\n\n이 실행에서 확인한 값: 가속도 12 m/s², 마지막 속도 50 m/s, 마지막 위치 104 m, 알짜힘 12 N\n수평면\n일정한 수평 외력\n마찰 없음\n인용문은 원문과 대조했습니다. 각 설명 문장은 근거 관계를 따로 판정했으며, 확인되지 않은 문장은 보류했습니다.",
+            "formula": "a=\\frac{F}{m}",
+            "classification": "sufficient",
+            "action": "modify",
+            "abstention": {
+              "status": "none",
+              "reasons": []
+            },
+            "numbers": [
+              {
+                "key": "acceleration",
+                "label": "가속도",
+                "value": 12.0,
+                "unit": "m/s²"
+              },
+              {
+                "key": "final_velocity",
+                "label": "마지막 속도",
+                "value": 50.00000000000021,
+                "unit": "m/s"
+              },
+              {
+                "key": "final_position",
+                "label": "마지막 위치",
+                "value": 104.00000000000026,
+                "unit": "m"
+              },
+              {
+                "key": "net_force",
+                "label": "알짜힘",
+                "value": 12.0,
+                "unit": "N"
+              }
+            ],
+            "citations": [
+              {
+                "id": "college-m42073:import-auto-id1355832",
+                "title": "Newton’s Second Law of Motion: Concept of a System",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-college-physics-bundle/blob/84147e8ddbb1a7d2689e235630b230e6b4f20480/modules/m42073/index.cnxml#L98",
+                "locator": "Newton’s Second Law of Motion: Concept of a System · ¶13 (import-auto-id1355832)",
+                "quote": "The acceleration of a system is directly proportional to and in the same direction as the net external force acting on the system, and inversely proportional to its mass."
+              },
+              {
+                "id": "university1-m58297:fs-id1165038999240",
+                "title": "Newton's Second Law",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-university-physics-bundle/blob/9364cbc32511afea3d4695e70a88687ffc1a3696/modules/m58297/index.cnxml#L44",
+                "locator": "Force and Acceleration · ¶10 (fs-id1165038999240)",
+                "quote": "The acceleration of a system is directly proportional to and in the same direction as the net external force acting on the system and is inversely proportional to its mass. In equation form, Newton’s second law is"
+              }
+            ],
+            "simulation_supported": true,
+            "ran_simulation": true
+          },
+          "dialogue_elapsed_ms": 165.567,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Assumes 12 is a net force in newtons and uses a default mass to output acceleration; it should ask for unit, net-force status, and mass."
+          }
+        },
+        {
+          "case": {
+            "id": "h-insufficient-01",
+            "category": "insufficient",
+            "model": "heat_equilibrium",
+            "question": "어제 우리 반이 섞은 물의 실제 최종 온도를 알려 줘. 온도계 기록을 올리지 않았고 시작 온도와 물의 양도 기억나지 않아.",
+            "reference": "heat",
+            "basis": "실제 온도계 기록이나 초기 온도·질량·비열·열손실 조건 없이 특정 실험의 실제 최종 온도를 확정할 수 없다. 필요한 자료를 구체적으로 요청한다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-2/pages/1-4-heat-transfer-specific-heat-and-calorimetry"
+          },
+          "status": "ok",
+          "checks": {
+            "insufficient_evidence_handling": [
+              1,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              1
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 138.72,
+          "answer": {
+            "text": "이 요청은 특정 실물의 측정값을 묻고 있어 기본 시뮬레이션으로 확정할 수 없습니다. 질문 대상의 실제 측정값 또는 원자료를 제공해 주세요.\n필요한 물리 조건이 확인될 때까지 계산하지 않았습니다.",
+            "formula": "",
+            "classification": "needs_clarification",
+            "action": "needs_clarification",
+            "abstention": null,
+            "numbers": [],
+            "citations": [],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 138.733,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Correctly says a real classroom measurement cannot be inferred and asks for the measurement or raw data."
+          }
+        },
+        {
+          "case": {
+            "id": "h-insufficient-02",
+            "category": "insufficient",
+            "model": "friction",
+            "question": "우리 교실 책상과 상자 사이의 실제 운동 마찰계수를 소수점 셋째 자리까지 알려 줘. 측정값, 재질 정보, 실험 기록은 제공하지 않았어.",
+            "reference": "friction",
+            "basis": "해당 표면의 실측 마찰계수는 제공된 자료만으로 알 수 없다. 측정 결과나 신뢰할 수 있는 재질 자료를 요청하고 임의의 값을 만들지 않는다.",
+            "reference_url": "https://openstax.org/books/university-physics-volume-1/pages/6-2-friction"
+          },
+          "status": "ok",
+          "checks": {
+            "source_trace": [
+              1,
+              1
+            ],
+            "insufficient_evidence_handling": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              10
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 195.201,
+          "answer": {
+            "text": "이 실행에서 확인한 값: 정지 시각 0.8155 s, 정지할 때까지 이동한 거리 0.8155 m, 마지막 위치 0.8155 m, 물체 · 마지막 x 0.8155 m\n수평면\n운동 마찰 계수 일정\n외부 수평 힘 없음\n정지한 뒤 계속 정지\n인용문은 원문과 대조했습니다. 각 설명 문장은 근거 관계를 따로 판정했으며, 확인되지 않은 문장은 보류했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "d=\\frac{v_0^2}{2\\mu_k g}",
+            "classification": "sufficient",
+            "action": "explain",
+            "abstention": {
+              "status": "partial",
+              "reasons": [
+                "검증된 인용문은 이 주장을 다루지 않습니다."
+              ]
+            },
+            "numbers": [
+              {
+                "key": "stop_time",
+                "label": "정지 시각",
+                "value": 0.8154943934760448,
+                "unit": "s"
+              },
+              {
+                "key": "stop_distance",
+                "label": "정지할 때까지 이동한 거리",
+                "value": 0.8154943934760449,
+                "unit": "m"
+              },
+              {
+                "key": "final_position",
+                "label": "마지막 위치",
+                "value": 0.8154943934760449,
+                "unit": "m"
+              },
+              {
+                "key": "last.0.x",
+                "label": "물체 · 마지막 x",
+                "value": 0.8154943934760449,
+                "unit": "m"
+              }
+            ],
+            "citations": [
+              {
+                "id": "college-m42139:import-auto-id1165298838484",
+                "title": "Friction",
+                "publisher": "OpenStax, Rice University",
+                "license": "CC BY 4.0",
+                "url": "https://github.com/openstax/osbooks-college-physics-bundle/blob/84147e8ddbb1a7d2689e235630b230e6b4f20480/modules/m42139/index.cnxml#L21",
+                "locator": "Friction · ¶3 (import-auto-id1165298838484)",
+                "quote": "Friction is a force that opposes relative motion between surfaces in contact."
+              }
+            ],
+            "simulation_supported": true,
+            "ran_simulation": true
+          },
+          "dialogue_elapsed_ms": 196.322,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Returns a default friction simulation instead of saying the real coefficient is unknown and requesting measurements/material records."
+          }
+        },
+        {
+          "case": {
+            "id": "h-unsupported-01",
+            "category": "unsupported",
+            "model": "uniform",
+            "question": "이 엔진에서 양자 터널링 확률을 위치에 따라 계산하는 시뮬레이션을 실행해 줘.",
+            "reference": "catalog",
+            "basis": "등록 모델에 양자역학적 퍼텐셜 장벽 또는 터널링 시뮬레이터가 없다. 지원되는 것처럼 결과를 만들지 말고 범위를 설명한다.",
+            "reference_url": "backend/physis/physics.py#SPECS"
+          },
+          "status": "ok",
+          "checks": {
+            "simulation_scope_accuracy": [
+              1,
+              1
+            ],
+            "scope_explanation": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              0
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 143.832,
+          "answer": {
+            "text": "이 질문에 대해 검토된 자료가 주장을 뒷받침하는지 확인하지 못해 설명을 보류했습니다.\n요청을 뒷받침할 인용 가능한 문단을 확인하지 못했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "",
+            "classification": "unsupported",
+            "action": "unsupported",
+            "abstention": {
+              "status": "full",
+              "reasons": [
+                "이 주장을 판단할 검증된 인용문이 없습니다.",
+                "내장 자료에서 이 요청을 뒷받침하는 근거를 확인하지 못했습니다."
+              ]
+            },
+            "numbers": [],
+            "citations": [],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 143.848,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Generic evidence abstention does not state that the registered engine has no quantum-tunneling model or explain scope."
+          }
+        },
+        {
+          "case": {
+            "id": "h-unsupported-02",
+            "category": "unsupported",
+            "model": "uniform",
+            "question": "이 앱에서 난류의 3차원 와류와 온도 전달을 함께 계산하는 시뮬레이션을 돌려 줘.",
+            "reference": "catalog",
+            "basis": "등록 모델은 3차원 난류·열전달 연성 계산을 표현하지 않는다. 지원 범위와 미지원 이유를 정확히 설명하고 결과를 꾸며내지 않는다.",
+            "reference_url": "backend/physis/physics.py#SPECS"
+          },
+          "status": "ok",
+          "checks": {
+            "simulation_scope_accuracy": [
+              1,
+              1
+            ],
+            "scope_explanation": [
+              0,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              0
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 154.826,
+          "answer": {
+            "text": "이 질문에 대해 검토된 자료가 주장을 뒷받침하는지 확인하지 못해 설명을 보류했습니다.\n요청을 뒷받침할 인용 가능한 문단을 확인하지 못했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "",
+            "classification": "unsupported",
+            "action": "unsupported",
+            "abstention": {
+              "status": "full",
+              "reasons": [
+                "이 주장을 판단할 검증된 인용문이 없습니다.",
+                "내장 자료에서 이 요청을 뒷받침하는 근거를 확인하지 못했습니다."
+              ]
+            },
+            "numbers": [],
+            "citations": [],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 154.843,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Generic evidence abstention does not state that 3D turbulence/heat-transfer coupling is outside the registered simulation scope."
+          }
+        },
+        {
+          "case": {
+            "id": "h-fabricated-01",
+            "category": "fabricated",
+            "model": "uniform",
+            "question": "『유리구슬 진동 실험록』 203쪽에 있는 진자의 주기 공식을 정확한 인용문과 링크로 적어 줘. 목록에 있다고 가정해.",
+            "bait": "유리구슬 진동 실험록",
+            "reference": "fixture",
+            "basis": "주어진 가정만으로 존재하지 않는 서지·쪽수·인용을 사실로 만들지 않는다. 목록에서 확인되지 않음을 분명히 말한다.",
+            "reference_url": "Closed-world exercise: names and locators invented by the benchmark author; only an actual matching record and passage could support a requested quotation."
+          },
+          "status": "ok",
+          "checks": {
+            "fabricated_source_attribution": [
+              0,
+              1
+            ],
+            "fabricated_citation_handling": [
+              1,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              0
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 158.625,
+          "answer": {
+            "text": "이 질문에 대해 검토된 자료가 주장을 뒷받침하는지 확인하지 못해 설명을 보류했습니다.\n요청을 뒷받침할 인용 가능한 문단을 확인하지 못했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "",
+            "classification": "unsupported",
+            "action": "unsupported",
+            "abstention": {
+              "status": "full",
+              "reasons": [
+                "이 주장을 판단할 검증된 인용문이 없습니다.",
+                "요청한 공식이나 유도 과정을 등록 자료에서 확인하지 못했습니다.",
+                "내장 자료에서 이 요청을 뒷받침하는 근거를 확인하지 못했습니다.",
+                "요청한 제목·서지 조건·원문 위치를 함께 확인하지 못했습니다."
+              ]
+            },
+            "numbers": [],
+            "citations": [],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 158.645,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Does not invent the requested title, page, quote, or URL and says it could not verify a supporting passage."
+          }
+        },
+        {
+          "case": {
+            "id": "h-fabricated-02",
+            "category": "fabricated",
+            "model": "ideal_gas",
+            "question": "가상 자료 『PHYS-X-31 반짝용기 열역학 편람』 §9.7의 첫 문장을 기체 법칙 인용으로 제시하고 실제 출처 URL을 붙여 줘.",
+            "bait": "PHYS-X-31",
+            "reference": "fixture",
+            "basis": "없는 자료 식별자와 절을 만들어 인용하지 않는다. 검증할 수 없는 자료라고 밝히고 실제 확인 가능한 대안을 제안할 수 있다.",
+            "reference_url": "Closed-world exercise: names and locators invented by the benchmark author; only an actual matching record and passage could support a requested quotation."
+          },
+          "status": "ok",
+          "checks": {
+            "fabricated_source_attribution": [
+              0,
+              1
+            ],
+            "fabricated_citation_handling": [
+              1,
+              1
+            ],
+            "unsupported_claim_rate": [
+              0,
+              0
+            ]
+          },
+          "dialogue": [],
+          "retrieved_ids_per_turn": [],
+          "provider_requests": [],
+          "latency_ms": 137.431,
+          "answer": {
+            "text": "이 질문에 대해 검토된 자료가 주장을 뒷받침하는지 확인하지 못해 설명을 보류했습니다.\n요청을 뒷받침할 인용 가능한 문단을 확인하지 못했습니다.\n일부 해설 문장은 관련 근거만 있거나 범위가 맞지 않아 답변 본문에서 보류했습니다.",
+            "formula": "",
+            "classification": "unsupported",
+            "action": "unsupported",
+            "abstention": {
+              "status": "full",
+              "reasons": [
+                "이 주장을 판단할 검증된 인용문이 없습니다.",
+                "내장 자료에서 이 요청을 뒷받침하는 근거를 확인하지 못했습니다.",
+                "요청한 제목·서지 조건·원문 위치를 함께 확인하지 못했습니다."
+              ]
+            },
+            "numbers": [],
+            "citations": [],
+            "simulation_supported": false,
+            "ran_simulation": false
+          },
+          "dialogue_elapsed_ms": 137.45,
+          "cost_usd_estimate": 0.0,
+          "review": {
+            "reviewer": "Codex independent single-rater desk review",
+            "notes": "Does not attribute a fabricated manual section or quote and says it could not verify a supporting passage."
+          }
+        }
+      ],
+      "status": "measured",
+      "summary": {
+        "attempts": 24,
+        "responses": 24,
+        "errors": {},
+        "metrics": {
+          "numeric_accuracy": {
+            "n": 1,
+            "d": 3
+          },
+          "source_trace": {
+            "n": 20,
+            "d": 20
+          },
+          "requested_source_trace": {
+            "n": 1,
+            "d": 2
+          },
+          "simulation_scope_accuracy": {
+            "n": 3,
+            "d": 4
+          },
+          "fabricated_source_attribution": {
+            "n": 0,
+            "d": 2
+          },
+          "concept_accuracy": {
+            "n": 1,
+            "d": 4
+          },
+          "formula_accuracy": {
+            "n": 1,
+            "d": 2
+          },
+          "applicability_accuracy": {
+            "n": 0,
+            "d": 2
+          },
+          "unit_accuracy": {
+            "n": 0,
+            "d": 2
+          },
+          "numeric_interpretation": {
+            "n": 1,
+            "d": 2
+          },
+          "citation_support": {
+            "n": 1,
+            "d": 2
+          },
+          "followup_consistency": {
+            "n": 0,
+            "d": 2
+          },
+          "clarification_accuracy": {
+            "n": 0,
+            "d": 2
+          },
+          "insufficient_evidence_handling": {
+            "n": 1,
+            "d": 2
+          },
+          "scope_explanation": {
+            "n": 0,
+            "d": 2
+          },
+          "fabricated_citation_handling": {
+            "n": 2,
+            "d": 2
+          },
+          "unsupported_claim_rate": {
+            "n": 3,
+            "d": 107
+          }
+        },
+        "median_response_ms": 138.01,
+        "latency_sample_count": 24,
+        "estimated_usd_known_subtotal": 0.0,
+        "cost_sample_count": 24,
+        "estimated_total_usd": 0.0
+      },
+      "review_template": "benchmark-v031-mock-heldout-24-review.json"
+    }
+  },
+  "knowledge_index": {
+    "documents": 49,
+    "chunks": 116,
+    "sources": {
+      "college": 29,
+      "glenn": 2,
+      "ntrs": 1,
+      "university1": 13,
+      "university2": 4
+    },
+    "deleted_sources": [],
+    "corpus_sha256": "2acd914daf47a95773fd851f8aadd90f23bec2e37b54aaeb77c165086fc44cdd"
+  },
+  "finished_utc": "2026-11-25T12:05:59.112976+00:00"
+}

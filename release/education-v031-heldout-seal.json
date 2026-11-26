@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "sealed_utc": "2026-11-25T12:03:13.012252+00:00",
+  "status": "sealed-before-generation",
+  "heldout_file": "release/education-v031-heldout.jsonl",
+  "heldout_sha256": "276b32e62c6db1fc67ff6a7560fbd6de9b5a46a57290e492d0406f19d72a48c9",
+  "heldout_canonical_sha256": "032e43a26cd4b4adf3691fd82b5c176ab158fd0e030fa0d8335dbfa851fc8338",
+  "heldout_count": 24,
+  "category_counts": {
+    "concept": 2,
+    "misconception": 2,
+    "formula": 2,
+    "applicability": 2,
+    "units": 2,
+    "numeric": 2,
+    "citation": 2,
+    "followup": 2,
+    "ambiguous": 2,
+    "insufficient": 2,
+    "unsupported": 2,
+    "fabricated": 2
+  },
+  "heldout_ids": [
+    "h-concept-01",
+    "h-concept-02",
+    "h-misconception-01",
+    "h-misconception-02",
+    "h-formula-01",
+    "h-formula-02",
+    "h-applicability-01",
+    "h-applicability-02",
+    "h-units-01",
+    "h-units-02",
+    "h-numeric-01",
+    "h-numeric-02",
+    "h-citation-01",
+    "h-citation-02",
+    "h-followup-01",
+    "h-followup-02",
+    "h-ambiguous-01",
+    "h-ambiguous-02",
+    "h-insufficient-01",
+    "h-insufficient-02",
+    "h-unsupported-01",
+    "h-unsupported-02",
+    "h-fabricated-01",
+    "h-fabricated-02"
+  ],
+  "rubric_file": "release/education-v031-heldout-rubric.md",
+  "rubric_sha256": "f5211900702df2314de934fa27eeb299a02f0812f0d7daacac6b475a93c76d63",
+  "reference_map_sha256": "d9130f2fed3060421df5302b685f7df6ea20a0371ef1dd01178936fc195c9792",
+  "prior_v0_3_final_fixture_sha256": "7e09db1010b0dc158f453325d9238e3c9741d4270f229fd6e24e6cd0004ba302",
+  "product_freeze": {
+    "snapshot_sha256": "86a18410440acb8f5f83d6afeb78bfc9504241d67d745c7a681b99a17b35edb2",
+    "manifest_file_sha256": "b7405950db7e19a6719c7ad77e7f789fd51379d178b5eb48b887f6b862ff2c06",
+    "recorded_utc": "2026-11-25T11:49:52.629324+00:00",
+    "file_count": 157,
+    "verified_files": 157
+  },
+  "mock_plan": {
+    "regression": "all 72 existing v0.3 final items",
+    "heldout": "all 24 sealed items",
+    "provider": "mock/local-rules",
+    "endpoint": "in-process TestClient POST /api/tutor/stream",
+    "answer_keys_or_basis_sent": false
+  },
+  "local_plan": {
+    "provider": "ollama",
+    "model": "qwen2.5:3b",
+    "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+    "endpoint": "http://127.0.0.1:11434",
+    "arms": [
+      "raw",
+      "retrieval",
+      "retrieval_physics"
+    ],
+    "item_ids": [
+      "h-concept-01",
+      "h-misconception-01",
+      "h-formula-01",
+      "h-applicability-01",
+      "h-units-01",
+      "h-numeric-01",
+      "h-citation-01",
+      "h-followup-01",
+      "h-ambiguous-01",
+      "h-insufficient-01",
+      "h-unsupported-01",
+      "h-fabricated-01"
+    ],
+    "items_per_arm": 12,
+    "one_item_per_category": true,
+    "rotation": "arm order rotated by case index",
+    "answer_keys_or_basis_sent": false
+  },
+  "safety_screen": {
+    "method": "fixed allowlist, lexical weapons/cyber/operational-biology screen applied to question, prior turn, and basis before any generation",
+    "checked_heldout": 24,
+    "matches": 0,
+    "rejected": 0
+  },
+  "evaluation_script_sha256": {
+    "scripts/benchmark_v3.py": "fc68caf21d26509aa150d8b9f6ea4a328d2a500ad1caf6619db28bd706bf2a81",
+    "scripts/benchmark_scoring.py": "895fc497b0d5c68ad6b30ae2c0b3186af330bc493dff22a763ef7b263db7d447",
+    "scripts/independent_v031.py": "ee286c048943c2457a5138017d9ec9afaf20934b2bea582bb8e8eafed95c99cd",
+    "scripts/independent_v031_combine.py": "c2f02f00833decfee760e42f9a8b19bb740ba2c29452e362d4d0654696ebc16b",
+    "scripts/independent_v031_fresh.py": "e9ad865ad3d0f248937bad822991097a5decec42792f9032c59fdb483cd6bdd7"
+  }
+}
