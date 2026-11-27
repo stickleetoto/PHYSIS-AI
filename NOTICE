@@ -1,0 +1,18 @@
+PHYSIS AI
+Copyright 2026 DevSeat
+
+DevSeat licenses its original PHYSIS AI work under the Apache License,
+Version 2.0. See LICENSE.
+
+This distribution includes excerpts from College Physics 2e by Paul Peter
+Urone, Roger Hinrichs and contributors, and University Physics Volumes 1
+and 2 by Samuel J. Ling, Jeff Sanny, William Moebs and contributors.
+The excerpts are from OpenStax, Rice University. They are licensed under
+Creative Commons Attribution 4.0 International. PHYSIS selected passages,
+normalized whitespace and simplified inline mathematical notation. Source
+editions, authors, locations and modification details are in SOURCE_MANIFEST.md.
+
+The repository preserves KaTeX and font notices in frontend/public/licenses.
+THIRD_PARTY_NOTICES.md identifies separately licensed materials and the
+terms accompanying dependencies. Third-party copyrights and licenses apply
+to their respective materials.
