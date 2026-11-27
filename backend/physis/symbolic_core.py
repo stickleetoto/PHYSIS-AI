@@ -23,8 +23,8 @@ NAME = re.compile(r"[A-Za-z][A-Za-z0-9_]{0,15}\Z", re.ASCII)
 ZERO = (0,0,0,0,0)
 
 
-def symbol(name):
-    if not isinstance(name,str) or not NAME.fullmatch(name) or name in {*FUNCTIONS, "pi", "elliptic_k"}:
+def symbol(name, *, reserved=()):
+    if not isinstance(name,str) or not NAME.fullmatch(name) or name in {*FUNCTIONS, "pi", "elliptic_k", *reserved}:
         raise ValueError("변수는 영문자로 시작하는 16자 이내의 이름이어야 합니다.")
     return sp.Symbol(name, real=True)
 
@@ -58,9 +58,15 @@ class Parsed:
     names: set = field(default_factory=set)
 
 
-def parse(text, *, registry=False):
+def parse(text, *, registry=False, extra_functions=None):
     guards, names = [], set()
     funcs = FUNCTIONS | ({"elliptic_k":sp.elliptic_k} if registry else {})
+    if extra_functions is not None:
+        if not isinstance(extra_functions, dict) or any(
+                not isinstance(name,str) or not NAME.fullmatch(name) or not callable(fn)
+                for name,fn in extra_functions.items()):
+            raise ValueError("추가 함수 목록이 올바르지 않습니다.")
+        funcs |= extra_functions
     tree = syntax(text)
     normalized = text.strip().replace("^","**")
 
@@ -80,7 +86,7 @@ def parse(text, *, registry=False):
         if isinstance(n,ast.Name):
             if n.id == "pi":
                 return sp.pi
-            variable = symbol(n.id)
+            variable = symbol(n.id,reserved=funcs)
             names.add(variable)
             if len(names)>12:
                 raise ValueError("한 수식에서 지원하는 변수는 최대 12개입니다.")
@@ -108,6 +114,7 @@ def parse(text, *, registry=False):
             arg = visit(n.args[0],depth+1,power_cost,nested_fn+1)
             if name == "sqrt": guards.append(sp.Ge(arg,0))
             if name == "log": guards.append(sp.Gt(arg,0))
+            if name == "tan": guards.append(sp.Ne(sp.cos(arg),0))
             if name == "elliptic_k": guards.append(sp.Lt(arg,1))
             if name=="exp" and (arg.has(sp.exp) or (arg.is_number and abs(arg)>40)):
                 raise ValueError("지수함수의 상수 인자 범위 또는 중첩 한도를 넘었습니다.")

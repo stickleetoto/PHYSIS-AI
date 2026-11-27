@@ -1,4 +1,5 @@
-.masthead .topnav { flex:0 1 auto; }
+.masthead .topnav { flex:0 1 auto;min-width:0;margin-left:clamp(4px,1vw,16px);overflow-x:auto; }
+.masthead .topnav button { white-space:nowrap;padding-inline:clamp(5px,.65vw,10px);flex-shrink:0; }
 .experiment-controls, .experiment-controls form, .experiment-controls > div {
   display:flex; align-items:center; flex-wrap:wrap; gap:6px;
 }

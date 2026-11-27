@@ -96,7 +96,7 @@ def create_app(db_path: Path | None = None) -> FastAPI:
         app.state.knowledge = knowledge
         yield
 
-    app = FastAPI(title="PHYSIS AI", version="0.3.3", lifespan=lifespan)
+    app = FastAPI(title="PHYSIS AI", version="0.4", lifespan=lifespan)
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost", "[::1]", "testserver"])
 
     @app.exception_handler(RequestValidationError)
@@ -323,7 +323,11 @@ def create_app(db_path: Path | None = None) -> FastAPI:
     app.include_router(studio_router(store, boards, load, get_spec, snapshot, Snapshot, knowledge, names))
     app.include_router(portable_router(store, boards, load, get_spec, names))
     app.include_router(knowledge_router)
+    from .math_lab_api import router as math_lab_router
+    from .math_ode import router as ode_router
     app.include_router(math_router)
+    app.include_router(math_lab_router)
+    app.include_router(ode_router)
     app.include_router(study_router(knowledge, load, snapshot, store.path.parent))
     app.include_router(provider_router)
     app.include_router(science_router)

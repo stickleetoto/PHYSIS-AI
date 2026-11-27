@@ -240,9 +240,20 @@ export async function downloadExperimentPng(
 ): Promise<void> {
   const sourceSvg = serializeSvgWithComputedStyles(svg)
   const document = buildExperimentPngSvgDocument(sourceSvg, options)
+  return downloadSvgPng(document, `physis-${safeFilePart(options.snapshot.experiment.model)}-${options.kind}-r${options.snapshot.revision}.png`)
+}
+
+export function downloadMathGraph(svg: SVGSVGElement) {
+  const clone = svg.cloneNode(true) as SVGSVGElement
+  clone.setAttribute('width', '960')
+  clone.setAttribute('height', '520')
+  return downloadSvgPng(new XMLSerializer().serializeToString(clone), 'physis-math-graph.png')
+}
+
+async function downloadSvgPng(document: string, filename: string) {
   const image = await loadSvgImage(document)
   const canvas = window.document.createElement('canvas')
-  canvas.width = EXPORT_WIDTH
+  canvas.width = image.naturalWidth
   canvas.height = image.naturalHeight
   const context = canvas.getContext('2d')
   if (!context) throw new Error('PNG 캔버스를 사용할 수 없습니다.')
@@ -253,7 +264,7 @@ export async function downloadExperimentPng(
   const url = URL.createObjectURL(blob)
   const anchor = window.document.createElement('a')
   anchor.href = url
-  anchor.download = `physis-${safeFilePart(options.snapshot.experiment.model)}-${options.kind}-r${options.snapshot.revision}.png`
+  anchor.download = filename
   anchor.click()
   window.setTimeout(() => URL.revokeObjectURL(url), 1000)
 }

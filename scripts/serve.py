@@ -17,7 +17,7 @@ import webbrowser
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
 HOST = "127.0.0.1"
-VERSION = "0.3.3"
+VERSION = "0.4"
 
 
 def is_running(address):

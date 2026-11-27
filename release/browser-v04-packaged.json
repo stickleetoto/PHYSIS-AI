@@ -1,0 +1,28 @@
+{
+  "archive": "PHYSIS-AI-0.4-win-x64.zip",
+  "bytes": 74132071,
+  "sha256": "21075b93917fcad3a2c47b68614102907d4b819b8d190902c6ea325eaf4f2e1d",
+  "entries": 3770,
+  "checked_project_files": 363,
+  "CRC": "pass",
+  "PE_machine": "AMD64",
+  "previous_archives": {
+    "0.1": "f75e3b0769339a700862e2479397a23df5c0c1d9ea2a7c7c566859e70e1552d3",
+    "0.2": "b9c540bc2cafccd1272b4d98f4c2fcf4b6d5257ae0882751215d86e2d857fc4c",
+    "0.3": "44d9947ed0cf921c4ba5caa34e7c9f4fdc350789b829b9cd410d23b1adb945c7",
+    "0.3.1": "6dfd8d428c9b6880268aecdd92dae78630d51113b5c033ff8ef28c09c30dc8d0",
+    "0.3.2": "219969d83e86c0ee231975f572382e53f5a8e763ff6b1b6e04d4d6e3b634d1cb",
+    "0.3.3": "b0caca8a42a47ce9ec2f0058658a483f95ac0b33a2467deb0db5f0fd9d189f38"
+  },
+  "registry": "0.4 23 27",
+  "base_commit": "baf3b7cc350b13e38be60dc515c171801fca4d16",
+  "backend": 570,
+  "frontend": 32,
+  "source_browser": 23,
+  "source_math_after_startup_fix": 4,
+  "packaged_browser": 4,
+  "llm_requests": 0,
+  "gpu_compute": false,
+  "education_quality": "unmeasured",
+  "installed_environment": "Extracted Windows x64 launcher, embedded runtime, Windows-only PATH, loopback service, bundled assets, Mock, headless Edge with GPU/WebGL disabled."
+}

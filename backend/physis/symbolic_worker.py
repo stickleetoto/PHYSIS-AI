@@ -43,8 +43,23 @@ def main():
     try:
         job = limit_memory()
         sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-        from physis.symbolic_core import calculate
-        result = calculate(json.loads(sys.stdin.buffer.read(16_384)))
+        data = json.loads(sys.stdin.buffer.read(16_384))
+        if "numeric" in data:
+            from physis.math_numerics import calculate
+            args = data["numeric"]
+        elif "matrix" in data:
+            from physis.math_matrices import matrices as calculate
+            args = data["matrix"]
+        elif "laboratory" in data:
+            from physis.math_lab_engine import calculate_lab as calculate
+            args = data["laboratory"]
+        else:
+            from physis.symbolic_core import calculate
+            args = data
+        if "--notify-ready" in sys.argv:
+            sys.stdout.buffer.write(b"READY\n")
+            sys.stdout.buffer.flush()
+        result = calculate(args)
     except (MemoryError,OSError):
         result = {"status":"unverifiable","detail":"메모리 제한 안에서 계산할 수 없습니다."}
     except Exception:

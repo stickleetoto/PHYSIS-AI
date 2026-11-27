@@ -143,7 +143,8 @@ def add_project(archive):
     release = ROOT / "release"
     updates = [p for p in release.iterdir() if p.is_file() and any(v in p.name for v in ("0.3.1","v031"))
                and p.suffix in {".md", ".json", ".png", ".jsonl", ".sha256", ".csv"}]
-    for path in [*release.glob("PHYSIS-0.3-*.png"), *(release / name for name in reports), *updates]:
+    for path in [*release.glob("PHYSIS-0.3-*.png"), *release.glob("PHYSIS-0.4-*.png"),
+                 release / "검증결과-v0.4.md", *(release / name for name in reports), *updates]:
         if path.is_file():
             archive.write(path, PREFIX / "release" / path.name)
     for path in sorted((release / "software-v032").rglob("*")):
@@ -156,12 +157,12 @@ def add_project(archive):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--output", type=Path, default=ROOT / "release" / "PHYSIS-AI-0.3.3-win-x64.zip")
+    parser.add_argument("--output", type=Path, default=ROOT / "release" / "PHYSIS-AI-0.4-win-x64.zip")
     parser.add_argument("--reuse-runtime", action="store_true",
-                        help="Copy the verified v0.3.2 runtime when requirements are identical.")
+                        help="Copy the verified v0.3.3 runtime when requirements are identical.")
     args = parser.parse_args()
-    if args.output.resolve() in {(ROOT / "release" / f"PHYSIS-AI-{v}-win-x64.zip").resolve() for v in ("0.1", "0.2", "0.3", "0.3.1", "0.3.2")}:
-        sys.exit("Archived release. Choose a v0.3.3 output path.")
+    if args.output.resolve() in {(ROOT / "release" / f"PHYSIS-AI-{v}-win-x64.zip").resolve() for v in ("0.1", "0.2", "0.3", "0.3.1", "0.3.2", "0.3.3")}:
+        sys.exit("Archived release. Choose a v0.4 output path.")
     if sys.platform != "win32" or platform.machine().upper() != "AMD64" or sys.version_info[:2] != (3, 13):
         sys.exit("Build using Windows x64 CPython 3.13.")
     if not (ROOT / "frontend" / "dist" / "index.html").exists():
@@ -170,9 +171,9 @@ def main():
     candidate = args.output.with_suffix(".partial")
     with ZipFile(candidate, "w", ZIP_DEFLATED, compresslevel=5) as archive:
         if args.reuse_runtime:
-            source = ROOT / "release" / "PHYSIS-AI-0.3.2-win-x64.zip"
+            source = ROOT / "release" / "PHYSIS-AI-0.3.3-win-x64.zip"
             with source.open("rb") as content:
-                if hashlib.file_digest(content, "sha256").hexdigest() != "219969d83e86c0ee231975f572382e53f5a8e763ff6b1b6e04d4d6e3b634d1cb":
+                if hashlib.file_digest(content, "sha256").hexdigest() != "b0caca8a42a47ce9ec2f0058658a483f95ac0b33a2467deb0db5f0fd9d189f38":
                     raise ValueError("Unexpected baseline archive digest.")
             with ZipFile(source) as baseline:
                 if baseline.read("PHYSIS-AI/requirements.txt") != (ROOT/"requirements.txt").read_bytes():

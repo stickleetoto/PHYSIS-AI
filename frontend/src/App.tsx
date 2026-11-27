@@ -59,8 +59,10 @@ import { FieldScene, isFieldModel } from './FieldScene'
 import './studio.css'
 import './research.css'
 import { ResearchView, type StudyTarget } from './ResearchView'
+import { fromPhysics, type MathEntry } from './mathLabModel'
+const MathematicsLab = lazy(() => import('./MathematicsLab').then(m=>({default:m.MathematicsLab})))
 
-type View = 'lab'|'tutor'|'formula'|'numerical'|'learning'|'research'
+type View = 'lab'|'tutor'|'formula'|'numerical'|'learning'|'research'|'mathematics'
 const ScienceView = lazy(() => import('./ScienceView').then(module => ({default: module.ScienceView})))
 type PanelProps = Parameters<typeof TutorPanel>[0]
 type Mode = PanelProps['mode']
@@ -152,6 +154,7 @@ export function App() {
     [level, setLevel] = useState<Level>(() => getLearning().current?.level ?? 'school')
   const [view,setView]=useState<View>('lab'), [mode,setMode]=useState<Mode>('explain')
   const [study,setStudy]=useState<StudyTarget>({tab:'library'})
+  const [mathEntry,setMathEntry]=useState<MathEntry>({topic:'function'})
   const [lesson,setLesson]=useState<Lesson|null>(null), [notice,setNotice]=useState('')
   const [focus,setFocus]=useState<FocusAction[]>([])
   const [settings,setSettings]=useState(false)
@@ -334,10 +337,10 @@ export function App() {
     setPrediction('')
     setNotes('')
   }
-  const openModel = (model: string, preset?:{title:string;initialValues:Record<string,number>}) =>
+  const openModel = (model: string, preset?:{title:string;initialValues:Record<string,number>;duration?:number}) =>
     perform(async () => {
       const s = await api<Snapshot>('/experiments', 'POST', { model, level,
-        ...(preset?{display_name:preset.title,patch:{values:preset.initialValues}}:{}) })
+        ...(preset?{display_name:preset.title,patch:{values:preset.initialValues,duration:preset.duration}}:{}) })
       accept(s)
       recordExperiment(s,level)
       setPrevious(undefined)
@@ -582,7 +585,7 @@ export function App() {
   const togglePlay=()=>{if(!playing && elapsed>=end)setElapsed(0);setPlaying(!playing)}
   const handleShortcut=useEffectEvent((event:KeyboardEvent)=>{
     if(event.defaultPrevented || event.isComposing || event.repeat || event.altKey || event.metaKey || event.shiftKey
-      || busy || lock.current || drawer || settings || learningTools
+      || view==='mathematics' || busy || lock.current || drawer || settings || learningTools
       || (event.target instanceof Element && event.target.closest('input,textarea,select,[contenteditable]:not([contenteditable="false"]),[role="textbox"],dialog')))return
     const key=event.key.toLowerCase()
     if(event.ctrlKey && key==='o'){event.preventDefault();importer.current?.click();return}
@@ -623,7 +626,7 @@ export function App() {
         <span className="brand-divider" />
         <span className="product-name">물리 탐구실</span>
         <nav className="topnav" aria-label="워크스페이스 탐색">
-          {([['tutor','튜터',GraduationCap],['lab','실험실',FlaskConical],['formula','공식',Sigma],['numerical','수치해석',ChartSpline],['research','지식 탐구',Search],['learning','학습 기록',LibraryBig]] as const).map(([key,label,Icon])=>
+          {([['tutor','튜터',GraduationCap],['lab','실험실',FlaskConical],['mathematics','수학 실험실',LayoutGrid],['formula','공식',Sigma],['numerical','수치해석',ChartSpline],['research','지식 탐구',Search],['learning','학습 기록',LibraryBig]] as const).map(([key,label,Icon])=>
             <button key={key} disabled={busy} aria-pressed={view===key&&!drawer} onClick={()=>changeView(key)}><Icon size={15}/>{label}</button>)}
         </nav>
         <div className="catalog-tools">
@@ -770,7 +773,12 @@ export function App() {
               </button>
             </div>
           )}
-          {view==='research' ? (
+          {view==='mathematics' ? (
+            <Suspense fallback={<p role="status">수학 실험실을 여는 중입니다.</p>}>
+              <MathematicsLab entry={mathEntry} snapshot={snapshot} catalog={catalog} numerical={()=>changeView('numerical')}
+                open={(model,values,title,duration)=>{changeView('lab',false);void openModel(model,{initialValues:values,title,duration})}}/>
+            </Suspense>
+          ) : view==='research' ? (
             <ResearchView target={study} onTarget={setStudy} onModel={m=>{changeView('lab',false);void openModel(m)}}/>
           ) : view==='learning' ? (
             <LearningView onReview={async id=>{await reopen(id);setMode('review');changeView('tutor',false)}} onErase={erase}/>
@@ -789,6 +797,12 @@ export function App() {
           ) : view==='formula'||view==='numerical' ? (
             <Suspense fallback={<p role="status">공식과 계산 도구를 불러오는 중입니다.</p>}>
               <ScienceView tab={view} snapshot={snapshot} selectedVariable={focusVariable} onPatch={patch} onModel={openModel} onOpenLab={()=>changeView('lab')}/>
+              {view==='numerical' && <button className="math-formula-link" onClick={()=>{
+                setMathEntry({topic:'numerics'});changeView('mathematics',false)
+              }}>근 찾기·차분·구적법 열기</button>}
+              {view==='formula' && fromPhysics(snapshot) && <button className="math-formula-link" onClick={()=>{
+                setMathEntry(fromPhysics(snapshot)!);changeView('mathematics',false)
+              }}>이 공식으로 수학 실험 열기</button>}
             </Suspense>
           ) : (
             <>

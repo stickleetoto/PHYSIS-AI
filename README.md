@@ -1,5 +1,7 @@
 # PHYSIS AI
 
+**v0.4 Mathematics Laboratory**는 사용자 수식에서 그래프·미분·적분을 구하고 같은 조건으로 물리 실험을 실행한다. 벡터·삼각함수, 선형대수, 통계, 수치해석, 초기값 문제도 다룬다. Windows 배포 폴더에서 `Start-PHYSIS.cmd --offline`으로 시작한 뒤 상단의 **수학 실험실**을 연다. [사용 안내](MATHEMATICS_LAB.md) · [물리 연결](PHYSICS_BRIDGE.md) · [검증 결과](MATHEMATICS_VALIDATION.md)
+
 PHYSIS AI는 한국어로 질문하고, 조건을 바꾸고, 그래프와 측정값으로 답을 확인하는 물리 학습 실험실입니다. 예를 들어 높이가 같은 두 물체의 질량만 바꿔 떨어뜨리면, 도착 시간과 운동 에너지 중 어느 값이 달라지는지 관찰할 수 있습니다. **v0.3.2의 실제 LLM 교육 성능과 학생의 학습 효과는 미측정입니다.** [검증 보고서](EDUCATIONAL_EVALUATION_V3.md)
 
 ## 시스템 아키텍처

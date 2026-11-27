@@ -77,6 +77,8 @@ Thumbs.db
 /release/*
 !/release/browser-v032-packaged.json
 !/release/browser-v033-packaged.json
+!/release/PHYSIS-0.4-*.png
+!/release/browser-v04-packaged.json
 !/release/software-v032/
 /release/software-v032/*
 !/release/software-v032/automated-qa.json
