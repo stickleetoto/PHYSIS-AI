@@ -6,6 +6,10 @@ PHYSIS AI는 한국어로 수학·물리 실험을 설계하고, 조건을 바�
 
 ![v0.4에서 이차 위치 함수와 도함수, 접선을 함께 그린 실제 화면](release/PHYSIS-0.4-derivative.png)
 
+## Windows x64 배포본으로 시작하기
+
+릴리스 페이지에서 `PHYSIS-AI-0.4.1-win-x64.zip`과 `SHA256SUMS.txt`를 받으세요. 쓰기 가능한 폴더에 모두 압축 해제하고 인터넷에 연결된 상태에서 **Setup-Runtime.cmd**를 한 번 실행합니다. 설정 도구가 공식 Python과 과학 계산 패키지의 해시를 검사해 이 폴더 안에 준비합니다. 이후 **Start-PHYSIS.cmd** 또는 오프라인 전용 명령 `Start-PHYSIS.cmd --offline`으로 실행합니다. [Windows 릴리스](https://github.com/stickleetoto/PHYSIS-AI/releases/tag/v0.4.1) · [설치·검증·문제 해결](WINDOWS_DISTRIBUTION.md)
+
 ## Windows에서 소스로 시작하기
 
 Windows x64, Python 3.13 및 Node.js 22.12 이상을 준비합니다. 저장소 루트에서 다음 명령을 실행합니다. 첫 설치에는 패키지 다운로드를 위한 인터넷 연결이 필요합니다.
@@ -15,7 +19,7 @@ Setup-Windows.cmd
 Start-PHYSIS.cmd --offline
 ```
 
-기본 주소는 `http://127.0.0.1:8765`입니다. 설치 후에는 오프라인 모드에서 Mock 튜터, 수학·물리 엔진, 내장 문헌 검색을 사용할 수 있습니다. 종료하려면 콘솔에서 Ctrl+C를 누르세요. v0.4는 소스로 배포합니다. Windows 런타임을 포함한 ZIP은 별도 검토 중입니다. [배포 검토 내용](THIRD_PARTY_NOTICES.md#windows-binaries)
+기본 주소는 `http://127.0.0.1:8765`입니다. 설치 후에는 오프라인 모드에서 Mock 튜터, 수학·물리 엔진, 내장 문헌 검색을 사용할 수 있습니다. 종료하려면 콘솔에서 Ctrl+C를 누르세요.
 
 ## 수학 실험실
 

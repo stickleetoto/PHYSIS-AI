@@ -23,6 +23,12 @@ def post(client, path, **values):
     return response.json()
 
 
+def test_health_reports_distribution_version(client):
+    health = client.get("/api/health").json()
+    assert health["service"] == "PHYSIS AI"
+    assert health["version"] == "0.4.1"
+
+
 def test_lesson_with_persistent_identity_and_computed_evidence(client):
     created = post(client, "/api/chat", message="무거운 물체가 가벼운 물체보다 빨리 떨어지는 거 아니야?")
     first = created["snapshot"]

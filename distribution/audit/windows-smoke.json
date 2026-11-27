@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "app_version": "0.4.1",
+  "mode": "zip",
+  "platform": "Windows x64",
+  "host_image": "local",
+  "provider": "mock",
+  "application_network": "PHYSIS_OFFLINE=1; loopback only",
+  "setup_network": "only the explicit Setup-Runtime.cmd step may fetch hash-verified sources over HTTPS",
+  "staging_path": "Korean and space-containing temporary path (absolute path omitted)",
+  "started_utc": "2026-11-27T02:27:04.087715+00:00",
+  "checks": [
+    {
+      "name": "zip_extraction_and_layout",
+      "status": "PASS",
+      "details": "Archive CRC passed; safe extraction completed under a Korean and space-containing staging path."
+    },
+    {
+      "name": "runtime_absence_simulation",
+      "status": "PASS",
+      "details": "PASS: the extracted package reported the explicit setup step and did not create or locate a fallback interpreter."
+    },
+    {
+      "name": "runtime_setup",
+      "status": "PASS",
+      "details": "The separately invoked Setup-Runtime.cmd created runtime/python.exe; launcher did not install it automatically."
+    },
+    {
+      "name": "vc_redist_absence_simulation",
+      "status": "PASS",
+      "details": "SIMULATED: empty System32 and app-local test folders produce the official x64 minimum-version diagnostic; host files were not changed."
+    },
+    {
+      "name": "restricted_path_native_runtime",
+      "status": "PASS",
+      "details": "Embedded x64 CPython loaded NumPy/SciPy and solved a matrix with PATH restricted to Windows System32; no host Python or Node was used."
+    },
+    {
+      "name": "foreign_port_collision",
+      "status": "PASS",
+      "details": "PASS: a foreign listener is left untouched and the launcher exits with a choose-another-port instruction."
+    },
+    {
+      "name": "existing_instance_behavior",
+      "status": "PASS",
+      "details": "PASS: a same-version offline server is reported as already running and is not terminated by the second launcher."
+    },
+    {
+      "name": "packaged_api_restart",
+      "status": "PASS",
+      "details": "PASS: packaged localhost API, math, physics, Tutor, persistence, port reuse, and CTRL_BREAK shutdown."
+    },
+    {
+      "name": "math_physics_tutor_and_localhost",
+      "status": "PASS",
+      "details": "UI, offline Mock health, free-fall physics, symbolic derivative, and Tutor stream returned expected local results."
+    },
+    {
+      "name": "ctrl_c_shutdown",
+      "status": "PASS",
+      "details": "A detached sender delivered CTRL_C_EVENT; Uvicorn logged graceful application shutdown and the port closed."
+    },
+    {
+      "name": "persistence_restart_and_port_reuse",
+      "status": "PASS",
+      "details": "The same port restarted after shutdown and the saved experiment reloaded with the same ID, inputs, and revision."
+    },
+    {
+      "name": "ctrl_break_shutdown",
+      "status": "PASS",
+      "details": "A detached sender delivered CTRL_BREAK_EVENT; Uvicorn logged graceful application shutdown and the same port closed."
+    }
+  ],
+  "overall": "PASS",
+  "app_path_relative_to_work_dir": "한글 경로 space 포함/PHYSIS AI 0.4.1/PHYSIS-AI",
+  "runtime": {
+    "python": "3.14.10",
+    "architecture": "win-amd64",
+    "bits": 64,
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "finished_utc": "2026-11-27T02:27:48.467757+00:00",
+  "work_dir_preserved": true,
+  "zip_sha256": "6ae18c6f6b8c6ece1d4b3d1909175a8e0c18386a1f5874e4be81ead2738572a1",
+  "local_host": {
+    "build": "Windows 11 x64 26200",
+    "elevated": false,
+    "host_vc_runtime_present": true,
+    "pristine_consumer_windows": "unverified"
+  }
+}

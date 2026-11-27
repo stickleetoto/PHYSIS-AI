@@ -1,5 +1,12 @@
 # PHYSIS AI 변경 기록
 
+## v0.4.1 · Windows Distribution Update
+
+- Windows x64용으로 웹 화면을 미리 빌드하고, 실행에 필요한 소스·교재·고지만 허용 목록으로 패키징한다. 이전 배포본과 v0.4 소스 태그는 보존한다.
+- 배포 의존성의 공개 보안 권고를 확인해 KaTeX를 0.18.2로, python-dotenv를 1.2.4로, pypdf를 같은 주 버전의 6.21.4로 갱신했다. KaTeX의 글꼴 파일 60개는 기존 버전과 바이트 단위로 일치한다.
+- 사용자가 최초 설정을 실행하면 공식 Python과 과학 계산 패키지의 해시를 검증해 전용 런타임을 준비한다. 시작 도구는 로컬 서버와 필요한 런타임을 확인한다. 설정 후 오프라인 Mock 모드를 사용할 수 있다.
+- 배포 파일 목록, 부품 명세서(SBOM), 제3자 고지, SHA-256 검사 및 CPU 기반 CI를 추가했다. [Windows 사용 안내](WINDOWS_DISTRIBUTION.md) · [배포 검증](DISTRIBUTION_AUDIT.md)
+
 ## v0.4 · Mathematics Laboratory · 2026-11-27
 
 - DevSeat 원저작물에 Apache-2.0을 적용하고 영문·한국어 사용 안내와 제3자 고지를 추가했다. OpenStax 발췌문은 CC BY 4.0을 유지한다. [라이선스](LICENSE) · [제3자 고지](THIRD_PARTY_NOTICES.md)

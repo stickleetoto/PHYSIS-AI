@@ -1,4 +1,4 @@
-KaTeX fonts, distributed unmodified in KaTeX 0.16.22.
+KaTeX fonts, distributed unmodified in KaTeX 0.18.2.
 Copyright (c) 2009-2010, Design Science, Inc. (www.mathjax.org)
 Copyright (c) 2014-2018 Khan Academy (www.khanacademy.org)
 Reserved Font Names: KaTeX_AMS, KaTeX_Caligraphic, KaTeX_Fraktur, KaTeX_Main,

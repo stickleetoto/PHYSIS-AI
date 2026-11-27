@@ -1,0 +1,85 @@
+name: Windows distribution checks
+
+on:
+  push:
+    branches: [main, feature/v0.4.1-windows-distribution]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: windows-2022
+    timeout-minutes: 30
+    env:
+      PHYSIS_AI_PROVIDER: mock
+      PHYSIS_ALLOW_ENV_PROVIDER_DEFAULT: '0'
+      PYTHON_DOTENV_DISABLED: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.14'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - name: Install the locked Windows dependency versions and test tools
+        shell: pwsh
+        run: |
+          $constraints = Join-Path $env:RUNNER_TEMP 'physis-constraints.txt'
+          (Get-Content -Raw distribution/runtime-lock.json | ConvertFrom-Json).wheels |
+            ForEach-Object { '{0}=={1}' -f $_.name,$_.version } | Set-Content -Encoding ascii $constraints
+          python -m pip install -c $constraints -r requirements-dev.txt
+      - name: Verify publisher digests, Windows dependency closure and published advisories
+        run: python scripts/verify_runtime_lock.py
+      - name: Backend tests
+        run: python -m pytest -q backend/tests
+      - name: Frontend dependency installation
+        working-directory: frontend
+        run: npm ci --no-audit --no-fund
+      - name: TypeScript and production UI
+        working-directory: frontend
+        run: npm run build
+      - name: Frontend tests
+        working-directory: frontend
+        run: npm test -- --maxWorkers=1
+      - name: Packaging and dependency inventory
+        run: python scripts/package_windows.py build
+      - run: python scripts/package_windows.py audit release/PHYSIS-AI-0.4.1-win-x64.zip
+      - name: Distribution regression tests
+        run: python -m pytest -q scripts/test_package_windows.py
+      - name: Scan history and the complete unpacked distribution
+        shell: pwsh
+        run: |
+          $archive = Join-Path $env:RUNNER_TEMP 'gitleaks.zip'
+          $tools = Join-Path $env:RUNNER_TEMP 'physis-scanner'
+          $unpacked = Join-Path $env:RUNNER_TEMP 'physis-public-package'
+          $report = Join-Path $env:RUNNER_TEMP 'physis-history.json'
+          Invoke-WebRequest 'https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_windows_x64.zip' -OutFile $archive
+          if ((Get-FileHash $archive).Hash -ne 'd29144deff3a68aa93ced33dddf84b7fdc26070add4aa0f4513094c8332afc4e') { throw 'Scanner hash mismatch' }
+          Expand-Archive $archive $tools
+          $scanner = Join-Path $tools 'gitleaks.exe'
+          & $scanner git '--log-opts=--all --full-history' --redact=100 --report-format json --report-path $report .
+          if ($LASTEXITCODE -ne 1) { throw "Unexpected history scan status $LASTEXITCODE" }
+          python scripts/verify_history_findings.py $report
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Expand-Archive release/PHYSIS-AI-0.4.1-win-x64.zip $unpacked
+          & $scanner dir --redact=100 $unpacked
+          exit $LASTEXITCODE
+      - name: Provision and exercise the actual ZIP on an independent Windows image
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/feature/v0.4.1-windows-distribution')
+        run: python scripts/verify_windows_distribution.py --zip release/PHYSIS-AI-0.4.1-win-x64.zip --host-image github-hosted --report "${{ runner.temp }}/physis-windows-smoke.json"
+      - name: Record Windows smoke evidence
+        if: always()
+        shell: pwsh
+        run: |
+          $report = Join-Path $env:RUNNER_TEMP 'physis-windows-smoke.json'
+          if (Test-Path -LiteralPath $report) { Get-Content -Raw -LiteralPath $report }

@@ -2,8 +2,8 @@ fastapi==0.142.2
 httpx==0.28.1
 numpy==2.3.5
 pydantic==2.13.4
-python-dotenv==1.2.1
+python-dotenv==1.2.4
 scipy==1.17.0
 uvicorn==0.35.0
-pypdf==6.9.2
+pypdf==6.21.4
 sympy==1.14.0

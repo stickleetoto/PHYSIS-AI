@@ -28,6 +28,9 @@ ROOT = Path(__file__).resolve().parents[2]
 load_dotenv(ROOT / ".env", override=False)
 
 
+API_VERSION = "0.4.1"
+
+
 class NewExperiment(StrictModel):
     model: str = Field(max_length=64)
     level: Level = "school"
@@ -96,7 +99,7 @@ def create_app(db_path: Path | None = None) -> FastAPI:
         app.state.knowledge = knowledge
         yield
 
-    app = FastAPI(title="PHYSIS AI", version="0.4", lifespan=lifespan)
+    app = FastAPI(title="PHYSIS AI", version=API_VERSION, lifespan=lifespan)
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=["127.0.0.1", "localhost", "[::1]", "testserver"])
 
     @app.exception_handler(RequestValidationError)

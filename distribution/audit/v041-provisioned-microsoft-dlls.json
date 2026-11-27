@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "title": "PHYSIS AI v0.4.1 optional runtime Microsoft DLL provenance audit",
+  "audit_scope": {
+    "runtime_source": "runtime/ after explicit setup in an extracted PHYSIS AI 0.4.1 package",
+    "runtime_version": "3.14.10",
+    "runtime_architecture": "win-amd64",
+    "physical_runtime_dlls_inspected": 12,
+    "microsoft_company_dlls": 3,
+    "pe_files_scanned_for_static_imports": 165,
+    "pe_parse_failures": 0,
+    "method": "Inspected PE version resources and Authenticode signatures for installed DLL files; matched candidate DLL bytes to their original CPython embed ZIP or NumPy wheel members; scanned installed EXE/DLL/PYD PE normal and delay-load import tables with pefile. Dynamic LoadLibrary calls are outside static import tables.",
+    "note": "Windows API-set imports such as api-ms-win-crt-*.dll are operating-system API contracts; they are not physical DLL payloads in this app-local runtime."
+  },
+  "public_zip": {
+    "runtime_payload": "none",
+    "python_binaries_or_wheels": "none",
+    "microsoft_dlls": "none",
+    "decision": "The public ZIP contains setup metadata and scripts only for runtime provisioning; the records below describe optional files installed after explicit user setup."
+  },
+  "user_provisioned_runtime": {
+    "installed_root": "runtime/",
+    "provisioning": "User explicitly runs Setup-Runtime.cmd, which downloads the official CPython embeddable ZIP and locked wheels, verifies the pinned digests, and installs transactionally into the isolated app-local runtime.",
+    "microsoft_redistribution_guidance": [
+      "https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files?view=msvc-170",
+      "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170"
+    ],
+    "files": [
+      {
+        "installed_path": "runtime/vcruntime140.dll",
+        "original_filename": "vcruntime140.dll",
+        "company": "Microsoft Corporation",
+        "file_version": "14.51.36247.0",
+        "product_version": "14.51.36247.0",
+        "size_bytes": 178616,
+        "sha256": "d1f4225df2cd877dbf130d5668a021dce3f94118455ff5ec952061c30afc9ce7",
+        "installed_file_sha256": "d1f4225df2cd877dbf130d5668a021dce3f94118455ff5ec952061c30afc9ce7",
+        "authenticode": {
+          "status": "Valid",
+          "signer": "CN=Microsoft Windows Software Compatibility Publisher, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+          "thumbprint": "2650247AC56048BC7928663C02733D25898A1D6E"
+        },
+        "source": {
+          "component": "CPython 3.14.10",
+          "archive_filename": "python-3.14.10-embed-amd64.zip",
+          "archive_url": "https://www.python.org/ftp/python/3.14.10/python-3.14.10-embed-amd64.zip",
+          "archive_sha256": "90905e64a840557d8c1bc4f5b74db3d7ee85e3ffb217611cac1c7813acea4159",
+          "archive_sha256_evidence_url": "https://www.python.org/ftp/python/3.14.10/python-3.14.10-embed-amd64.zip.spdx.json",
+          "archive_sha256_evidence": "Python.org SPDX SBOM CPython package checksum; independently matches the downloaded archive hash.",
+          "archive_member": "vcruntime140.dll",
+          "archive_member_sha256": "d1f4225df2cd877dbf130d5668a021dce3f94118455ff5ec952061c30afc9ce7",
+          "license_id": "PSF-2.0",
+          "upstream_license_notice_member": "LICENSE.txt"
+        },
+        "purpose": "Microsoft Visual C++ runtime used by CPython and native extensions.",
+        "pe_imports": {
+          "direct_imports": [
+            "api-ms-win-crt-convert-l1-1-0.dll",
+            "api-ms-win-crt-heap-l1-1-0.dll",
+            "api-ms-win-crt-runtime-l1-1-0.dll",
+            "api-ms-win-crt-stdio-l1-1-0.dll",
+            "api-ms-win-crt-string-l1-1-0.dll",
+            "kernel32.dll"
+          ],
+          "delay_imports": [],
+          "direct_consumers": [
+            "Lib/site-packages/numpy.libs/msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll",
+            "Lib/site-packages/numpy/_core/_multiarray_tests.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/_core/_multiarray_umath.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/_core/_operand_flag_tests.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/_core/_rational_tests.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/_core/_simd.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/_core/_struct_ufunc_tests.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/_core/_umath_tests.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/fft/_pocketfft_umath.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/linalg/_umath_linalg.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/linalg/lapack_lite.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/random/_bounded_integers.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/random/_common.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/random/_generator.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/random/_mt19937.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/random/_pcg64.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/random/_philox.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/random/_sfc64.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/random/bit_generator.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/random/mtrand.cp314-win_amd64.pyd",
+            "Lib/site-packages/pydantic_core/_pydantic_core.cp314-win_amd64.pyd",
+            "_asyncio.pyd",
+            "_bz2.pyd",
+            "_ctypes.pyd",
+            "_decimal.pyd",
+            "_elementtree.pyd",
+            "_hashlib.pyd",
+            "_lzma.pyd",
+            "_multiprocessing.pyd",
+            "_overlapped.pyd",
+            "_queue.pyd",
+            "_remote_debugging.pyd",
+            "_socket.pyd",
+            "_sqlite3.pyd",
+            "_ssl.pyd",
+            "_uuid.pyd",
+            "_wmi.pyd",
+            "_zoneinfo.pyd",
+            "_zstd.pyd",
+            "libcrypto-3.dll",
+            "libffi-8.dll",
+            "libssl-3.dll",
+            "pyexpat.pyd",
+            "python.exe",
+            "python314.dll",
+            "pythonw.exe",
+            "select.pyd",
+            "sqlite3.dll",
+            "unicodedata.pyd",
+            "vcruntime140_1.dll",
+            "winsound.pyd"
+          ],
+          "delay_consumers": []
+        },
+        "vendor_terms": "The official CPython LICENSE.txt contains Microsoft Distributable Code conditions, including restrictions on further distribution and downstream protective terms. The Microsoft redistribution guidance linked below also applies; this audit makes no independent legal determination.",
+        "public_zip_decision": "Not included in the public ZIP. This file appears only after the user explicitly runs Setup-Runtime and the verified upstream archive is provisioned into the app-local runtime."
+      },
+      {
+        "installed_path": "runtime/vcruntime140_1.dll",
+        "original_filename": "vcruntime140_1.dll",
+        "company": "Microsoft Corporation",
+        "file_version": "14.51.36247.0",
+        "product_version": "14.51.36247.0",
+        "size_bytes": 50112,
+        "sha256": "a7146c08f89fe5b04541ab507cdb59ff7b44534d4ba3c668a426c6450a03434e",
+        "installed_file_sha256": "a7146c08f89fe5b04541ab507cdb59ff7b44534d4ba3c668a426c6450a03434e",
+        "authenticode": {
+          "status": "Valid",
+          "signer": "CN=Microsoft Windows Software Compatibility Publisher, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+          "thumbprint": "2650247AC56048BC7928663C02733D25898A1D6E"
+        },
+        "source": {
+          "component": "CPython 3.14.10",
+          "archive_filename": "python-3.14.10-embed-amd64.zip",
+          "archive_url": "https://www.python.org/ftp/python/3.14.10/python-3.14.10-embed-amd64.zip",
+          "archive_sha256": "90905e64a840557d8c1bc4f5b74db3d7ee85e3ffb217611cac1c7813acea4159",
+          "archive_sha256_evidence_url": "https://www.python.org/ftp/python/3.14.10/python-3.14.10-embed-amd64.zip.spdx.json",
+          "archive_sha256_evidence": "Python.org SPDX SBOM CPython package checksum; independently matches the downloaded archive hash.",
+          "archive_member": "vcruntime140_1.dll",
+          "archive_member_sha256": "a7146c08f89fe5b04541ab507cdb59ff7b44534d4ba3c668a426c6450a03434e",
+          "license_id": "PSF-2.0",
+          "upstream_license_notice_member": "LICENSE.txt"
+        },
+        "purpose": "Microsoft Visual C++ exception-handling runtime used by the CPython build and native extensions.",
+        "pe_imports": {
+          "direct_imports": [
+            "api-ms-win-crt-heap-l1-1-0.dll",
+            "api-ms-win-crt-runtime-l1-1-0.dll",
+            "api-ms-win-crt-string-l1-1-0.dll",
+            "kernel32.dll",
+            "vcruntime140.dll"
+          ],
+          "delay_imports": [],
+          "direct_consumers": [
+            "Lib/site-packages/numpy.libs/msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll",
+            "Lib/site-packages/numpy/_core/_multiarray_umath.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/fft/_pocketfft_umath.cp314-win_amd64.pyd",
+            "_wmi.pyd"
+          ],
+          "delay_consumers": []
+        },
+        "vendor_terms": "The official CPython LICENSE.txt contains Microsoft Distributable Code conditions, including restrictions on further distribution and downstream protective terms. The Microsoft redistribution guidance linked below also applies; this audit makes no independent legal determination.",
+        "public_zip_decision": "Not included in the public ZIP. This file appears only after the user explicitly runs Setup-Runtime and the verified upstream archive is provisioned into the app-local runtime."
+      },
+      {
+        "installed_path": "runtime/Lib/site-packages/numpy.libs/msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll",
+        "original_filename": "msvcp140.dll",
+        "company": "Microsoft Corporation",
+        "file_version": "14.40.33810.0",
+        "product_version": "14.40.33810.0",
+        "size_bytes": 575056,
+        "sha256": "a4c2229bdc2a2a630acdc095b4d86008e5c3e3bc7773174354f3da4f5beb9cde",
+        "installed_file_sha256": "a4c2229bdc2a2a630acdc095b4d86008e5c3e3bc7773174354f3da4f5beb9cde",
+        "authenticode": {
+          "status": "Valid",
+          "signer": "CN=Microsoft Windows Software Compatibility Publisher, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+          "thumbprint": "19FAC08D74CA905CEC066C597708A16148C8FCD5"
+        },
+        "source": {
+          "component": "NumPy 2.3.5",
+          "archive_filename": "numpy-2.3.5-cp314-cp314-win_amd64.whl",
+          "archive_url": "https://files.pythonhosted.org/packages/a3/2e/235b4d96619931192c91660805e5e49242389742a7a82c27665021db690c/numpy-2.3.5-cp314-cp314-win_amd64.whl",
+          "archive_sha256": "e6a0bc88393d65807d751a614207b7129a310ca4fe76a74e5c7da5fa5671417e",
+          "archive_sha256_evidence_url": "https://pypi.org/pypi/numpy/2.3.5/json",
+          "archive_sha256_evidence": "PyPI release JSON file record SHA-256; downloaded archive SHA-256 independently matches the record.",
+          "archive_member": "numpy.libs/msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll",
+          "archive_member_sha256": "a4c2229bdc2a2a630acdc095b4d86008e5c3e3bc7773174354f3da4f5beb9cde",
+          "license_id": "BSD-3-Clause",
+          "upstream_license_notice_member": "numpy-2.3.5.dist-info/LICENSE.txt"
+        },
+        "purpose": "Microsoft C++ standard library used by NumPy native extensions.",
+        "pe_imports": {
+          "direct_imports": [
+            "api-ms-win-crt-convert-l1-1-0.dll",
+            "api-ms-win-crt-environment-l1-1-0.dll",
+            "api-ms-win-crt-filesystem-l1-1-0.dll",
+            "api-ms-win-crt-heap-l1-1-0.dll",
+            "api-ms-win-crt-locale-l1-1-0.dll",
+            "api-ms-win-crt-math-l1-1-0.dll",
+            "api-ms-win-crt-runtime-l1-1-0.dll",
+            "api-ms-win-crt-stdio-l1-1-0.dll",
+            "api-ms-win-crt-string-l1-1-0.dll",
+            "api-ms-win-crt-time-l1-1-0.dll",
+            "api-ms-win-crt-utility-l1-1-0.dll",
+            "kernel32.dll",
+            "vcruntime140.dll",
+            "vcruntime140_1.dll"
+          ],
+          "delay_imports": [],
+          "direct_consumers": [
+            "Lib/site-packages/numpy/_core/_multiarray_umath.cp314-win_amd64.pyd",
+            "Lib/site-packages/numpy/fft/_pocketfft_umath.cp314-win_amd64.pyd"
+          ],
+          "delay_consumers": []
+        },
+        "vendor_terms": "The source NumPy wheel includes this signed Microsoft DLL. Its bundled license texts do not establish redistribution entitlement for Microsoft code; consult the Microsoft redistribution guidance linked below. This audit makes no independent legal determination.",
+        "public_zip_decision": "Not included in the public ZIP. This file appears only after the user explicitly runs Setup-Runtime and the verified upstream archive is provisioned into the app-local runtime."
+      }
+    ],
+    "non_microsoft_company_dlls_excluded_from_this_list": [
+      "runtime/libcrypto-3.dll",
+      "runtime/libffi-8.dll",
+      "runtime/libssl-3.dll",
+      "runtime/libtommath.dll",
+      "runtime/python3.dll",
+      "runtime/python314.dll",
+      "runtime/sqlite3.dll",
+      "runtime/Lib/site-packages/numpy.libs/libscipy_openblas64_-9e3e5a4229c1ca39f10dc82bba9e2b2b.dll",
+      "runtime/Lib/site-packages/scipy.libs/libscipy_openblas-64eda39e79589aedb16f58e5547eb599.dll"
+    ]
+  },
+  "evidence_limits": [
+    "PE import tables report direct normal and delay-load references only; dynamic loading and OS-provided API-set resolution are not represented.",
+    "Authenticode status and source-member byte equality establish observed signature and provenance, not redistribution permission.",
+    "No separate Microsoft VC Redistributable package or DLL is downloaded, extracted, or embedded by PHYSIS AI."
+  ]
+}

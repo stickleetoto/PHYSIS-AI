@@ -1,0 +1,165 @@
+{
+  "source_archive": "PHYSIS-AI-0.4-win-x64.zip",
+  "source_archive_sha256": "21075b93917fcad3a2c47b68614102907d4b819b8d190902c6ea325eaf4f2e1d",
+  "official_guidance": [
+    "https://learn.microsoft.com/cpp/windows/redistributing-visual-cpp-files",
+    "https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist/"
+  ],
+  "files": {
+    "PHYSIS-AI/runtime/vcruntime140.dll": {
+      "original_name": "vcruntime140.dll",
+      "file_version": "14.42.34438.0",
+      "company": "Microsoft Corporation",
+      "sha256": "052ad6a20d375957e82aa6a3c441ea548d89be0981516ca7eb306e063d5027f4",
+      "imports": [
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll"
+      ],
+      "direct_importers": [
+        "DLLs/_asyncio.pyd",
+        "DLLs/_bz2.pyd",
+        "DLLs/_ctypes.pyd",
+        "DLLs/_ctypes_test.pyd",
+        "DLLs/_decimal.pyd",
+        "DLLs/_elementtree.pyd",
+        "DLLs/_hashlib.pyd",
+        "DLLs/_lzma.pyd",
+        "DLLs/_multiprocessing.pyd",
+        "DLLs/_overlapped.pyd",
+        "DLLs/_queue.pyd",
+        "DLLs/_socket.pyd",
+        "DLLs/_sqlite3.pyd",
+        "DLLs/_ssl.pyd",
+        "DLLs/_uuid.pyd",
+        "DLLs/_wmi.pyd",
+        "DLLs/_zoneinfo.pyd",
+        "DLLs/libcrypto-3.dll",
+        "DLLs/libffi-8.dll",
+        "DLLs/libssl-3.dll",
+        "DLLs/pyexpat.pyd",
+        "DLLs/select.pyd",
+        "DLLs/sqlite3.dll",
+        "DLLs/unicodedata.pyd",
+        "DLLs/winsound.pyd",
+        "Lib/site-packages/numpy.libs/msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll",
+        "Lib/site-packages/numpy/_core/_multiarray_tests.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/_core/_multiarray_umath.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/_core/_operand_flag_tests.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/_core/_rational_tests.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/_core/_simd.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/_core/_struct_ufunc_tests.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/_core/_umath_tests.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/fft/_pocketfft_umath.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/linalg/_umath_linalg.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/linalg/lapack_lite.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/random/_bounded_integers.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/random/_common.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/random/_generator.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/random/_mt19937.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/random/_pcg64.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/random/_philox.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/random/_sfc64.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/random/bit_generator.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/random/mtrand.cp313-win_amd64.pyd",
+        "Lib/site-packages/pydantic_core/_pydantic_core.cp313-win_amd64.pyd",
+        "python.exe",
+        "python313.dll",
+        "vcruntime140_1.dll"
+      ],
+      "authenticode": {
+        "status": "Valid",
+        "signer": "CN=Microsoft Windows Software Compatibility Publisher, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+        "thumbprint": "6C6D5882B6227B929967D1E389201A7BB5EBBD35",
+        "timestampSigner": "CN=Microsoft Time-Stamp Service, OU=nShield TSS ESN:F002-05E0-D947, OU=Microsoft America Operations, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+      },
+      "upstream": {
+        "distribution_url": "https://www.python.org/ftp/python/3.13.4/python-3.13.4-embed-amd64.zip",
+        "container_sha256": "514ca14ec356ecb7749a7c0a1ef1eac9fd9c67d57af4812cb1f0822b0d3a85e8",
+        "path": "vcruntime140.dll"
+      },
+      "purpose": "MSVC runtime used by the CPython build and native extensions",
+      "terms": "Microsoft Distributable Code under the applicable Microsoft license; full upstream CPython and wheel notices apply to their respective distributions.",
+      "distribution_decision": "Excluded from the PHYSIS ZIP. DevSeat direct redistribution entitlement has not been established.",
+      "dependent_files_method": "Static PE import and delay-load tables from the 163 EXE/DLL/PYD files in the preserved v0.4 ZIP. Dynamic loads are outside this count."
+    },
+    "PHYSIS-AI/runtime/vcruntime140_1.dll": {
+      "original_name": "vcruntime140_1.dll",
+      "file_version": "14.42.34438.0",
+      "company": "Microsoft Corporation",
+      "sha256": "6a99bc0128e0c7d6cbbf615fcc26909565e17d4ca3451b97f8987f9c6acbc6c8",
+      "imports": [
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "kernel32.dll",
+        "vcruntime140.dll"
+      ],
+      "direct_importers": [
+        "DLLs/_wmi.pyd",
+        "Lib/site-packages/numpy.libs/msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll",
+        "Lib/site-packages/numpy/_core/_multiarray_umath.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/fft/_pocketfft_umath.cp313-win_amd64.pyd"
+      ],
+      "authenticode": {
+        "status": "Valid",
+        "signer": "CN=Microsoft Windows Software Compatibility Publisher, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+        "thumbprint": "1865C35307C0B7C8C5FE1EE98DF4CF6A0C081C30",
+        "timestampSigner": "CN=Microsoft Time-Stamp Service, OU=nShield TSS ESN:8900-05E0-D947, OU=Microsoft America Operations, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+      },
+      "upstream": {
+        "distribution_url": "https://www.python.org/ftp/python/3.13.4/python-3.13.4-embed-amd64.zip",
+        "container_sha256": "514ca14ec356ecb7749a7c0a1ef1eac9fd9c67d57af4812cb1f0822b0d3a85e8",
+        "path": "vcruntime140_1.dll"
+      },
+      "purpose": "MSVC x64 exception handling runtime",
+      "terms": "Microsoft Distributable Code under the applicable Microsoft license; full upstream CPython and wheel notices apply to their respective distributions.",
+      "distribution_decision": "Excluded from the PHYSIS ZIP. DevSeat direct redistribution entitlement has not been established.",
+      "dependent_files_method": "Static PE import and delay-load tables from the 163 EXE/DLL/PYD files in the preserved v0.4 ZIP. Dynamic loads are outside this count."
+    },
+    "PHYSIS-AI/runtime/Lib/site-packages/numpy.libs/msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll": {
+      "original_name": "msvcp140.dll",
+      "file_version": "14.40.33810.0",
+      "company": "Microsoft Corporation",
+      "sha256": "a4c2229bdc2a2a630acdc095b4d86008e5c3e3bc7773174354f3da4f5beb9cde",
+      "imports": [
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-environment-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-utility-l1-1-0.dll",
+        "kernel32.dll",
+        "vcruntime140.dll",
+        "vcruntime140_1.dll"
+      ],
+      "direct_importers": [
+        "Lib/site-packages/numpy/_core/_multiarray_umath.cp313-win_amd64.pyd",
+        "Lib/site-packages/numpy/fft/_pocketfft_umath.cp313-win_amd64.pyd"
+      ],
+      "authenticode": {
+        "status": "Valid",
+        "signer": "CN=Microsoft Windows Software Compatibility Publisher, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+        "thumbprint": "19FAC08D74CA905CEC066C597708A16148C8FCD5",
+        "timestampSigner": "CN=Microsoft Time-Stamp Service, OU=nShield TSS ESN:8603-05E0-D947, OU=Microsoft America Operations, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+      },
+      "upstream": {
+        "distribution_url": "https://files.pythonhosted.org/packages/0c/88/e2eaa6cffb115b85ed7c7c87775cb8bcf0816816bc98ca8dbfa2ee33fe6e/numpy-2.3.5-cp313-cp313-win_amd64.whl",
+        "container_sha256": "00dc4e846108a382c5869e77c6ed514394bdeb3403461d25a829711041217d5b",
+        "path": "numpy.libs/msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll"
+      },
+      "purpose": "C++ standard library for NumPy native extensions",
+      "terms": "Microsoft Distributable Code under the applicable Microsoft license; full upstream CPython and wheel notices apply to their respective distributions.",
+      "distribution_decision": "Excluded from the PHYSIS ZIP. DevSeat direct redistribution entitlement has not been established.",
+      "dependent_files_method": "Static PE import and delay-load tables from the 163 EXE/DLL/PYD files in the preserved v0.4 ZIP. Dynamic loads are outside this count."
+    }
+  }
+}

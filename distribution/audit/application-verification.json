@@ -1,0 +1,35 @@
+{
+  "backend": {
+    "tests": 571,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "interpreter": "CPython 3.13.4, isolated test environment, locked runtime package versions"
+  },
+  "packaged_browser": {
+    "tests": 7,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "test_names": [
+      "test_graph_hole_and_exports",
+      "test_calculus_to_physics_and_formula_return",
+      "test_geometry_statistics_matrix_and_numerics",
+      "test_work_displacement_and_travelling_wave_use_real_physics",
+      "test_reviewed_formulas_render_search_and_open_experiment",
+      "test_symbolic_domain_and_discontinuous_graph_in_browser",
+      "test_conversation_modification_and_real_csv"
+    ],
+    "browser": "Microsoft Edge, headless, --disable-gpu --disable-webgl --disable-accelerated-2d-canvas",
+    "runtime": "CPython 3.14.10 x64, Mock provider, offline mode, Windows-only PATH",
+    "zip_sha256": "6ae18c6f6b8c6ece1d4b3d1909175a8e0c18386a1f5874e4be81ead2738572a1"
+  },
+  "frontend": {
+    "tests": 32,
+    "failures": 0,
+    "workers": 1,
+    "typecheck": "pass",
+    "production_build": "pass"
+  },
+  "llm_requests": 0
+}

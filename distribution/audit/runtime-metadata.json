@@ -1,0 +1,8 @@
+{
+  "python": "3.14.10",
+  "runtime_lock_sha256": "11a24e365d7e9c1fe23da6dc9f1f5778cf0d4ed3715f11651a99b63fd51138ea",
+  "pypi_wheels_verified": 23,
+  "windows_dependency_closure": "pass",
+  "npm_runtime_entries_checked": 6,
+  "pypi_and_osv_reported_advisories": {}
+}

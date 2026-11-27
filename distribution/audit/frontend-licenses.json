@@ -1,0 +1,56 @@
+[
+  {
+    "component": "react",
+    "version": "19.3.1",
+    "license": "MIT",
+    "url": "https://registry.npmjs.org/react/-/react-19.3.1.tgz",
+    "tarball_integrity": "sha512-QNhWdt7nrgVWWQG58QuGsAR3jv3Hbe4mb4vz7w2csnHavciZJgda1CPNaldF6eVxv90ud3jUXpKlHL69gO38yw==",
+    "notice_file": "LICENSE",
+    "notice_sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+  },
+  {
+    "component": "react-dom",
+    "version": "19.3.1",
+    "license": "MIT",
+    "url": "https://registry.npmjs.org/react-dom/-/react-dom-19.3.1.tgz",
+    "tarball_integrity": "sha512-Y0bARz53lhEC1NMCASs0/j+faB/zqt3R8hpvg1e8+61ZVJ4UL0UdC4cBbXfZMcIuhrfgeILTLe+ZeBCavQPtKQ==",
+    "notice_file": "LICENSE",
+    "notice_sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+  },
+  {
+    "component": "scheduler",
+    "version": "0.28.0",
+    "license": "MIT",
+    "url": "https://registry.npmjs.org/scheduler/-/scheduler-0.28.0.tgz",
+    "tarball_integrity": "sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==",
+    "notice_file": "LICENSE",
+    "notice_sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+  },
+  {
+    "component": "katex",
+    "version": "0.18.2",
+    "license": "MIT",
+    "url": "https://registry.npmjs.org/katex/-/katex-0.18.2.tgz",
+    "tarball_integrity": "sha512-3snve4y0SXTMequLim1FMiPvLGElySam0blN5xQZBqEY3lOJz1TnuaaiugnBZBqHzlSAGmFTYL7MCQkORuLKCA==",
+    "notice_file": "LICENSE",
+    "notice_sha256": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3"
+  },
+  {
+    "component": "lucide-react",
+    "version": "0.468.0",
+    "license": "ISC",
+    "url": "https://registry.npmjs.org/lucide-react/-/lucide-react-0.468.0.tgz",
+    "tarball_integrity": "sha512-6koYRhnM2N0GGZIdXzSeiNwguv1gt/FAjZOiPl76roBi3xKEXa4WmfpxgQwTTL4KipXjefrnf3oV4IsYhi4JFA==",
+    "notice_file": "LICENSE",
+    "notice_sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+  },
+  {
+    "component": "vite",
+    "version": "7.3.8",
+    "license": "MIT",
+    "url": "https://registry.npmjs.org/vite/-/vite-7.3.8.tgz",
+    "tarball_integrity": "sha512-3tTi78MAKhVk9h+YZVXMQ8POmneJuE97QUPAWtJghHzhH7BAyiqQOC2KZh1DWOsu/USB2cRXhznPByaabvYXfw==",
+    "notice_file": "LICENSE.md",
+    "notice_sha256": "a77a1c089806b39ad339535bdf3677f636c91d96693e8ad7b11fe733f650ea64"
+  }
+]

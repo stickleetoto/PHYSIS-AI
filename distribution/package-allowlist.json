@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "release_version": "0.4.1",
+  "archive_root": "PHYSIS-AI",
+  "max_archive_bytes": 26214400,
+  "max_uncompressed_bytes": 12582912,
+  "generated_files": [
+    "SHA256SUMS.txt",
+    "sbom.cdx.json"
+  ],
+  "fixed_files": [
+    {
+      "source": "LICENSE",
+      "path": "LICENSE"
+    },
+    {
+      "source": "NOTICE",
+      "path": "NOTICE"
+    },
+    {
+      "source": "THIRD_PARTY_NOTICES.md",
+      "path": "THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "source": "SOURCE_MANIFEST.md",
+      "path": "SOURCE_MANIFEST.md"
+    },
+    {
+      "source": "WINDOWS_DISTRIBUTION.md",
+      "path": "WINDOWS_DISTRIBUTION.md"
+    },
+    {
+      "source": "Start-PHYSIS.cmd",
+      "path": "Start-PHYSIS.cmd"
+    },
+    {
+      "source": "scripts/serve.py",
+      "path": "scripts/serve.py"
+    },
+    {
+      "source": "scripts/windows_prerequisites.py",
+      "path": "scripts/windows_prerequisites.py"
+    },
+    {
+      "source": "distribution/README.txt",
+      "path": "README.txt"
+    },
+    {
+      "source": "distribution/Setup-Runtime.cmd",
+      "path": "Setup-Runtime.cmd"
+    },
+    {
+      "source": "distribution/Setup-Runtime.ps1",
+      "path": "Setup-Runtime.ps1"
+    },
+    {
+      "source": "distribution/runtime-lock.json",
+      "path": "runtime-lock.json"
+    },
+    {
+      "source": "backend/physis/corpus/CC-BY-4.0.txt",
+      "path": "backend/physis/corpus/CC-BY-4.0.txt"
+    },
+    {
+      "source": "backend/physis/corpus/retrieval_queries.json",
+      "path": "backend/physis/corpus/retrieval_queries.json"
+    },
+    {
+      "source": "backend/physis/corpus/selection.json",
+      "path": "backend/physis/corpus/selection.json"
+    },
+    {
+      "source": "backend/physis/corpus/units.json",
+      "path": "backend/physis/corpus/units.json"
+    },
+    {
+      "source": "backend/physis/corpus/units.sha256",
+      "path": "backend/physis/corpus/units.sha256"
+    },
+    {
+      "source": "distribution/notices/React-MIT.txt",
+      "path": "third-party-notices/React-MIT.txt"
+    },
+    {
+      "source": "distribution/notices/React-DOM-MIT.txt",
+      "path": "third-party-notices/React-DOM-MIT.txt"
+    },
+    {
+      "source": "distribution/notices/Scheduler-MIT.txt",
+      "path": "third-party-notices/Scheduler-MIT.txt"
+    },
+    {
+      "source": "distribution/notices/Lucide-ISC.txt",
+      "path": "third-party-notices/Lucide-ISC.txt"
+    },
+    {
+      "source": "distribution/notices/Feather-MIT.txt",
+      "path": "third-party-notices/Feather-MIT.txt"
+    },
+    {
+      "source": "distribution/notices/Vite-MIT.txt",
+      "path": "third-party-notices/Vite-MIT.txt"
+    }
+  ],
+  "production_modules": [
+    "__init__.py",
+    "alignment.py",
+    "api.py",
+    "clarification.py",
+    "classroom_units.py",
+    "cognitive_provider.py",
+    "cognitive_routing.py",
+    "cognitive.py",
+    "curriculum.py",
+    "education.py",
+    "evaluation_guard.py",
+    "evidence.py",
+    "formula_registry.py",
+    "grounded.py",
+    "knowledge_api.py",
+    "knowledge_processing.py",
+    "knowledge_sources.py",
+    "knowledge_terms.py",
+    "knowledge.py",
+    "math_derivation.py",
+    "math_lab_api.py",
+    "math_lab_engine.py",
+    "math_matrices.py",
+    "math_numerics.py",
+    "math_ode.py",
+    "math_router.py",
+    "model_lesson.py",
+    "physics_common.py",
+    "physics_events.py",
+    "physics_fields.py",
+    "physics_fluids.py",
+    "physics_motion.py",
+    "physics_oscillations.py",
+    "physics.py",
+    "portable_api.py",
+    "portable.py",
+    "provider_config.py",
+    "provider_routes.py",
+    "provider_stream.py",
+    "providers.py",
+    "reasoning.py",
+    "reviewed_claims.py",
+    "schema.py",
+    "science_api.py",
+    "science_formulas.py",
+    "science_language.py",
+    "state.py",
+    "studio.py",
+    "study_api.py",
+    "symbolic_core.py",
+    "symbolic_units.py",
+    "symbolic_worker.py",
+    "tutor_protocol.py",
+    "tutor.py",
+    "workbenches.py"
+  ],
+  "frontend_dist": [
+    "assets/FormulaLibrary-D11z0oPL.css",
+    "assets/FormulaLibrary-grvHTARM.js",
+    "assets/index-DduM6Hxg.js",
+    "assets/index-DMJ_LDCV.css",
+    "assets/KaTeX_AMS-Regular-BQhdFMY1.woff2",
+    "assets/KaTeX_AMS-Regular-DMm9YOAa.woff",
+    "assets/KaTeX_AMS-Regular-DRggAlZN.ttf",
+    "assets/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf",
+    "assets/KaTeX_Caligraphic-Bold-BEiXGLvX.woff",
+    "assets/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2",
+    "assets/KaTeX_Caligraphic-Regular-CTRA-rTL.woff",
+    "assets/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2",
+    "assets/KaTeX_Caligraphic-Regular-wX97UBjC.ttf",
+    "assets/KaTeX_Fraktur-Bold-BdnERNNW.ttf",
+    "assets/KaTeX_Fraktur-Bold-BsDP51OF.woff",
+    "assets/KaTeX_Fraktur-Bold-CL6g_b3V.woff2",
+    "assets/KaTeX_Fraktur-Regular-CB_wures.ttf",
+    "assets/KaTeX_Fraktur-Regular-CTYiF6lA.woff2",
+    "assets/KaTeX_Fraktur-Regular-Dxdc4cR9.woff",
+    "assets/KaTeX_Main-Bold-Cx986IdX.woff2",
+    "assets/KaTeX_Main-Bold-Jm3AIy58.woff",
+    "assets/KaTeX_Main-Bold-waoOVXN0.ttf",
+    "assets/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2",
+    "assets/KaTeX_Main-BoldItalic-DzxPMmG6.ttf",
+    "assets/KaTeX_Main-BoldItalic-SpSLRI95.woff",
+    "assets/KaTeX_Main-Italic-3WenGoN9.ttf",
+    "assets/KaTeX_Main-Italic-BMLOBm91.woff",
+    "assets/KaTeX_Main-Italic-NWA7e6Wa.woff2",
+    "assets/KaTeX_Main-Regular-B22Nviop.woff2",
+    "assets/KaTeX_Main-Regular-Dr94JaBh.woff",
+    "assets/KaTeX_Main-Regular-ypZvNtVU.ttf",
+    "assets/KaTeX_Math-BoldItalic-B3XSjfu4.ttf",
+    "assets/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2",
+    "assets/KaTeX_Math-BoldItalic-iY-2wyZ7.woff",
+    "assets/KaTeX_Math-Italic-DA0__PXp.woff",
+    "assets/KaTeX_Math-Italic-flOr_0UB.ttf",
+    "assets/KaTeX_Math-Italic-t53AETM-.woff2",
+    "assets/KaTeX_SansSerif-Bold-CFMepnvq.ttf",
+    "assets/KaTeX_SansSerif-Bold-D1sUS0GD.woff2",
+    "assets/KaTeX_SansSerif-Bold-DbIhKOiC.woff",
+    "assets/KaTeX_SansSerif-Italic-C3H0VqGB.woff2",
+    "assets/KaTeX_SansSerif-Italic-DN2j7dab.woff",
+    "assets/KaTeX_SansSerif-Italic-YYjJ1zSn.ttf",
+    "assets/KaTeX_SansSerif-Regular-BNo7hRIc.ttf",
+    "assets/KaTeX_SansSerif-Regular-CS6fqUqJ.woff",
+    "assets/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2",
+    "assets/KaTeX_Script-Regular-C5JkGWo-.ttf",
+    "assets/KaTeX_Script-Regular-D3wIWfF6.woff2",
+    "assets/KaTeX_Script-Regular-D5yQViql.woff",
+    "assets/KaTeX_Size1-Regular-C195tn64.woff",
+    "assets/KaTeX_Size1-Regular-Dbsnue_I.ttf",
+    "assets/KaTeX_Size1-Regular-mCD8mA8B.woff2",
+    "assets/KaTeX_Size2-Regular-B7gKUWhC.ttf",
+    "assets/KaTeX_Size2-Regular-Dy4dx90m.woff2",
+    "assets/KaTeX_Size2-Regular-oD1tc_U0.woff",
+    "assets/KaTeX_Size3-Regular-CTq5MqoE.woff",
+    "assets/KaTeX_Size3-Regular-DgpXs0kz.ttf",
+    "assets/KaTeX_Size4-Regular-BF-4gkZK.woff",
+    "assets/KaTeX_Size4-Regular-Dl5lxZxV.woff2",
+    "assets/KaTeX_Size4-Regular-DWFBv043.ttf",
+    "assets/KaTeX_Typewriter-Regular-C0xS9mPB.woff",
+    "assets/KaTeX_Typewriter-Regular-CO6r4hn1.woff2",
+    "assets/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf",
+    "assets/katex-DxqQUoF2.css",
+    "assets/katex.min-CBkCpXNJ.js",
+    "assets/KnowledgeLibrary-D_xxbdYj.js",
+    "assets/KnowledgeLibrary-f29tRbhW.css",
+    "assets/MathematicsLab-DQSIw22x.css",
+    "assets/MathematicsLab-T79mcHsH.js",
+    "assets/ScienceView-3U829Uvl.js",
+    "index.html",
+    "licenses/KaTeX-fonts-OFL-1.1.txt",
+    "licenses/KaTeX-MIT.txt",
+    "physis.svg"
+  ]
+}

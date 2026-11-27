@@ -6,6 +6,10 @@ PHYSIS AI is a Korean-language mathematics and physics workbench. In v0.4 you ca
 
 ![The running Mathematics Laboratory showing a position function, its derivative and a tangent](release/PHYSIS-0.4-derivative.png)
 
+## Windows x64 download
+
+Download `PHYSIS-AI-0.4.1-win-x64.zip` and `SHA256SUMS.txt` from the release page. Extract everything to a writable folder and run **Setup-Runtime.cmd** once with internet access. It checks the official Python archive and Python package hashes and prepares a runtime in that folder. Then run **Start-PHYSIS.cmd**, or use `Start-PHYSIS.cmd --offline` for offline-only operation. The frontend is already built. [Windows release](https://github.com/stickleetoto/PHYSIS-AI/releases/tag/v0.4.1) · [Setup, verification and troubleshooting](WINDOWS_DISTRIBUTION.md)
+
 ## Run from source on Windows
 
 Use Windows x64, Python 3.13 and Node.js 22.12 or later. From the repository root, run the following commands. Setup needs internet access to install dependencies and build the frontend.
@@ -15,7 +19,7 @@ Setup-Windows.cmd
 Start-PHYSIS.cmd --offline
 ```
 
-Open `http://127.0.0.1:8765`. The launcher serves the built UI and local API. After setup, offline mode supports the deterministic Mock tutor, simulations and built-in literature search. Press Ctrl+C in the launcher console to exit. The v0.4 release distributes source. The standalone Windows ZIP is on hold. [Windows distribution review](THIRD_PARTY_NOTICES.md#windows-binaries)
+Open `http://127.0.0.1:8765`. The launcher serves the built UI and local API. After setup, offline mode supports the deterministic Mock tutor, simulations and built-in literature search. Press Ctrl+C in the launcher console to exit.
 
 ## Mathematics Laboratory and Physics Bridge
 
