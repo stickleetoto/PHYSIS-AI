@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import hashlib
+import sys
 from pathlib import Path
 from types import SimpleNamespace
 from zipfile import ZIP_DEFLATED, ZIP_STORED, ZipFile
@@ -24,6 +25,31 @@ import package_windows as packager
 
 
 ROOT = "PHYSIS-AI/"
+
+
+def test_portable_interpreter_checks_file_identity(tmp_path, monkeypatch):
+    import serve
+
+    lock = tmp_path / "runtime-lock.json"
+    lock.write_text(json.dumps({
+        "product": {"version": serve.VERSION},
+        "runtime": {"architecture": "win-amd64", "version": ".".join(map(str, sys.version_info[:3]))},
+        "installation": {"python_executable": "runtime/python.exe"},
+    }), encoding="utf-8")
+    expected = tmp_path / "python.exe"
+    expected.write_bytes(b"test file")
+    alias = tmp_path / "alias.exe"
+    alias.hardlink_to(expected)
+    monkeypatch.setattr(serve, "PACKAGE_LOCK", lock)
+    monkeypatch.setattr(serve, "PORTABLE_RUNTIME", expected)
+    monkeypatch.setattr(sys, "executable", str(alias))
+    serve.validate_portable_runtime()
+
+    other = tmp_path / "other.exe"
+    other.write_bytes(expected.read_bytes())
+    monkeypatch.setattr(sys, "executable", str(other))
+    with pytest.raises(SystemExit, match="must be started with its runtime"):
+        serve.validate_portable_runtime()
 
 
 def _minimal_source_inventory(root: Path) -> dict[str, object]:

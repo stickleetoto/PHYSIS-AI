@@ -22,7 +22,7 @@
     ],
     "browser": "Microsoft Edge, headless, --disable-gpu --disable-webgl --disable-accelerated-2d-canvas",
     "runtime": "CPython 3.14.10 x64, Mock provider, offline mode, Windows-only PATH",
-    "zip_sha256": "6ae18c6f6b8c6ece1d4b3d1909175a8e0c18386a1f5874e4be81ead2738572a1"
+    "zip_sha256": "00ccac7b853f4d6950ffa099b7807df1e628cd5afc8cb45457b049f249935a24"
   },
   "frontend": {
     "tests": 32,

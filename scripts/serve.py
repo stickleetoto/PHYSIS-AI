@@ -54,9 +54,13 @@ def validate_portable_runtime():
         raise SystemExit("runtime-lock.json does not match this PHYSIS AI Windows x64 release.")
     if not PORTABLE_RUNTIME.is_file():
         raise SystemExit("The portable runtime is not ready. Run Setup-Runtime.cmd explicitly first.")
-    actual = os.path.normcase(os.path.abspath(sys.executable))
-    expected = os.path.normcase(os.path.abspath(PORTABLE_RUNTIME))
-    if actual != expected:
+    # A short DOS path, a junction or a substituted drive may name the same
+    # executable. Compare the underlying volume and file ID.
+    try:
+        packaged_interpreter = os.path.samefile(sys.executable, PORTABLE_RUNTIME)
+    except OSError:
+        packaged_interpreter = False
+    if not packaged_interpreter:
         raise SystemExit("This distribution must be started with its runtime\\python.exe. Run Start-PHYSIS.cmd.")
     expected_python = str(runtime.get("version", ""))
     actual_python = ".".join(map(str, sys.version_info[:3]))

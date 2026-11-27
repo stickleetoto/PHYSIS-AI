@@ -49,10 +49,10 @@ On Windows 11 x64 build 26200, a non-elevated account extracted the ZIP under a 
 | Public ZIP | Verified value |
 |---|---|
 | Filename | `PHYSIS-AI-0.4.1-win-x64.zip` |
-| Size | 1,443,851 bytes compressed, 2,954,839 bytes extracted |
-| SHA-256 | `6ae18c6f6b8c6ece1d4b3d1909175a8e0c18386a1f5874e4be81ead2738572a1` |
+| Size | 1,443,934 bytes compressed, 2,955,000 bytes extracted |
+| SHA-256 | `00ccac7b853f4d6950ffa099b7807df1e628cd5afc8cb45457b049f249935a24` |
 | Contents | 154 approved files and 36 CycloneDX inventory components, including separately provisioned dependencies |
 | Security inspection | Gitleaks 8.30.1 reported zero findings in the extracted ZIP. File inventory, sizes, internal hashes, source-content comparison and ZIP CRC checks passed. |
 | Excluded material | Zero native binaries, wheel archives, raw evaluation records, conversations or user databases |
 
-Rebuilding the release produced the same ZIP digest as the Windows and browser trials. The complete package regression suite passed 21 tests. A separate Windows check created an NTFS directory junction inside a disposable fixture and confirmed that the packager rejected its use as a source directory. The external CycloneDX SBOM passed the official 1.6 schema and matched the embedded SBOM byte for byte. All seven previous Windows archives still matched their recorded SHA-256 digests.
+Rebuilding the release produced the same ZIP digest as the Windows and browser trials. The complete package regression suite passed 22 tests. A separate Windows check created an NTFS directory junction inside a disposable fixture and confirmed that the packager rejected its use as a source directory. The external CycloneDX SBOM passed the official 1.6 schema and matched the embedded SBOM byte for byte. All seven previous Windows archives still matched their recorded SHA-256 digests.

@@ -8,7 +8,7 @@
   "application_network": "PHYSIS_OFFLINE=1; loopback only",
   "setup_network": "only the explicit Setup-Runtime.cmd step may fetch hash-verified sources over HTTPS",
   "staging_path": "Korean and space-containing temporary path (absolute path omitted)",
-  "started_utc": "2026-11-27T02:27:04.087715+00:00",
+  "started_utc": "2026-11-27T04:38:33.844195+00:00",
   "checks": [
     {
       "name": "zip_extraction_and_layout",
@@ -80,9 +80,9 @@
     "numpy": "2.3.5",
     "scipy": "1.17.0"
   },
-  "finished_utc": "2026-11-27T02:27:48.467757+00:00",
+  "finished_utc": "2026-11-27T04:39:08.905308+00:00",
   "work_dir_preserved": true,
-  "zip_sha256": "6ae18c6f6b8c6ece1d4b3d1909175a8e0c18386a1f5874e4be81ead2738572a1",
+  "zip_sha256": "00ccac7b853f4d6950ffa099b7807df1e628cd5afc8cb45457b049f249935a24",
   "local_host": {
     "build": "Windows 11 x64 26200",
     "elevated": false,
